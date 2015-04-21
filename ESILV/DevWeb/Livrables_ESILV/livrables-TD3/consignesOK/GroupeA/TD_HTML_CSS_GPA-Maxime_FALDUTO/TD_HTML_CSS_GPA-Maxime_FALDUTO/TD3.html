@@ -1,0 +1,82 @@
+﻿<html>
+
+<head>
+<meta charset="utf-8">
+<link href="FormulairedePaiement.css" rel="stylesheet" type="text/css"/>
+</head>
+
+
+
+<body>
+
+<h1> Formulaire de paiement </h1>
+
+
+<form>
+
+<p>Les champs obligatoires sont suvis par *.</p>
+<h2> Informations de contact </h2>
+
+<div>
+<fieldset>
+ <legend> Civilité </legend>
+     <input type="radio" name="hf" value="Mr" id="oui" />
+     <label for="oui" class="inline">Monsieur</label> 
+     <input type="radio" name="hf" value="Mme" id="non" />
+     <label for="non" class="inline">Madame</label>
+</fieldset>
+</div>
+
+<div>
+</br>
+<label for="name">Nom :</label>
+<input type="text" id="nom" required /> *
+</div>
+
+<div>
+<br/>
+<label for="courriel">Courriel :</label> 
+<input type="email" id="ea" required /> *
+
+</div>
+
+<p> __________________________________________________________________ </p>
+
+<h2> Informations de paiement </h2>
+
+<div>
+<label for="typecarte">Type de carte :</label>
+<SELECT name="nom" size="1">
+<OPTION>Visa
+<OPTION>Mastercard
+<OPTION>Paypal
+<OPTION>American Express
+<OPTION>Bitcoins 
+</SELECT>
+</div>
+
+<div>
+<br/>
+<label for="numcarte">Numéro de carte :</label>
+<input type="text" id="texte" required /> * en 16 chiffres
+
+</div>
+
+<div>
+<br/>
+<label for="dateexp">Date d'expiration :</label>
+<input type="month" id="dt" required /> * au format mm/aa
+
+</div>
+
+<div>
+<br/>
+<button type="submit"> Confirmer le paiement </button>
+</div>
+
+
+</form>
+
+</body>
+
+</html>

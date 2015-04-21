@@ -1,0 +1,51 @@
+h1{							/*titre h1*/
+color: fuchsia;
+margin-left: 500px;			/*décalage par rapport à la gauche*/
+margin-top: 10px;			/*décalage par rapport au haut*/
+}
+
+p{							/*paragraphe*/
+margin-left: 5px;
+}
+
+h2{							/*sous-titre h2*/
+margin-left: 5px; 
+}
+
+form{						/*cadre/bordure*/
+border: 4px solid fuchsia;	/*taille et couleur*/
+border-radius: 20px;		/*arrondis les angles*/
+width: 600px;				/*largeur*/
+margin-left: 500px;
+padding: 1em;				/*espacement intérieur*/
+}
+
+label{						/*étiquette*/
+text-align: right; 			/*aignement du texte à droite*/
+display: inline-block;		/*alignement des labels*/
+width: 150px;
+}
+
+input{						/*entrées de données*/
+border : 1px solid black;
+width: 300px;
+}
+
+fieldset{						/*cadre regroupant plusieurs éléments: ici "Monsieur" et "Madame"*/
+width: 275px;
+margin-left: 155px;
+text-align: left;
+}
+
+input[type = "radio"]{		/*données entrées dont le type est "radio"*/
+margin: -130px;
+}
+
+form, div{					/*cadre/bordure et divisions*/
+margin-top: 1em;			/*espace entre les balises div dans form */
+}
+
+button{						/*bouton*/
+margin-left: 15em;
+align: center;
+}

@@ -1,0 +1,36 @@
+h1{
+color:purple;
+margin-left : 100px;
+}
+
+h2{
+margin-left : 20px;
+}
+
+p{
+margin-left : 20px;
+}
+
+form{border : 4px solid purple;
+border-radius : 1cm;
+margin-left : 100px;
+width: 570px;
+padding:10px;
+}
+
+label{
+margin-left : 15px;
+width : 180px;
+text-align : left;
+display : inline-block;
+} 
+
+button{
+margin-left : 200px;
+}
+
+fieldset{
+margin-left : 120px;
+margin-right : 198px;
+padding:5px;
+}

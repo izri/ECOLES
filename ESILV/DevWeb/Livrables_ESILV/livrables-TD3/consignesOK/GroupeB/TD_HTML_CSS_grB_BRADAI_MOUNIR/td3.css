@@ -1,0 +1,23 @@
+h1{
+color : pink
+}
+form {
+margin :0 auto;
+width : 500px;
+padding :1em;
+border:5px solid purple;
+border-radius: 1em;
+color :black;
+}
+
+label {
+ color: black;
+ margin-right: 150 px;
+ width :120px;
+ text-align:right;
+ display :inline-block;
+ }
+
+div{
+margin-top :1em;
+}

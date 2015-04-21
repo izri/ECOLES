@@ -1,0 +1,58 @@
+h1 
+{
+	color : violet ; 
+	margin-left : 20%;
+}
+
+HR
+{
+	margin-left : 5%;
+	margin-right : 5%;
+}
+
+form 
+{
+	margin-left: 20%;
+	width: 50%;
+	border:  4px solid violet;
+	border-radius:15px;
+	padding-top: 20px;
+	padding-bottom: 15px
+}
+
+fieldset 
+{
+	margin-left : 25%;
+	margin-right : 30%;
+	border: 2px solid grey;  
+}
+
+.centre
+{
+  margin-left : 5%;
+}
+
+.info
+{
+display: inline-block;
+width: 120px;
+text-align: right;
+padding-left: 0px;
+margin-left: 45px;
+}
+
+.blanc
+{
+width: 400px;
+display: inline-block;
+width: 305px;
+}
+
+.type
+{
+display: inline-block;
+width: 253px;
+text-align: right;
+padding-left: 0px;
+margin-left: 45px;
+}

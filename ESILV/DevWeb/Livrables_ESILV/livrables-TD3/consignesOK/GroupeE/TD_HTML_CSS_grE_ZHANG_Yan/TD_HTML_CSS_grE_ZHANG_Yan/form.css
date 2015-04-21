@@ -1,0 +1,52 @@
+fieldset
+{
+margin-left:120px;
+width: 200px;
+}
+
+#nom
+{
+margin-left:81px;
+}
+
+#courriel
+{
+margin-left: 62px;
+}
+
+#carte
+{
+margin-left: 20px;
+}
+
+#confirmation
+{
+margin-left:150px;
+}
+
+input.submit
+{	
+    font-size: 70%;
+	width: 150px;	
+	color: black;
+}
+
+
+#bouton
+{
+color: fuchsia;
+}
+
+label 
+{
+color: black;
+}
+
+.Contenu
+{
+margin-left;
+width:450px;
+padding: 10px;
+border-radius: 10px; 
+border: 5px solid fuchsia;
+}

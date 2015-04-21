@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+<link href='Formulaire de paiement.css' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<title>Formulaire de paiement</title>
+
+</head>
+
+<body>
+<h1 class="titre">Formulaire de paiement</h1>
+
+<div class="cadre">
+<form method="post" action="mailto:val.rossi2@hotmail.fr?subject=commentaires" enctype="text/plain">
+
+<p>Les champs obligatoires sont suivis par*</p>
+<h2>Information de contact</h2>
+
+<div>
+
+<fieldset>
+<legend>Civilité:</legend>
+<input type="radio" name="civilite" value="monsieur" >Monsieur<br>
+<input type="radio" name="civilite" value="madame" >Madame<br>
+</fieldset><br>
+
+</div>
+
+<div>
+	<label for="Nom">Nom</label>:<input class="taille" type="text" name="Nom">*
+</div><br>
+
+<div>
+	<label for="courriel">Courriel</label>:<input class="taille" type="email" name="Adresse mail">*
+</div><br>
+
+<hr width="90%" color="#ccc" align="center">
+<h2>Information de paiement</h2>
+
+<div>
+<label for="type">Type de carte:</label>
+<select name="cartes">
+
+<option value="Visa" selected>Visa</option>
+<option value="AmericanExpress" selected>American Express</option>
+<option value="MasterCard" selected>Master Card</option>
+
+
+</select>
+</div>
+
+<p></p>
+
+<div>
+	<label for="NumDeCarte">Numéro de carte:</label><input class="taille" type="text" maxlength="16" name="Num Carte">* en 16 chiffres
+</div><br>
+
+<div >
+	<label for="dateExpiration">Date d'expiration:</label><input class="taille" type="text" maxlength="5" name="Date expiration">* au format mm/aa
+</div><br>
+
+<div class="confirmer">
+	<input type="submit" value="Confirmer le paiement">
+	<input type="reset" value="Annuler">
+
+
+</div><br>
+
+</form>
+</body>
+</html>

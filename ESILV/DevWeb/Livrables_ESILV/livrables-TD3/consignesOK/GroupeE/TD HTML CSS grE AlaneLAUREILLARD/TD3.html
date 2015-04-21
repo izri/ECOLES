@@ -1,0 +1,75 @@
+<html>
+<head>
+			<link href="TD3.css" rel="stylesheet" type="text/css"/>
+</head>
+	<body>
+		
+<meta charset="utf-8">
+ <h1> Formulaire d'inscription </h1>
+  	<form method="post" action="URL">
+ <p>
+ <label> Les champs obligatoires sont suivis par *.</label>
+ </div>
+
+ <p>
+ <label><font size ="+2"><b> Informations de contact</b></font></label>
+ </p>
+
+ <p>
+<fieldset class="ok">
+ <legend> Civilité </legend>
+     <input type="radio" name="CSS" value="monsieur" id="monsieur"
+     checked="checked"/>
+     <label for="monsieur">Monsieur</label>
+     <div>
+     <input type="radio" name="CSS" value="Madame" id="Madame"/>
+     <label for="madame">Madame</label>
+ </div>
+ </fieldset>
+
+ </p>
+ 		<div>
+ 		<label for="nom" class="align"> Nom : </label>
+ 		<input type="text" id="zone1" value=" "/>
+ 		<label for="*"><i> *</i></label>
+ 	</p>
+
+ 	<p>
+ 		<label for="Prénom" class="align"> Prénom : </label>
+ 		<input type="text" id="zone2" value=" "/>
+ 		<label for="**"><i> *</i></label>
+ 	</p>
+<p>
+  <hr style="width:490px;color:grey;background-color:grey; height:1px;" /> 
+</p>
+ 	<p>
+ 	<label><font size ="+2"><b> Informations de paiement</b></font></label>
+ </p>
+
+ <p>
+   <label for="utilise" class="align"> Tupe de carte : </label>
+   <select name="utilise" id="utilise">
+   <option value="toujours"> Visa</option>
+   <option value="parfois"> Mastercard</option>
+   <option value="jamais"> American Express</option>
+   </select>
+</p>
+
+  		<p>
+ 		<label for="Num" class="align"> Numéro de carte : </label>
+ 		<input type="text" id="zone3" value=" " />
+ 		<label for="16"><i> * en 16 chiffres</i></label>
+ 	</p>
+
+ 	<p>
+ 		<label for="Date" class="align"> Date d'expiration : </label>
+ 		<input type="text" id="zone4" value=" "/>
+ 		<label for="FD"><i> * au format mm/aa</i></label>
+ 	</p>
+
+ 	<p>
+ 		<input type="submit" value="Confirmer le paiement" class="ol">
+ 	</p>
+</form>
+	</body>
+</html>

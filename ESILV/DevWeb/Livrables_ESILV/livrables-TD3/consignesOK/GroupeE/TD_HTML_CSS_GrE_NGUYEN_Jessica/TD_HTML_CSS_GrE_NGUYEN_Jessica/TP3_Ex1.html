@@ -1,0 +1,73 @@
+<!DOCTYPE html>															<!-- document de type html -->
+<HTLM lang = "fr">														<!-- langue = français -->
+
+<HEAD>
+<meta charset = "utf-8"/>												<!-- permet de lire les caractères spéciaux sur HTML5 -->
+<TITLE> Exercice 1 : Formulaire de Paiement </TITLE>
+<link href = "forme.css" rel = "stylesheet" />							<!-- relit le fichier "TP3 Ex.html" et le ficher "forme.ccs" -->
+
+</HEAD>
+
+<BODY>
+<h1> Formulaire de paiement </h1>
+<form action = "URL" method = "post">
+
+<p> Les champs obligatoires sont suivis par un * </p>
+
+<h2> Informations de contact </h2>
+
+<fieldset> 																<!-- regroupe "Monsieur" et "Madame" -->
+<legend> Civilité </legend>
+<input type = "radio" name = "sexe" value = "Monsieur"/> Monsieur		<!-- value = "Monsieur" checked, on met le cirseur directement à la réponse "Monsieur" -->
+<br>																	<!-- retour à la ligne -->
+<input type = "radio" name = "sexe" value = "Madame"/> Madame			<!-- on peut mettre style = "margin: -130px;" pour placer correctement "Monsieur"/"Madame" sous "Civilité" -->
+</fieldset>
+
+<div>
+<label for = "nom"> Nom: </label>
+<input class = "required" required>
+<span class = "after"> * </span>
+</div>
+
+<div>
+<label for = "courriel"> Courriel: </label> 
+<input class = "required" type = "email" required>
+<span class = "after"> * </span>
+</div>
+
+<hr> </hr>																<!-- dessine la ligne horizontale divisant "Information de contact" et "Information de paiement" -->
+
+<h2> Informations de paiement </h2>
+
+<div>
+<label for = "type de carte"> Type de carte : </label>
+<select name = 'type de carte' id = "Type de carte">
+<option value = "">Visa </option>
+<option value = "">CB </option>
+<option value = "">MasterCard </option>
+<option value = "">Autre </option> 
+</select>
+</div>
+
+<div>
+<label for = "numéro de carte"> Numéro de carte : </label>
+<input pattern = [0-9]{16,16} maxlength = "16" required number = "16 to 16 characters> <!-- pattern: entre que des chiffres de 0 à 9, maxlength entre exactement 16 caractères -->
+<span class = "after"> <em> * en 16 chiffres</em> </span>				<!-- em ou i pour mettre en italique -->
+
+</div>
+
+<div>
+<label for = "date d'expiration"> Date d'expiration : </label>
+<input pattern = "[0-9 /-/]{5,5}" maxlength = "5" required number = "5 to 5 characters> <!-- pattern: entre que des chiffres de 0 à 9 et des slash "/", maxlength entre exactement 5 caractères -->
+<span class = "after"> <i> * au format mm/aa<i> </span>					<!-- i ou em pour mettre en italique -->
+</div>
+
+<div>
+<button onclick ="ClicBouton();"> Confirmer le paiement </button>		<!-- bouton -->
+</div>
+
+<form>
+
+</BODY>
+
+</HTML>

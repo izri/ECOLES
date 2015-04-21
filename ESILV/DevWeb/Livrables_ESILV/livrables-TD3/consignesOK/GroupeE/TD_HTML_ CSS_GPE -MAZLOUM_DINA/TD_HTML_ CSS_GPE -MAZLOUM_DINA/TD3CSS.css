@@ -1,0 +1,75 @@
+/* mise en page des h1 */
+h1{
+color: orchid ;
+margin-left:500px;
+margin-top=10px; 
+}
+
+/* mise en page des h2 */
+h2{
+margin-left:10px;
+}
+
+
+/* mise en page des paragraphes */
+p{
+margin-left:10px;
+}
+
+/* mise en page de la forme */
+form { 
+border:4px solid orchid;
+border-radius:20px;
+width:700px;
+margin-left:500px;
+
+}
+
+
+/* mise en page des label */
+label{
+
+color:black;
+text-align:right;
+display:inline-block;
+width:150px;
+}
+
+
+/* mise en page des input*/
+input{
+border:1px solid black;
+width:350px;
+vertical-align:top;
+
+
+}
+
+/* mise en page du button */
+button{
+color:orchid;
+margin-left:11.5em;
+}
+
+/* mise en page du selecteur d'identifiant*/
+
+#Monsieur, #Madame{
+width:10px;}
+
+
+/* mise en page de la form et des div */
+form,div{
+ margin-top:1em;
+}
+
+/* mise en page du fieldset */
+fieldset
+{
+  width:325px;
+    display: inline-flex;
+    margin-left:155px;
+
+   
+}
+
+

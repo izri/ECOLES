@@ -1,0 +1,54 @@
+form{
+	margin-left:30%;
+width:45%;
+border:5px solid purple;
+border-radius:10px;
+}
+
+H1{
+	color:purple;
+	margin-left:30%;
+}
+H2{
+	margin-left:3%;
+}
+
+
+
+
+p{
+	margin-left: 3%;
+}
+label{
+	margin-left: 5%;
+	width:20%;
+	display:inline-block;
+	text-align: right;
+
+}
+#lol{
+
+	margin-left: -25%;
+}
+input{
+	width:40%;
+}
+fieldset{
+	margin-left: 25.5%;
+		
+		width:36%;
+	display:inline-block;
+	
+}
+
+#boutton{
+
+	margin-left: 25.5%;
+}
+
+#classM{
+
+
+	margin-left: 5%;
+	margin-top: -7.5%;
+}

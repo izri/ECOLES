@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title> TD 3 </title>
+	<meta charset ="utf-8">
+	<link href="td3.css" rel="stylesheet" style="text/css"/>
+	
+</head>
+<body>
+	<h1 align="center"> Formulaire de paiement </h1>
+	<form>	
+	<p> Les champs obligatoires sont suivis par * </p>
+	<h2> Informations de contact </h2>
+	<fieldset>
+	<legend> Civilite</legend>
+	
+		<input type ="radio" name="sexe" id="masculin "> Monsieur
+		<input type ="radio" name="sexe" id="feminin"> Madame
+	</fieldset>
+	
+	<div>
+		<label> Nom : </label> 
+		<input type ="text" required> *
+	</div>
+	<div>
+		<label> Courriel : </label> 
+		<input type ="email" required > *
+	</div>
+
+<hr>
+<h3> Informations de paiement</h3>
+<label> Type de carte : </label>
+<select>
+	<option>Visa
+	<option>Electron
+	<option>Maestro
+	<option>MasterCard
+	<option>American Express
+</select>
+
+
+	<div>
+	<label> Numero de carte : </label>
+	<input type ="number" required > * 16 chiffres 
+	</div>
+	<div>
+	<label> Date d'expiration : </label>
+	<input type="month" required> * au format mm/aa
+	</div>
+	<div>
+		<button type="submit"> Confirmer le paiement 
+	</div>
+</form>
+		
+
+	
+</body>
+</html>

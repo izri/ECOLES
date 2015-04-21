@@ -1,0 +1,68 @@
+<html>
+			<head>
+				<meta charset ="utf_8">
+				<link href="td3.css" rel="stylesheet" type="text/css"/>
+				<title> TD3 html </title>
+			</head>
+	
+<body>
+		<h1>Formulaire de Paiement</h1>
+<form method = "post" action="traitement.php">
+<p> Les champs obligatoires sont suivis par *.</p>
+
+
+	<h2>Informations de contact</h2>
+
+	
+<p classe="centre">
+Civilité<BR> 
+<label for="Monsieur">Monsieur</label>           
+<input type="radio" name="Civilité" value="Monsieur" id="Monsieur"/><br/>
+<label for="Madame">Madame</label>           
+<input type="radio" name="Civilité" value="Madame" id="Madame"/>
+</p>
+	
+	<div>
+	<label for = "name">nom:</label>
+	<input type "text" id ="Nom " required="required" align="center"<it> *</it></input>
+	</div>
+	
+	
+	<div>
+	<label for = "courriel">courriel:</label>
+	<input type = "email" id = "Courriel"required="required" align="center"<it> *</it></input>
+	</div>
+
+	
+
+	<h2>Informations de paiement</h2>
+
+		<div>
+		   <p>
+ 		<label for="Carte">Type de carte</label>
+		 <select name="carte" id="carte">
+   	        <option value="Visa">Visa</option>
+		<option value="MasterCard">MasterCard</option>
+		<option value="Autre">Autre</option>
+    	  	 </select>
+  		  </p>
+		</div>		
+		<div>
+		<label for = "Numero">Numéro de carte :</label>
+		<input type "numeric" id ="numero"required="required" align="center" minlength = "16" maxlength = "16"/>
+		<it> * en 16 chiffres</it>
+		</div>
+	
+		<div>
+		<label for = "Date">Date d'expiration:</label>
+		<input type = "date" id = "date"required="required" align="center"/>
+		<it> * au format mm/aa </it>
+		</div>
+
+		<div>
+		<button type ="submit">Confirmer le paiement </button>
+		</div>
+</form>
+
+</body>
+</html>

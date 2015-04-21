@@ -1,0 +1,19 @@
+h1{color:#FF00FF;}
+.champ{margin-left: 2%;}
+h2{margin-left: 2%;}
+form
+{
+	width: 45%;
+	border : solid #FF00FF 5px;
+	border-radius: 10px;
+}
+label{
+	display: inline-block; 
+	text-align: right; 
+	margin-right : 0%;
+	width: 135px;
+	padding-bottom: 20px;
+}
+fieldset{margin-left: 23%;margin-right: 48%;}
+.barre{margin-left: 2%;margin-right: 2%;}
+.buttonstyle{margin-left: 23%; margin-bottom: 2%}

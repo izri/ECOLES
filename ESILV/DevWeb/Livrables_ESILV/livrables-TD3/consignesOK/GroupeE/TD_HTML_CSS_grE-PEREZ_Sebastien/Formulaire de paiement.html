@@ -1,0 +1,73 @@
+<html lang=fr>
+<head>
+	<meta charset="utf-8">
+	<link href='Formulaire de paiement.css' rel='stylesheet' type='text/css'/>
+	<title>Formulaire de paiement</title>
+
+</head>
+<body>
+<h1>Formulaire de paiement</h1>
+<div class="cadre">
+<p>
+	Les champs obligatoires sont suivis par *.
+</p>
+<h2>Infomations de contact</h2>
+
+<div class="civilite">
+
+<fieldset>
+<legend>Civilité:</legend>
+<input type="radio" name="civilite" value="monsieur" >Monsieur<br>
+<input type="radio"  name="civilite" value="madame" >Madame<br>
+</fieldset><br>
+
+</div>
+
+<div>
+	<label for="Nom">Nom</label> : <input class="taille" required type="text" name="Nom"> *
+</div><br>
+
+<div>
+	<label for="courriel">Courriel</label> : <input class="taille" required type="email" name="Adresse mail"> *
+</div><br>
+
+<hr width="95%" color="black" align="center">
+
+
+<h2>Informations de paiement</h2>
+
+
+<div>
+
+<label for="type">Type de carte : </label>
+
+<select name="cartes">
+
+<option value="Visa" selected>Visa</option>
+<option value="MasterCard" selected>Master Card</option>
+<option value="AmericanExpress" selected>American Express</option>
+
+</select>
+</div>
+<br>
+
+<div>
+	<label for="NumCarte">Numéro de carte : </label> <input class="taille" required type="text" maxlength="16" name="NumCarte"> * en 16 chiffres
+</div>
+<br>
+
+<div >
+	<label for="Expiration">Date d'expiration : </label> <input class="taille" required type="text" maxlength="5" name="Expiration"> * au format mm/aa
+</div>
+<br>
+
+<div class="confirmer">
+	<input type="submit" value="Confirmer le paiement">
+</div>
+<br>
+
+
+</div>
+
+</body>
+</html>

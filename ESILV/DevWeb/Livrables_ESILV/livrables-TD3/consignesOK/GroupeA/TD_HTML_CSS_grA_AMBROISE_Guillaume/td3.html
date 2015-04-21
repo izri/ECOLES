@@ -1,0 +1,41 @@
+<HTML lang="fr">
+<HEAD>
+	<link rel="stylesheet" href="td3.css" type="text/css" />
+<meta charset ="utf-8"/>
+</HEAD>
+<BODY>
+	<h1 > Formulaire de paiement</h1><br/>
+	<form method="post" action="">
+
+	<p type="base">Les champs obligatoires sont suivis par *</p>
+	<h2>Informations de contact</h2>
+<fieldset type="contact">
+	<fieldset type="civilite">
+	<legend>Civilité</legend <br/>
+		 <input type="radio" name="Civilite" value="Monsieur" id="Monsieur" /> <label type="radio" for="Monsieur">Monsieur</label><br/>
+       <input type="radio" name="Civilite" value="Madame" id="Madame" /> <label type="radio" for="Madame">Madame</label><br/>
+	
+</fieldset>
+<br/>
+<label for="Nom" type="text"> Nom : </label> <input id"Nom" type="text" required/> *<br/> <br/>
+<label for="courrier" type="text"> Courriel : </label> <input id"email" type="email" required/> *
+<br/> <br/></fieldset>
+<h2>Informations de paiement</h2>
+<fieldset type=paiement>
+<p>
+<label for"Typecart" type="text"> Type de carte : </label>
+<select name="Carte" id="type">
+	<option value="visa">VISA</option>
+	<option value="cb">Carte bleue</option>
+	<option value="mastercard">Mastercard</option>
+</select>
+</p>
+<label for="numérodecarte" type="text"> Numéro de carte : </label> <input id"numérodecarte" type="number" required/> <i> * en 16 chiffres</i>
+<br/><br>
+<label for="datedexpiration" type="text"> Date d'expiration : </label> <input id"numérodecarte" type="number" required/> <i> * au format mm/aa</i>
+<br/><br/>
+<input type="submit" value="Confirmer le paiement"/>
+</fieldset>
+</form>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8"/>
+	<title>TD3</title>
+	<link rel="stylesheet" media="screen" type="text/css" title="mon style" href="Style.css" />
+</head>
+
+<body>
+	<h1 class="titre">Formulaire de paiement</h1>
+	<form method="post" action="mailto:rendu.clement@gmail.com?subject=commentaires" enctype="text/plain"> <!-- début formulaire -->
+		<p>Les champs obligatoires sont suivis par des *</p>
+		<h1>Informations de contact</h1>
+		<div id="contact"> <!-- reference au css -->
+			<fieldset>
+				<legend>Civilité</legend> <!-- reference au css -->
+				<input name="civilité" type="radio" value="0">Monsieur<br/>
+				<input name="civilité" type="radio" value="1">Madame
+			</fieldset>
+		</div>
+		<div id="block"><label for="nom">Nom :</label> <input class="taille" type="text" cols="40" name="zone"/> *</div>
+		<div id="block"><label for="courriel">Courriel :</label> <input class="taille" type="text" name="zone"/> *</div>	
+		
+		<hr width="90%" color="#ccc" align=center> <!-- barre grise -->
+		
+		<h1>Informations de paiement</h1>
+		<div id="block">
+			<label for="type">Type de carte :</label>
+			<select name="carte"> <!-- menu deroulant -->
+				<option value="Visa" selected>Visa
+				<option value="MasterCard">Master Card
+				<option value="CarteBleue">Carte Bleue
+				<option value="AmericanExpress">American Express
+				<option value="Maestro">Maestro
+				<option value="e-carteBleue">e-carte Bleue
+			</select>
+		</div>
+		<div id="block"><label for="numero">Numéro de carte :</label> <input class="taille" type="text" name="zone"/> * <em>en 16 chiffres</em></div>
+		<div id="block"><label for="date">Date d'expiration :</label> <input class="taille" type="text" name="zone"/> * <em>au format mm/aa</em></div>
+		<div id="block" align="center"><button type="submit">Confirmer le paiement</link>&nbsp;&nbsp;<button type="reset">Annuler</button></div>
+	</form>
+</body>
+</html>

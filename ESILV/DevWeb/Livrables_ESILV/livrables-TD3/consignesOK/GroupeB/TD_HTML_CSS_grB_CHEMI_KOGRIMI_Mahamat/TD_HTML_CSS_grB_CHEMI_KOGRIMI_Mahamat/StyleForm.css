@@ -1,0 +1,28 @@
+form 
+{
+margin :0 auto;
+width : 400px;
+padding :1em;
+border:5px solid purple;
+border-radius: 1em;
+color :black;
+}
+
+label
+ {
+ color: black;
+ margin-right: 150 px;
+ width :120px;
+ text-align:inline-block;
+ display :inline-block;
+ }
+
+h1
+ {
+color : purple
+ }
+ fieldset
+ {
+ color: black;
+ width :250px;
+ }

@@ -1,0 +1,196 @@
+<?php
+class Vehicule{
+	var $marque;
+	var $couleur;
+	var $kilometres;
+	var $qteCarburant;
+
+	function __construct(){
+//recuperer le nombre de paramètres en arguments
+	$nb=func_num_args();
+//l'ensemble des arguments
+	$arguments=func_get_args();
+
+switch($nb)
+
+{
+
+	case 0: $this->marque="t";//constructeur par défaut
+	$this->couleur="b";
+	$this->kilometre="0";
+	$this->qteCarburant="0";
+	break;
+
+	case 4: $this->marque=$arguments[0];//constructeur paramétré
+	$this->couleur=$arguments[1];
+	$this->kilometre=$arguments[2];
+	$this->qteCarburant=$arguments[3];
+	break;
+
+default: echo"erreur"; break;
+
+}
+
+function getMarque($val){
+	$this->marque;
+}
+function getCouleur($val){
+	$this->couleur;
+}
+function getKilometre($val){
+	$this->kilometre;
+}
+function getQteCarbu($val){
+	$this->qteCarburant;
+}
+function setMarque($marq){
+	$this->marque=$marq;
+}
+function setCouleur($col){
+	$this->couleur=$col;
+}
+function setKilometre($kil){
+	$this->kilometre=$kil;
+}
+function setQteCarbu($qte){
+	$this->qteCarburant=$qte;
+}
+function affichage(){
+echo "la vehicule de marque "	.$this->getMarque() ."de couleur"
+.$this->getCouleur() ."ayant un kilometrage de : " .$this->getKilometre()."contient " .$this->getQteCarburant() ."</br>";
+}
+function arret(){
+	if($this->etat == true) $this->etat=false;
+	else 
+	echo" le vehicule est à l'arret </br>";
+}
+function roule(){
+	if($this->etat == false){
+		$this->etat=true;
+		$this->kilometre++;
+		$this->qteCarburant--;
+	}
+}
+//Exercice 3: Classe voiture et train
+
+class Voiture
+{
+	var $typeCarburant;
+	var $nbrePortes;
+
+	function __construct(){
+		$num=func_num_args();
+		$args=func_get_args();
+		switch ($num) {
+			case 0:
+				$this -> typeCarburant="Type de carburant inconnu";
+				$this -> nbrePortes="Nb inconnu de portes";
+				break;
+
+			case 2:
+				$this -> typeCarburant=$args[0];
+				$this -> nbrePortes=$args[1];
+				break;
+			
+			default:
+				echo "ERROR";
+				break;
+		}
+	}
+}
+	// 	Permet d'afficher le nb de portes et le type de carburants.
+			function Affichage(){
+				parent::Affichage();
+		echo"<font color=red>Type de carburant : ".$this->typeCarburant."<br>";
+		echo"Nombre de portes : ".$this->nbPorte."</font><br>";
+	}//Fin de la méthode
+	
+}//Fin de la classe Voiture 
+
+
+class Train{
+	var $type;
+	var $nbreWagons;
+
+	function __construct(){
+		$num=func_num_args();
+		$args=func_get_args();
+		switch ($num) {
+			case 0:
+				$this -> type="Type inconnu";
+				$this -> nbreWagons="Nombre inconnu";
+				break;
+
+			case 2:
+				$this -> type=$args[0];
+				$this -> nbreWagons=$args[1];
+				break;
+			
+			default:
+				echo "ERROR";
+				break;
+		}
+	
+	}
+
+	       // méthode affichant le type de train et le nombre de wagon
+			function Affichage(){
+			Vehicule::Affichage();
+		echo"<font color=green>Type de train : ".$this->type."<br>";
+		echo"Nombre de wagons : ".$this->nbrewagon."</font><br>";
+		//Fin de la méthode
+		
+	}
+}//Fin de la classe Train
+
+// Implémenter les classes
+
+
+$premierevoiture=new Voiture('Essence',5); //1er essai, avec paramètres
+$premierevoiture -> afficher1();
+
+$premiertrain=new Train('TGV',20); //1er essai, avec paramètres
+$premiertrain -> afficher2();
+
+
+// Exercice 4
+
+$tab_Vehicule= array();  //Créer un tableau
+
+//création des objets à mettre dans le tableau
+
+$myObject=new Voiture(); //1er objet de Voiture, sans paramètre
+array_push($tab_Vehicule, $myObject);
+
+$premierevoiture=new Voiture("Essence",5); //On met un deuxieme objet avec paramètre
+array_push($tab_Vehicule, $premierevoiture);
+
+$deuxiemevoiture=new Voiture("Diesel",3); //On met un troisième objet avec paramètre
+array_push($tab_Vehicule, $deuxiemevoiture);
+
+$myTrain=new Train(); //1er objet de Train, sans paramètres
+array_push($tab_Vehicule, $myTrain);
+
+$premiertrain= new Train("TGV",20); //
+array_push($tab_Vehicule, $premiertrain);
+
+$deuxiemetrain= new Train("TER",9); //
+array_push($tab_Vehicule, $deuxiemetrain);
+
+$myObjet=new Vehicule(); //1er objet de Vehicule, sans paramètre
+array_push($tab_Vehicule, $myObjet); 
+
+$premiervehicule= new Vehicule("Espace","Blanche",13000,37,0); //
+array_push($tab_Vehicule, $premiervehicule);
+
+$deuxiemevehicule=new Vehicule("Lancia","rouge",17600,43,1); //
+array_push($tab_Vehicule,$deuxiemevehicule);
+
+echo "<br><br>";
+for ($i=0;$i<count($tab_Vehicule);$i++){ 
+	$tab_Vehicule[$i]->afficher();
+}
+
+
+
+?>

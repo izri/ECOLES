@@ -1,0 +1,37 @@
+H1{color : #CF18E1;
+margin-left : 100px;}
+
+FORM{ color : black;
+border : 5px solid #CF18E1;
+border-radius : 15px;
+margin-left : 100px;
+width: 600px;
+padding : 10px;
+ }
+ 
+ INPUT[type=submit]{border : 1px solid;
+ line-height:1em;
+ margin-bottom:1em;
+ width : 150px;
+ color : black;
+ padding : 1px;
+ }
+ 
+ LABEL{ color : black;
+ margin-right : 50px;
+ text-align : center;
+ padding : 1px;}
+ 
+ FIELDSET{
+ margin-left : 140px;
+ border : 1px solid;
+ width : 200px;
+ text-align : left;
+ }
+ 
+ TABLE{
+ margin-left : 10px;
+ border : 1px;
+ text-align : left;
+ padding-left: 10px;
+ }

@@ -1,0 +1,74 @@
+form{
+	border: solid fuchsia 4px;
+	border-radius: 12px;
+	width: 40%;
+	margin: auto;
+}
+
+h1{ color:fuchsia;
+width:51%;
+margin:auto;}
+h2{color:black;
+margin-left:30px;
+width:40%;}
+
+fieldset[type=contact]
+{
+	width:90%;
+	margin:auto;
+	vertical-align: top;
+	border:none;
+	border-bottom: solid grey 1px;
+
+}
+
+fieldset[type=civilite]
+{
+	width:49.5%;
+	margin-left:144px;
+	height:60px;
+	border-radius:8px;
+	
+}
+
+fieldset[type=paiement]
+{  width:90%;
+	margin:auto;
+	vertical-align: top;
+	border:none;
+	border-bottom:solid grey 1px;}
+
+	label[type=text]{
+		display:block;
+	width:140px;
+	float:left;
+	text-align:right;
+	
+}
+
+input[type=submit]
+{	
+	margin-left:144px;}
+input[type=text]{
+	width:52%;	
+	margin-left:4px;
+}
+input[type=number]{
+	width:52%;	
+	margin-left:4px;
+}
+
+input[type=email]{
+	width:52%;	
+	margin-left:4px;
+}
+
+select{
+	width:25%;	
+	margin-left:4px;
+}
+
+p[type=base]{
+	margin-left: 30px;
+}
+

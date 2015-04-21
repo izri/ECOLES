@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+	<meta charset ="character_set">
+	<link href="TD 3.css" rel="stylesheet" style = "text/css" />
+	<title> TD_3 </title>
+</head>
+
+<body>
+<h1> Formulaire de Paiement </h1>
+	<div id="menu">
+		<p id ="titre"> Les champs obligatoires sont suivis par *. </p>
+			<h2> Informations de contact </h2>
+				<form method="post" action="traitement.php">
+		
+		<fieldset>
+			<legend>Civilité</legend>
+		<p>
+	<br />
+		<input type="radio" name="civilité" value="monsieur" id="monsieur" />
+		 <label for="medium15-25">Monsieur</label><br />
+		<input type="radio" name="civilité" value="madame" id="madame" />
+		 <label for="moins15">Madame </label><br />
+		</p>
+		</fieldset>
+
+	<div id ="nc">
+		<p><label for="Nom"> Nom:</label>	
+		<input type="text" required= "required"/>*</p>
+	</div>
+
+	<div>
+		<p><label for="Courriel"> Courriel:</label>
+		<input type="email" required = "required"/>*</p>
+	</div>
+
+	<hr></hr>
+
+<h2> Informations de paiement </h2>
+<label>     Type de carte : </label>
+    <select name="Visa">
+      <option value="Carte Bancaire">Carte Bancaire</option>
+      <option value="Visa">Visa</option>
+      <option value="MasterCard">MasterCard</option>
+	  <option value="American Express">American Express</option>
+    </select>
+	<div>
+		<p><label for="Numéro de carte"> Numéro de carte:</label>
+		<input type="text" value = " " required ="required" /><em><font size =2 > <it>*en 16 chiffres </font></it> </em></p>
+	</div>
+
+	<div>
+		<p><label for="Date d'expiration"> Date d'expiration:</label>
+		<input type="text" value = "" required="required" /><em><font size =2 > <it>* au format mm/aa </font></it></p>
+	</div>
+	<div>
+		<input type="submit" value= "Confirmer le paiement" />
+	<br/>
+	</div>
+	<br/>
+			</form>
+</body>
+</html>

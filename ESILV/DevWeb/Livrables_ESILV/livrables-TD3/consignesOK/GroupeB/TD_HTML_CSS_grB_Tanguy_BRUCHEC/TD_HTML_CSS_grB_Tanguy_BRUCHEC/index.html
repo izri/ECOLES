@@ -1,0 +1,83 @@
+<html lang="fr">
+
+<head>
+
+	<meta charset="character_set">
+	<title> Formulaire de paiement </title>
+	<link href="styleindex.css" rel="stylesheet" type="text/css" />
+	
+</head>
+
+<body>
+	<h1> Formulaire de paiement </h1>
+	
+	<form action="URL", method="post">
+	
+		<div>
+		<p>Les champs obligatoires sont suivis par *.</p>
+		</div>
+		
+		<div>
+		<h2>Informations de contact</h2>
+		</div>
+		
+		<div>
+		<fieldset> 
+		<legend> Civilité </legend>
+		<input type="radio" name="sexe" value="Monsieur" id="Monsieur"><label for="civ"> Monsieur </label></input> 
+		<br>
+		<input type="radio" name="sexe" value="Madame" id="Madame"><label for="civ"> Madame </label></input> 
+		</fieldset>
+		</div>
+		<br>
+	
+		<div>
+		<label for="nom"> Nom : </label>
+		<input type="text" value="Nom par défaut" id="n" required> * </input>
+		</div>
+		<br>
+		
+		<div>
+		<label for="email"> Email : </label>
+		<input type="email" value="prenom.nom@email.com" id="em" required> * </input>
+		</div>
+		<br>
+		
+		<hr>
+		
+		<div>
+		<h2> Informations de paiement </h2>
+		</div>
+		
+		<div>
+		<label for="typecarte"> Type de carte : </label>
+		<select name="typecarte" id="typecarte">
+		<option value="visa"> Visa </option>
+		<option value="cb"> CB </option>
+		<option value="mc"> MasterCard </option>
+		<option value="am"> American Express </option>
+		</select>
+		</div>
+		<br>
+		
+		<div>
+		<label for="numcarte"> Numéro de carte : </label>
+		<input id="texte" required> * <em> en 16 chiffres </em> </input>
+		</div>
+		<br>
+		
+		<div>
+		<label for="dateexp"> Date d'expiration : </label>
+		<input id="texte" required> * <em> au format mm/aa </em> </input>
+		</div>
+		<br>
+		
+		<div>
+		<button type="submit" id="button"> Confirmer le paiement </button>
+		</div>
+	
+	</form>
+
+</body>
+
+</html>

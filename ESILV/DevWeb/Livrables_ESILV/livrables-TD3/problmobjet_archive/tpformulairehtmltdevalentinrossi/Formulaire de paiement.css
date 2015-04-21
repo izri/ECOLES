@@ -1,0 +1,12 @@
+*{font-family: cursive}
+h1{color:#5FB404;margin-left: 50px; }
+h2{margin-left: 20px}
+p{margin-left: 20px; color:red;}
+legend{margin-left: 5px;}
+.cadre{border:3px #5FB404 solid; width:600px; border-radius:10px; margin-left: 30px}
+label{margin-left:30px; display: inline-block; width:150px; text-align: right;}
+fieldset{width: 220px; text-align: left;display:block; margin-left: 135px; border-radius:10px}
+.taille{width: 250px;}
+body{margin-left: 300px;}
+select{width: 150px; display: inline-block; margin-left: -5px}
+.confirmer{margin-left: 180px;}

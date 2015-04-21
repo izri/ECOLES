@@ -1,0 +1,63 @@
+<!DOCTYPE HTML SYSTEM>
+<HTML>
+	<head>
+		<meta charset ="utf-8">
+		<link href = 'Formulairepaiement.css' rel="stylesheet" type="text/css" href="">
+		<title>Formulaire de paiement </title>
+	</head>
+
+	<body>
+		<h1>Formulaire de paiement</h1>
+
+		
+
+
+
+		<form method="post" >
+			<p>Les champs obligatoires sont suivis par *.</p>
+
+			<h2>Informations de contact</h2>
+
+			<fieldset>
+			<legend>Civilité</legend>
+			<input type="radio" id="nom1" name="civilité" value="monsieur">Monsieur <br>
+			<input type="radio" id="nom2" name="civilité" value="madame">Madame
+		</fieldset>
+
+			<p>
+			<label>Nom : </label> <input type="text" required="required" />  *
+		</p>
+		<p>
+			<label for="email">Courriel : </label> <input type="email" name="email" id="email" required="required" /> *
+		</p>
+
+		<hr>
+
+
+		<h2>Informations de paiement</h2>
+		
+
+
+		<p><label for="carte">Type de carte : </label>
+			<select name="carte">
+				<option value="visa">Visa</option>
+				<option value="American Express">American Express</option>
+			 </select>
+		</p>
+		<p>
+		<label for="numéro"> Numéro de carte : </label><input type="text" required="required" maxlength="16" >* en 16 chiffres
+		</p>
+
+		<p>
+			<label for="date">Date d'expiration : </label><input type="text" required="required" >* au format mm/aa
+		</p>
+
+		<p>
+			<button type="submit" value="Confirmer votre paiement">Confirmer votre paiement</button>
+		</p>
+
+	</form>
+
+
+	</body>
+</HTML>

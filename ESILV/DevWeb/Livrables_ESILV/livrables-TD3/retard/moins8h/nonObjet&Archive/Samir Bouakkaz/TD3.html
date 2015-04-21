@@ -1,0 +1,136 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <link href="TD3.css" rel="stylesheet" type ="text/css"/>
+
+  </head>
+
+
+
+  <h1> Formulaire de paiement </h1>
+
+  
+<form action="test.php" method="post">
+
+
+<body>
+
+
+
+<tr>
+<td>
+Les champs obligatoires sont suivis par *.
+</td>
+</tr>
+
+
+<h2>Information de contact </h2>
+
+
+<table>
+
+
+
+
+<tr>
+<td>
+</td>
+<td>
+<fieldset>
+<legend> Civilité </legend>
+<input type="radio" name="civilité" id="civilité"> <label for="civilité"> Monsieur </label>
+<br>
+<input type="radio" name="civilité" id="civilité"> <label for="civilité"> Madame </label>
+</br>
+</fieldset>
+</td>
+</tr>
+
+ 
+<tr>
+<td> 
+<label for="name"> Nom: </label>
+</td>
+<td>
+<input type="text" id="nom">
+</td>
+<td>*</td>
+</tr>
+
+<tr>
+<td>  
+<label for="courriel"> Courriel: </label>
+</td>
+<td>
+<input type="text" id="nom">
+</td>
+<td>*</td>
+</tr> 
+
+</table>
+  
+  
+  
+<hr>  
+  
+
+
+<h2> Informations de paiement </h2>
+
+<table>
+
+
+
+<tr>
+<td>
+<label for="type_carte"> Type de carte: </label>
+</td>
+<td>
+<input list="type_carte" />
+<datalist id="type_carte">
+<option value="Visa">
+<option value="Mastercard">
+<option value="Amercian Express">
+</datalist>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="numéro_carte"> Numéro de carte: </label>
+</td>
+<td>
+<input type="text" id="numéro_carte">
+</td>
+<td> * en 16 chiffres</td>
+</tr>
+
+<tr>
+<td>
+<label for="date_expiration"> Date d'expirtion: </label>
+</td>
+<td>
+<input type="text" id="date_expiration">
+</td>
+<td>* au format mm/aa</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+<br>
+<button type="submit" id="boutton"> Confirmer le paiement </button>
+</br>
+</td>
+</tr>
+
+</table>
+
+</body>
+
+</form>
+
+</html>

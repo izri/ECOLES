@@ -1,0 +1,77 @@
+H1 { color:#FF00FF }
+HR { margin-left:10px; margin-right:10px; }
+H3.titre, P.info { margin-left:1em; }
+FORM 
+{ 
+	border:5px solid #FF00FF;
+	border-radius:20px;
+	width:600px;
+}
+FIELDSET#contact, FIELDSET#paiement
+{
+    border:none;
+	padding-top:1px;	
+    margin-bottom:1px;
+    width:30em;			
+}
+INPUT[type="text"].neutre, SELECT
+{
+	font:1em "Calibri";
+    margin-left:140px;
+    line-height:1em;
+    margin-bottom:1em;
+}
+INPUT[type="text"].ok
+{
+	font:1em "Calibri";
+	background:#00FF00;
+    margin-left:140px;
+    line-height:1em;
+    margin-bottom:1em;
+}
+INPUT[type="text"].nok
+{
+	font:1em "Calibri";
+	background:#FF0000;
+    margin-left:140px;
+    line-height:1em;
+    margin-bottom:1em;
+}
+#civilite
+{
+	margin-left:140px;
+	border:1px solid;
+	width:190px;
+}
+#civilite LABEL
+{
+	border:none;
+	background:white;
+	font:1em "Calibri";
+    position:relative;
+	margin-left:10px;
+	bottom:10px;	
+}
+INPUT[type="radio"]
+{
+	font:1em "Calibri";
+    margin-left:10px;
+    line-height:1em;
+    margin-bottom:.2em;
+}
+LABEL
+{
+	font:1em "Calibri";
+    position:absolute;
+	width:120px;
+    padding-top:.2em;
+	text-align:right;
+}
+INPUT[type="submit"]
+{
+	font:1em "Calibri";
+    margin-left:154px;
+    line-height:1em;
+    margin-bottom:1em;
+	width:190px;
+}

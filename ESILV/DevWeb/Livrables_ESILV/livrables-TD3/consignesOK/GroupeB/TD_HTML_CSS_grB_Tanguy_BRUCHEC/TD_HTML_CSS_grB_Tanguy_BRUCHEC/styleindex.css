@@ -1,0 +1,58 @@
+h1
+{
+color : #EDAE01;
+margin-left : 23%;
+}
+
+input[id=texte], input[type=text], input[type=email]
+{
+width : 300px;
+}
+
+label
+{
+color : #2F007F;
+margin-right : auto;
+width : 20%;
+text-align : right;
+display : inline-block;
+}
+
+label[for="civ"]
+{
+color : #2F007F;
+margin-right : auto;
+width : 30%;
+text-align : left;
+display : inline-block;
+}
+
+fieldset
+{
+margin-left : 20.5%;
+width : 275px;
+text-align : left;
+}
+
+form
+{
+border : 6px solid #2F007F;
+border-collapse : collapse;
+border-radius : 20px;
+margin : auto;
+width : 50%;
+padding : 20px;
+}
+
+button
+{
+color : #2F007F;
+margin-left : 20.5%;
+width : 25%;
+}
+
+button:hover
+{   
+     text-decoration : underline;
+	 background-color: #EDAE01;
+}

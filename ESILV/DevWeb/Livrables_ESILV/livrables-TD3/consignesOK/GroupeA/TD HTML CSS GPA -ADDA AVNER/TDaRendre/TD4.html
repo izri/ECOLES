@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link href= 'FormulaireDePaiement.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<h1> Formulaire de paiement </h1>
+		<form>
+			<p class="centre"> Les champs obligatoires sont suivis par * </p> 
+			<h2 class="centre"> Informations de contact </h2>
+				<fieldset>
+						<legend>Civilité</legend>
+								<input type="radio" name="sexe" value="Mr" id="Mr" /> <label for="Mr">Monsieur</label><br />
+								<input type="radio" name="sexe" value="Mme" id="Mme" /> <label for="Mme">Madame</label><br />
+				</fieldset>
+				<br>
+					<label for=nom class="info">Nom : </label>
+					<input id=Text1 name=nom type=text placeholder="Dupont" required autofocus class="blanc"> *
+				</br>
+				<br>
+					<label for=email class="info"> Couriel : </label>
+					<input id=Text2 name=email type=email placeholder="Ex. exemple@domaine.com" required autofocus class="blanc" > *
+				</br>
+				<HR size=1 color = black ></HR>
+		<h2 class="centre"> Informations de paiement </h2>
+                <br>
+                    <label for="pays" class="type"> Type de carte : 
+                    <select name="pays" id="pays">
+							<option value="VISA">VISA</option>
+							<option value="AMEX">AmericanExpress</option>
+							<option value="MC">MasterCard</option>
+					</select>
+					</label>
+				</br>
+                <br>
+                    <label for=nom class="info">Numero de texte : </label>
+					<input id=Text3 name=nom1 type=text placeholder="Ex. 1234 5678 9101 1121" required autofocus size="19" class="blanc"><i> * en 16 chiffres </i> 
+				</br>
+				<br>
+					<label for=nom class="info">Date d'expiration :</label>
+					<input id=Text4 name=nom1 type=text placeholder="Ex. 02/15" required autofocus size="5" class="blanc"><i> * en format mm/aa </i>
+				</br>
+				<p style="margin-left: 25%;"><input type="submit" value="Confirmer le paiement"></p>
+		</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+*{
+	font-family: Segoe Print, Verdana, Arial, Serif;
+} 	/* police */
+html {
+	height: 100%;
+	width:100%;
+}	/* la zone html est sur toute la page */
+body{
+	width: 100%;
+	font-size: 12px;
+	margin-left: 400px; /* décalage du corps */
+} 
+.titre{
+	color: #f3f;
+}	/* référence à la class titre */
+#block{
+	margin-top: 10px;
+}	/* espace de 10px entre les blocks */
+.taille{
+	width: 275px;
+}	/* dimension des inputs */
+label{
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}	/* position du label */
+form{
+	width: 590px;
+	padding: 10px;
+	border: 5px solid #f3f;
+	border-radius: 20px;
+} 	/* cadre autour du texte */
+#contact{
+	margin: auto;
+	width: 280px;
+}	/* position du cadre */

@@ -1,0 +1,84 @@
+
+html 
+{
+
+   font-size: 16px;
+
+   font-family: 'Roboto', sans-serif;
+
+		                       }
+		
+		
+h3 {
+
+         text-align: left;
+
+                                   }
+	
+h2 {
+
+         font-family: Times New Roman;
+         text-align: center;
+         color : magenta;
+
+                                   }
+			
+h6 {
+
+         text-align: left;
+
+                                   }
+		
+		
+form
+ {
+
+   margin: 0;
+
+   padding: 1%;
+
+   position: fixed;
+
+   top: 12%;
+   right: 0;
+   left: 30%;
+
+   width: 40%;
+
+   height: auto;
+   border: 3px solid magenta;
+
+   border-radius: 10px;
+		       }
+	
+	
+/* Stylisation des champs a remplir*/
+
+input[type='text'],input[type='mail'], input[type='number']
+ {
+
+    outline: none;
+	           }
+
+
+		
+#civ 
+{
+			
+   border : 1px solid grey;
+
+   width: 55%;
+
+   position: relative;
+
+   top: 0; 
+   right: 0; 
+   left: 20%;
+
+   margin: 0;
+
+   padding: 1%;
+
+	          }
+		
+	
