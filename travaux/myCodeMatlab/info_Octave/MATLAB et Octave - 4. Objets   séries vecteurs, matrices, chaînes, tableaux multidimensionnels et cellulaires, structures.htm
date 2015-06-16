@@ -1,0 +1,2092 @@
+
+<!-- saved from url=(0050)http://enacit1.epfl.ch/cours_matlab/matrices.shtml -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>MATLAB et Octave - 4. Objets : séries/vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures</title>
+  <meta name="description" content="Cours d&#39;introduction à MATLAB et Octave, par J.-D. Bonjour (ENAC-IT1, SSIE, EPFL, CH-1015 Lausanne)">
+  <meta name="keywords" content="MATLAB, Octave, introduction, primer, aide-mémoire, référence, cours, didacticiel, tutoriel, exercices">
+  <link rel="stylesheet" href="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/style_sheet.css" type="text/css">
+  <script type="text/javascript" language="JavaScript" src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/utilities.js"></script><style type="text/css"></style>
+</head>
+<body bgcolor="white">
+
+<center><table border="0" class="noborder"><tbody><tr>
+  <td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/matlab_logo.gif"></td>
+  <td class="titre"><h1>4. Objets : séries/vecteurs, matrices, chaînes,<br>tableaux multidimensionnels et cellulaires, structures</h1></td>
+  <td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/octave_logo.gif"></td>
+</tr></tbody></table></center>
+
+
+<a name="series"></a>
+<h2>4.1 Séries (ranges)</h2>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> L'opérateur MATLAB/Octave <tt>:</tt> (deux points, en anglais "colon") est très important. <!-- Il est décrit sous <IMG SRC=m.gif><TT>helpwin colon</TT>. --> Outre l'adressage des éléments d'un tableau, il permet de construire des <b>séries linéaires</b> sous la forme de vecteurs ligne. On peut utiliser à cet effet soit l'opérateur <tt>:</tt> soit la fonction équivalente <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>colon</tt> :
+
+</p><dl>
+
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>début</i>:<i>fin</i></tt> &nbsp; ou &nbsp;
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>colon(<i>début</i>,<i>fin</i>)</tt>
+	</dt><dd>Crée une série numérique <b>linéaire</b> débutant par la valeur <i>début</i>, autoincrémentée de "1" et se terminant par la valeur <i>fin</i>. Il s'agit donc d'un <b>vecteur ligne</b> de dimension 1xM où M=<i>fin</i>-<i>début</i>+1. Si <i>fin</i>&lt;<i>début</i>, crée une série vide (vecteur de dimension 1x0)<br>
+	<u>Ex</u>:
+		<ul>
+		<li><tt>1:5</tt> crée le vecteur ans=[1 2 3 4 5]
+		</li><li><tt>x=1.7:4.6</tt> crée le vecteur x=[1.7 2.7 3.7]
+		</li></ul>
+		
+</dd><dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>début</i>:<i>pas</i>:<i>fin</i></tt> &nbsp; ou &nbsp;
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>colon(<i>début</i>,<i>pas</i>,<i>fin</i>)</tt>
+	</dt><dd>Crée une série numérique <b>linéaire</b> (vecteur ligne) débutant par la valeur <i>début</i>, incrémentée ou décrémentée du <i>pas</i> spécifié et se terminant par la valeur <i>fin</i>. Crée une série vide (vecteur de dimension 1x0) si <i>fin</i>&lt;<i>début</i> et que le <i>pas</i> est positif, ou si <i>fin</i>&gt;<i>début</i> et que le <i>pas</i> est négatif<br>
+	<u>Ex</u>:
+		<ul>
+		<li><tt>-4:-2:-11.7</tt> retourne le vecteur ans=[-4 -6 -8 -10]
+		</li><li><tt>x=0:0.5:2*pi</tt> crée x=[0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0]
+		</li></ul>
+
+</dd></dl>
+
+<p>
+Lorsqu'on connait la valeur de <i>début</i>, la valeur de <i>fin</i> et que l'on souhaite générer des séries <b>linéaires</b> ou <b>logarithmique</b> de <i>nbval</i> valeurs, on peut utiliser les fonctions suivantes :
+
+</p><dl>
+
+<dt><i>série</i> = <tt>linspace(<i>début</i>,<i>fin</i> {,<i>nbval</i>})</tt>
+	</dt><dd>Crée une <i>série</i> (vecteur ligne) de <i>nbval</i> éléments <b>linéairement</b> espacés de la valeur <i>début</i> jusqu'à la valeur <i>fin</i>. Si l'on omet le paramètre <i>nbval</i>, c'est une série de <b>100</b> éléments qui est créée<br>
+	<u>Ex</u>: <tt>v=linspace(0,-5,11)</tt> crée v=[0.0 -0.5 -1.0 -1.5 -2.0 -2.5 -3.0 -3.5 -4.0 -4.5 -5.0]
+
+</dd><dt><i>série</i> = <tt>logspace(<i>début</i>,<i>fin</i> {,<i>nbval</i>})</tt>
+	</dt><dd>Crée une <i>série</i> <b>logarithmique</b> (vecteur ligne) de <i>nbval</i> éléments, débutant par la valeur 10<sup><i>début</i></sup> et se terminant par la valeur 10<sup><i>fin</i></sup>. Si l'on omet le paramètre <i>nbval</i>, c'est une série de <b>50</b> éléments qui est créée<br>
+	<u>Ex</u>: <tt>x=logspace(2,6,5)</tt> crée x=[100 1000 10000 100000 1000000]
+
+</dd></dl>
+
+<br><br>
+
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> Sous Octave depuis la version 3, définir une série avec la syntaxe <tt><i>début</i>:<i>pas</i>:<i>fin</i></tt> (plutôt qu'avec <tt>linspace</tt>) est particulièrement <b>intéressant au niveau utilisation mémoire</b> ! En effet, quelle que soit la taille de la série qui en découle, celle-ci n'occupera en mémoire que 24 octets (c'est-à-dire l'espace de stockage nécessaire pour stocker en double précision les 3 valeurs définissant la série) ! <br>
+   &nbsp; &nbsp; &nbsp; <u>Ex</u>: <tt>s1=0:10/99:10;</tt> et <tt>s1=linspace(0,10,100);</tt> sont fonctionellement identiques, mais : <br>
+   &nbsp; &nbsp; &nbsp; - sous MATLAB 7.x : les variables <tt>s1</tt> et <tt>s2</tt> consomment toutes deux 800 octets (100 réels double précision) <br>
+   &nbsp; &nbsp; &nbsp; - alors que sous Octave 3.x : <tt>s2</tt> consomme aussi 800 octets, mais <tt>s1</tt> ne consomme que 24 octets !!! <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; noter cependant que, selon son usage, cette série est susceptible d'occuper aussi 800 octets (p.ex. <tt>s1'</tt> ou <tt>s1*3</tt>)
+
+
+
+
+<br><br>
+
+Pour construire des séries d'un autre type (géométrique, etc...), il faudra réaliser des boucles <tt>for</tt> ou <tt>while</tt>... (voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/mfiles.shtml#structures_controle">Structures de contrôle</a>").
+
+
+
+
+
+<a name="vecteurs"></a>
+<h2>4.2 Vecteurs (ligne ou colonne)</h2>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Comme on l'a dit en ce qui concerne les variables scalaires, MATLAB/Octave ne fait pas vraiment de différence entre une matrice, un vecteur et un scalaire, étant donné que ces éléments peuvent être redimensionnés dynamiquement. Une variable de type <b>vecteur</b> n'est donc, en quelque sorte, qu'une matrice NxM dégénérée d'une seule ligne (1xM) ou une seule colonne (Nx1).
+</p><p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> ATTENTION: les <b>éléments</b> du vecteurs sont numérotés par des entiers <b>débutant</b> par <b>la valeur 1</b> (et non pas 0, comme dans d'autres langages de programmation).
+</p><p>
+On présente ci-dessous les principales techniques d'<b>affectation</b> de vecteurs (usage des crochets <tt>[ ]</tt> ) et d'<b>adressage</b> de ses éléments (usage des parenthèses <tt>( )</tt> ) :
+
+<br>
+<br>
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Syntaxe</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>vec</i>=<tt>[<i>val1</i> <i>val2</i> <i>val3</i> ...]</tt>
+	<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=<tt>[<i>val</i> <i>var</i> <i>expr</i> ...]</tt></p></td>
+	<td>
+  	Création d'un <b>vecteur ligne</b> <i>vec</i> contenant les valeurs <i>val</i>, variables <i>var</i>, ou expressions <i>expr</i> spécifiées. <br>
+    Celles-ci doivent être délimitées par des <tt>&lt;espace&gt;</tt>, <tt>&lt;tab&gt;</tt> ou <tt>,</tt> (virgules).
+  	<p>
+  	<u>Ex</u>: <tt>v1=[1 -4 5]</tt>, <tt>v2=[-3,sqrt(4)]</tt> et <tt>v3=[v2 v1 -3]</tt> retournent v3=[-3 2 1 -4 5 -3]
+	</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>vec</i>=<tt>[<i>val</i> ; <i>var</i> ; <i>expr</i> ...]</tt>
+	<p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=<tt>[<i>val1</i></tt> <br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <tt><i>val2</i></tt> <br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <tt><i>...</i> ]</tt>
+	</p><p>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=<tt>[<i>var</i> <i>val</i> <i>var</i> <i>val</i> ...]'
+	</tt></p></td><td>
+  	Création d'un <b>vecteur colonne</b> <i>vec</i> contenant les valeurs <i>val</i> (ou variables <i>var</i>, ou expressions <i>expr</i>) spécifiées. <br>
+  	Celles-ci <b>doivent</b> être délimitées par des <tt>;</tt> (point-virgules) (1ère forme ci-contre) et/ou par la touche <tt>&lt;enter&gt;</tt> (2e forme).<br>
+  	La 3ème forme ci-contre consiste à définir un vecteur ligne et à le transposer avant de l'affecter à <i>vec</i>.
+  	<p>
+  	<u>Ex</u>:<br>
+  	• <tt>v4=[-3;5;2*pi]</tt>, <tt>v5=[11 ; v4]</tt>, <tt>v6=[3 4 5 6]'</tt> sont des vecteurs colonne valides<br>
+  	• mais <tt>v7=[v4 ; v1]</tt> provoque une erreur car on combine ici un vecteur colonne avec un vecteur ligne
+	</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>vec</i>'</tt></td>
+	<td><b>Transposée</b> du vecteur <i>vec</i>. Si <i>vec</i> était un vecteur ligne, il devient un vecteur colonne (ou vice-versa)</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>vec</i>=<tt><i>début</i>{:<i>pas</i>}:<i>fin</i></tt> ou<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>colon(<i>début</i>{,<i>pas</i>},<i>fin</i>)</tt></td>
+	<td>Initialisation d'un vecteur ligne <i>vec</i> à une <b>série linéaire</b> (voir chapitre sur les "Séries" ci-dessus)</td>
+</tr>
+
+<tr>
+	<td><i>vec</i>=<tt>linspace(<i>début</i>,<i>fin</i>{,<i>n</i>})</tt><br>
+	<i>var</i>=<tt>logspace(<i>début</i>,<i>fin</i>{,<i>n</i>})</tt></td>
+	<td>Initialisation d'un vecteur ligne <i>vec</i> à une série <b>linéaire</b>,<br>
+	respectivement <b>logarithmique</b> (voir chapitre sur les "Séries" ci-dessus)</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>vec</i>(<i>i</i>)</tt></td>
+	<td>Désigne le <i>i</i>-ème élément du vecteur ligne ou colonne <i>vec</i>
+	<p>
+	<u>Ex</u>: <tt>v3(2)</tt> retourne la valeur "2", et <tt>v4(2)</tt> retourne "5"</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>vec</i>(<i>i</i>{:<i>p</i>}:<i>j</i>)</tt></td>
+	<td>
+  	Adressage des éléments d'indice <i>i</i> à <i>j</i> du vecteur ligne ou colonne <i>vec</i> avec un pas de "1" ou de "<i>p</i>" si spécifié (construction faisant usage des "séries" présentées ci-dessus !). Si <i>vec</i> est un vecteur ligne, le résultat retourné sera un vecteur ligne ; respectivement si <i>vec</i> est un vecteur colonne, le résultat retourné sera un vecteur colonne.<br>
+  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Pour l'indice <i>j</i> on peut utiliser la valeur <tt>end</tt> qui désigne le <b>dernier élément</b> du vecteur.
+    <p>
+  	<u>Ex</u>:<br>
+  	• <tt>v4(2:end)</tt> retourne un vecteur colonne contenant la 2e jusqu'à la dernière valeur de v4, c'est-à-dire dans le cas présent [5;6.28]<br>
+  	• <tt>v3(2:2:6)</tt> retourne un vecteur ligne contenant la 2e, 4e et 6e valeur de v3, c'est-à-dire [2 -4 -3]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt><i>vec</i>([<i>i</i> <i>j</i> <i>k</i>:<i>l</i>])</tt></td>
+	<td>La notation d'indices entre crochets <tt>[]</tt> permet de désigner un ensemble continu ou discontinu d'éléments. Dans le cas ci-contre, on désigne les éléments <i>i</i>, <i>j</i> et <i>k</i> à <i>l</i>.
+	</td>
+</tr>
+
+<tr>
+	<td><tt><i>vec</i>(<i>i</i> { {:p} :<i>j</i>} )=<i>val</i></tt></td>
+	<td>Soit le vecteur <i>vec</i> (ligne ou colonne) de <i>n</i> éléments : l'instruction ci-contre, si <i>i</i>&gt;<i>n</i> et <i>j</i>&gt;<i>n</i>, étend la <b>taille</b> du vecteur à <i>i</i> ou <i>j</i> éléments en affectant aux <i>i</i>-ème à <i>j</i>-ème éléments la valeur <i>val</i> spécifiée, et aux autres nouveaux éléments créés la valeur "0"
+	<p>
+	<u>Ex</u>: si <tt>v8=[1 2 3]</tt>, alors <tt>v8(6:2:10)=44</tt> étend v8 qui devient [1 2 3 0 0 44 0 44 0 44]</p></td>
+</tr>
+
+<tr>
+	<td><pre>for k=<i>i</i>{:<i>p</i>}:<i>j</i>
+  <i>vec</i>(k)=<i>expression</i>
+end</pre></td>
+	<td>Initialise les éléments (spécifiés par la série <i>i</i>{:<i>p</i>}:<i>j</i>) du vecteur ligne <i>vec</i> par l'<i>expression</i> spécifiée
+	<p>
+	<u>Ex</u>: <tt>for i=2:2:6, v9(i)=i^2, end</tt> crée le vecteur v9=[0 4 0 16 0 36] (les éléments d'indice 1, 3 et 5 n'étant pas définis, ils sont automatiquement initialisés à 0)</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>vec</i>(<i>i</i>:<i>j</i>)=[]</tt><br>
+	  ou <tt><i>vec</i>([<i>k</i> <i>l</i> <i>m</i>])=[]</tt><br>
+	  ou combinaison de ces 2 notations...
+	</td>
+	<td>
+	  <b>Destruction</b> des éléments <i>i</i> à <i>j</i> du vecteur <i>vec</i> (qui est redimensionné en conséquence),<br>
+	  respectivement destruction des <i>k</i>-ème <i>l</i>-ème et <i>m</i>-ème éléments
+	  <p>
+	  <u>Ex</u>: soit <tt>v10=(11:20)</tt><br>
+	  • l'instruction <tt>v10(4:end)=[]</tt> (ou <tt>v10(4:length(v10))=[]</tt>) redéfini v10 à [11 12 13]<br>
+	  • alors que <tt>v10([1 3:7 10])=[]</tt> redéfini v10 à [12 18 19]
+	</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>length(<i>vec</i>)</tt></td>
+	<td>Retourne la <b>taille</b> (nombre d'éléments) du vecteur ligne ou colonne <i>vec</i></td>
+</tr>
+
+</tbody></table></center><p>
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="matrices"></a>
+</p><h2>4.3 Matrices</h2>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Pour MATLAB/Octave, une <b>matrice</b> est un tableau rectangulaire à 2 dimensions de NxM éléments (N lignes et M colonnes) de types nombres réels ou complexes ou de caractères. La présentation ci-dessous des techniques d'<b>affectation</b> de matrices (usage des crochets <tt>[ ]</tt> ) et d'<b>adressage</b> de ses éléments (usage des parenthèses <tt>( )</tt> ) est donc simplement une généralisation à 2 dimensions de ce qui a été vu pour les vecteurs à 1 dimension (chapitre précédent). Il faut simplement savoir en outre que, pour adresser un élément d'une matrice, il faut spécifier son <b>numéro de ligne et de colonne</b> séparés par une "<tt>,</tt>" (virgule).
+</p><p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> ATTENTION: comme pour les vecteurs, les indices de ligne et de colonne sont des valeurs entières débutant par 1 (et non pas 0 comme dans d'autres langages).
+</p><p>
+On dispose en outre de fonctions d'initialisation spéciales liées aux matrices.
+
+<br>
+<br>
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="35%"><b>Syntaxe</b></td>
+	<td width="60%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>mat</i>=<tt>[<i>v11</i> <i>v12</i> ... <i>v1m</i> ;</tt><br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <tt><i>v21</i> <i>v22</i> ... <i>v2m</i> ;</tt><br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <tt><i>...</i> <i>...</i> ... <i>...</i> ;</tt><br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <tt><i>vn1</i> <i>vn2</i> ... <i>vnm</i> ]</tt></td>
+	<td>Définit une <b>matrice</b> <i>mat</i> de <i>n</i> lignes x <i>m</i> colonnes dont les éléments sont initialisés aux valeurs <i>vij</i>. Notez bien que les éléments d'une ligne sont séparés par des <tt>&lt;espace&gt;</tt>, <tt>&lt;tab&gt;</tt> ou <tt>,</tt> (virgules), et que les différentes lignes sont délimitées par des <tt>;</tt> (point-virgules) et/ou par la touche <tt>&lt;Enter&gt;</tt>. Il faut qu'il y aie exactement le même nombre de valeurs dans chaque ligne, sinon l'affectation échoue.
+	<p>
+	<u>Ex</u>: <tt>m1=[-2:0 ; 4 sqrt(9) 3]</tt> définit la matrice de 2 lignes x 3 colonnes avant pour valeurs [-2 -1 0 ; 4 3 3]</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>mat</i>=<tt>[<i>vco1</i> <i>vco2</i> ...]</tt><br>
+	ou <i>mat</i>=<tt>[<i>vli1</i> ; <i>vli2</i> ; ...]</tt></td>
+	<td>Construit la matrice <i>mat</i> par <b>concaténation de vecteurs</b> colonne <i>vcoi</i> ou de vecteurs ligne <i>vlii</i> spécifiés. Notez bien que les séparateurs entre les vecteurs colonne est l'<tt>&lt;espace&gt;</tt>, et celui entre les vecteurs ligne est le <tt>;</tt> ! L'affectation échoue si tous les vecteurs spécifiés n'ont pas la même dimension.
+	<p>
+	<u>Ex</u>: si <tt>v1=1:3:7</tt> et <tt>v2=9:-1:7</tt>, alors <tt>m2=[v2;v1]</tt> retourne la matrice [9 8 7 ; 1 4 7]</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>[<i>mat1</i> <i>mat2</i> {<i>mat3</i>...}]</tt> ou<br>
+      <tt>horzcat(<i>mat1</i>, <i>mat2</i> {,<i>mat3</i>...})</tt>
+      <p>&nbsp;respectivement:<br>
+	    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>[<i>mat4</i>; <i>mat5</i> {; <i>mat6</i>...}]</tt> ou<br>
+      <tt>vertcat(<i>mat1</i>, <i>mat2</i> {,<i>mat3</i>...})</tt>
+  </p></td>
+	<td><b>Concaténation de matrices</b> (ou vecteurs). Dans le premier cas, on concatène côte à côte (<b>horizontalement</b>) les matrices <i>mat1</i>, <i>mat2</i>, <i>mat3</i>... Dans le second, on concatène <b>verticalement</b> les matrices <i>mat4</i>, <i>mat5</i>, <i>mat6</i>... Attention aux dimensions qui doivent être cohérentes : dans le premier cas toutes les matrices doivent avoir le même nombre de lignes, et dans le second cas le même nombre de colonnes.
+	<p>
+	<u>Ex</u>: ajout devant la matrice m2 ci-dessus de la colonne <tt>v3=[44;55]</tt> : avec <tt>m2=[v3 m2]</tt> ou avec <tt>m2=horzcat(v3,m2)</tt>, ce qui donne m2=[44 9 8 7 ; 55 1 4 7]</p></td>
+</tr>
+
+<tr>
+	<td><tt>ones(<i>n</i>{,<i>m</i>})</tt></td>
+	<td>
+	  Renvoie une matrice de <i>n</i> lignes x <i>m</i> colonnes dont <b>tous les éléments</b> sont égaux à "1". Si <i>m</i> est omis, crée une matrice carrée de dimension <i>n</i>
+	  <p>
+	  <u>Ex</u>: <tt><i>c</i> * ones(<i>n</i>,<i>m</i>)</tt> renvoie une matrice <i>n</i> x <i>m</i> dont tous les éléments sont égaux à <i>c</i>
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>zeros(<i>n</i>{,<i>m</i>})</tt></td>
+	<td>Renvoie une matrice de <i>n</i> lignes x <i>m</i> colonnes dont <b>tous les éléments</b> sont égaux à "0". Si <i>m</i> est omis, crée une matrice carrée de dimension <i>n</i></td>
+</tr>
+
+<tr>
+	<td><tt>eye(<i>n</i>{,<i>m</i>})</tt></td>
+	<td>Renvoie une matrice <b>identité</b> de <i>n</i> lignes x <i>m</i> colonnes dont les éléments de la diagonale principale sont égaux à "1" et les autres éléments sont égaux à "0". Si <i>m</i> est omis, crée une matrice carrée de dimension <i>n</i></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>diag(<i>vec</i>)</tt>
+	  <p>
+	  <tt>diag(<i>mat</i>)</tt>
+	</p></td>
+	<td>
+	  Appliquée à un vecteur <i>vec</i> ligne ou colonne, cette fonction retourne une <b>matrice carrée</b> dont la <b>diagonale</b> principale porte les éléments du <b>vecteur</b> <i>vec</i> et les autres éléments sont égaux à "0"
+	  <p>
+	  Appliquée à une matrice <i>mat</i> (qui peut ne pas être carrée), cette fonction retourne un <b>vecteur-colonne</b> formé à partir des éléments de la diagonale de cette matrice
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+    &nbsp; <br>
+	  <tt><i>mat</i>(:)=<i>val</i></tt> <br>
+    <tt><i>mat</i>([i j k:l],:)=<i>val</i></tt>
+	</td>
+	<td>
+	  Si la matrice <i>mat</i> existe : <br>
+    - réinitialise tous les éléments de <i>mat</i> à la valeur <i>val</i> <br>
+    - réinitialise tous les éléments de la <i>i</i>-ème, <i>j</i>-ème et <i>k</i>-ème à <i>l</i>-ème lignes à la valeur <i>val</i>
+	</td>
+</tr>
+
+<tr>
+	<td><i>mat2</i>=<tt>repmat(<i>mat1</i>,<i>M</i>,<i>N</i>)</tt></td>
+	<td>
+	  Renvoie une matrice <i>mat2</i> formée à partir de la matrice <i>mat1</i> <b>dupliquée en "tuile"</b> <i>M</i> fois verticalement et <i>N</i> fois horizontalement
+	  <p>
+	  <u>Ex</u>: <tt>repmat(eye(2),1,2)</tt> retourne [1 0 1 0 ; 0 1 0 1]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt><i>mat</i>=[]</tt></td>
+	<td>Crée une matrice <b>vide</b> <i>mat</i> de dimension 0x0</td>
+</tr>
+
+<tr>
+	<td>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> [<i>n</i> <i>m</i>]=<tt>size(<i>var</i>)</tt> <br>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>taille</i>=<tt>size(<i>var</i>,<i>dimension</i>)</tt>
+    <p>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> <i>n</i>=<tt>rows(<i>mat_2d</i>)</tt><br>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> <i>m</i>=<tt>columns(<i>mat_2d</i>)</tt></p></td>
+  	<td>La première forme renvoie, sur un vecteur ligne, la <b>taille</b> (nombre <i>n</i> de <b>lignes</b> et nombre <i>m</i> de <b>colonnes</b>) de la matrice ou du vecteur <i>var</i>. La seconde forme renvoie la <i>taille</i> de <i>var</i> correspondant à la <i>dimension</i> spécifiée (<i>dimension</i>=<tt>1</tt>=&gt; nombre de lignes, <tt>2</tt>=&gt; nombre de colonnes).
+    <p>
+    Les fonctions <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>rows</tt> et <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>columns</tt> retournent respectivelement le nombre <i>n</i> de <b>lignes</b> et nombre <i>m</i> de <b>colonnes</b>.
+  	</p><p>
+  	<u>Ex</u>: <tt>mat2=eye(size(mat1))</tt> définit une matrice identité "mat2" de même dimension que la matrice "mat1"
+  </p></td>
+</tr>
+
+<tr>
+	<td><tt>length(<i>mat</i>)</tt></td>
+	<td>Appliquée à une matrice, cette fonction analyse le nombre de <b>lignes</b> et le nombre de <b>colonnes</b> puis retourne <b>le plus grand</b> de ces 2 nombres (donc identique à <tt>max(size(<i>mat</i>))</tt>). Cette fonction est par conséquent assez <b>dangereuse</b> à utiliser sur une matrice !</td>
+</tr>
+
+<tr>
+	<td><tt>numel(<i>mat</i>)</tt>   &nbsp; &nbsp; &nbsp;<i>(NUMber of ELements)</i></td>
+	<td>Retourne le nombre d'éléments du tableau <i>mat</i> (donc identique à <tt>prod(size(<i>mat</i>))</tt> ou <tt>length(<i>mat</i>(:))</tt>, mais un peu plus "lisible")</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>mat</i>(<i>i</i>,<i>j</i>)</tt></td>
+	<td>Désigne <b>l'élément</b> (<i>i</i>,<i>j</i>) de <i>mat</i>, donc retourne un scalaire</td>
+</tr>
+
+<tr>
+	<td>
+  	<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>mat</i>(<i>i</i>:<i>j</i>,<i>k</i>:<i>m</i>)</tt></td>
+  	<td>Désigne la <b>partie de la matrice</b> <i>mat</i> dont les éléments se trouvent dans les lignes <i>i</i> à <i>j</i> et dans les colonnes <i>k</i> à <i>m</i><br>
+  	<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Notez bien les <b>formes simplifiées</b> très courantes de cette notation pour désigner des <b>lignes</b> ou <b>colonnes entières</b> d'une matrice :<br>
+  	&nbsp; &nbsp; • <tt><i>mat</i>(<i>i</i>,:)</tt> : la ligne <i>i</i><br>
+  	&nbsp; &nbsp; • <tt><i>mat</i>(<i>i</i>:<i>j</i>,:)</tt> : les lignes <i>i</i> à <i>j</i><br>
+  	&nbsp; &nbsp; • <tt><i>mat</i>(:,<i>k</i>)</tt> : la colonne <i>k</i><br>
+  	&nbsp; &nbsp; • <tt><i>mat</i>(:,<i>k</i>:<i>m</i>)</tt> : les colonnes <i>k</i> à <i>m</i><br>
+	</td>
+</tr>
+
+<tr>
+	<td><tt><i>mat</i>([<i>lignes</i>],[<i>cols</i>])</tt></td>
+	<td>
+	  La notation d'indices entre crochets <tt>[]</tt> permet de désigner un <b>ensemble continu ou discontinu</b> de lignes et/ou de colonnes
+	  <p>
+	  <u>Ex 1</u>: si l'on a la matrice <tt>m3=[1:4; 5:8; 9:12; 13:16]</tt><br>
+	  - <tt>m3([2 4],1:3)</tt> retourne [5 6 7 ; 13 14 15]<br>
+	  - <tt>m3([1 4],[1 4])</tt> retourne [1 4 ; 13 16]<br>
+	  <u>Ex 2</u>: si l'on a une matrice A 10x10, une matrice B 5x10 et un vecteur-ligne y 1x20<br>
+	  - l'affectation <tt>A([1:3 9],:) = [B(1:3,:) ; y(1:10)]</tt> remplace les lignes 1 à 3 de la matrice A par les 3 premières lignes de B, et la 9ème ligne de A par les 10 premiers éléments de y
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt><i>mat</i>(<i>i</i>)</tt> et<br>
+	<tt><i>mat</i>(<i>i</i>:<i>j</i>)</tt></td>
+	<td>Lorsque l'on adresse une matrice à la façon d'un vecteur (en ne précisant qu'un indice <i>i</i> ou une série <i>i</i>:<i>j</i> pour cet indice), la recherche s'effectue en numérotant les éléments de la matrice <b>colonne après colonne</b>. La première forme retourne, sur un scalaire, le <i>i</i>-ème élément ; la seconde forme retourne, sur un vecteur ligne, les <i>i</i>-ème au <i>j</i>-ème éléments.
+	<p>
+	<u>Ex</u>: <tt>m3(3)</tt> retourne "9", et <tt>m3(7:9)</tt> retourne [10 14 3]</p></td>
+</tr>
+
+<tr>
+	<td><tt><i>mat</i>(:)</tt> </td>
+	<td>Retourne un <b>vecteur colonne</b> constitué des colonnes de la matrice (colonne après colonne).
+	<p>
+	<u>Ex</u>: si <tt>m4=[1 2;3 4]</tt>, alors <tt>m4(:)</tt> retourne [1 ; 3 ; 2 ; 4]</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>mat</i>(<i>i</i>:<i>j</i>,:)=[]</tt><br>
+	  et <tt><i>mat</i>(:,<i>k</i>:<i>m</i>)=[]</tt>
+	</td>
+	<td>
+	  <b>Destruction</b> de <b>lignes</b> ou de <b>colonnes</b> d'une matrice (et redimensionnement de la matrice en conséquence). La première expression supprime les lignes <i>i</i> à <i>j</i>, et la seconde supprime les colonnes <i>k</i> à <i>m</i>. Ce type d'opération ne permet de supprimer que des lignes entières ou des colonnes <b>entières</b>
+	  <p>
+	  <u>Ex</u>: en reprenant la matrice m3 ci-dessus, l'instruction <tt>m3([1 3:4],:)=[]</tt> réduit cette matrice à la seconde ligne [5 6 7 8]
+	</p></td>
+</tr>
+
+</tbody></table></center><p>
+
+
+On rapelle ici les fonctions <tt>load {-ascii} <i>fichier_texte</i></tt> et <tt>save -ascii <i>fichier_texte</i> <i>variable</i></tt> (décrites au chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/workspace.shtml#workspace">Workspace</a>") qui permettent d'initialiser une matrice à partir de valeurs numériques provenant d'un <i>fichier_texte</i>, et vice-versa.
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="operateurs"></a>
+</p><h2>4.4 Opérateurs matriciels</h2>
+
+
+<h3>4.4.1 Opérateurs arithmétiques sur vecteurs et matrices</h3>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> La facilité d'utilisation et la puissance de MATLAB/Octave proviennent en particulier de ce qu'il est possible d'exprimer des opérations matricielles de façon très naturelle en utilisant directement les opérateurs arithmétiques de base (déjà présentés au niveau scalaire au chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#operateurs">Opérateurs de base</a>"). Nous décrivons ci-dessous l'usage de ces opérateurs dans un contexte matriciel (voir aussi <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>helpwin arith</tt> et <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>helpwin slash</tt>, ainsi qu'une petite démonstration interactive des opérations matricielles élémentaires avec <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>matmanip</tt>).
+
+<br>
+<br>
+
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Opérateur ou fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>+</tt> ou fonction <tt>plus(<i>m1</i>,<i>m2</i>,...)</tt><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>-</tt> ou fonction <tt>minus</tt></td>
+	<td><b>Addition</b> et <b>soustraction</b>. Les 2 arguments doivent être des vecteurs ou matrices de même dimension, à moins que l'un des deux ne soit un scalaire auquel cas l'addition/soustraction applique le scalaire sur tous les éléments du vecteur ou de la matrice.
+	<p>
+	<u>Ex</u>: <tt>[2 3 4]-[-1 2 3]</tt> retourne [3 1 1], et <tt>[2 3 4]-1</tt> retourne [1 2 3]</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>*</tt> ou fonction <tt>mtimes(<i>m1</i>,<i>m2</i>,...)</tt></td>
+	<td>
+  	<b>Produit matriciel</b>. Le nombre de colonnes de l'argument de gauche doit être égal au nombre de lignes de l'argument de droite, à moins que l'un des deux arguments ne soit un scalaire auquel cas le produit applique le scalaire sur tous les éléments du vecteur ou de la matrice.
+  	<p>
+  	<u>Ex</u>:<br>
+  	• <tt>[1 2]*[3;4]</tt> ou <tt>[1 2]*[3 4]'</tt> produit le scalaire "11" (mais <tt>[1 2]*[3 4]</tt> retourne une erreur!)<br>
+  	• <tt>2*[3 4]</tt> ou <tt>[3 4]*2</tt> retournent [6 8]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>.*</tt> ou fonction <tt>times(<i>m1</i>,<i>m2</i>,...)</tt></td>
+	<td><b>Produit éléments par éléments</b>. Les 2 arguments doivent être des vecteurs ou matrices de même dimension, à moins que l'un des deux ne soit un scalaire (auquel cas c'est identique à l'opérateur <tt>*</tt>).
+	<p>
+	<u>Ex</u>: si <tt>m1=[1 2;4 6]</tt> et <tt>m2=[3 -1;5 3]</tt><br>
+	&nbsp; &nbsp; • <tt>m1.*m2</tt> retourne [3 -2 ; 20 18]<br>
+	&nbsp; &nbsp; • <tt>m1*m2</tt> retourne [13 5 ; 42 14]<br>
+	&nbsp; &nbsp; • <tt>m1*2</tt> ou <tt>m1.*2</tt> retournent [2 4 ; 8 12]</p></td>
+</tr>
+
+<tr>
+	<td><tt>kron</tt></td>
+	<td>Produit <b>tensoriel</b> de Kronecker</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>\</tt> ou fonction <tt>mldivide</tt></td>
+	<td><b>Division matricielle à gauche</b><br>
+	<tt>A\B</tt> est la solution "X" du système linaire "A*X=B". On peut distinguer 2 cas :
+	<ul>
+	<li>Si "A" est une matrice carrée NxN et "B" est un vecteur colonne Nx1, <tt>A\B</tt> est équivalent à <tt>inv(A)*B</tt> et il en résulte un vecteur "X" de dimension Nx1
+	</li><li>S'il y a surdétermination, c'est-à-dire que "A" est une matrice MxN où M&gt;N et B est un vecteur colonne de Mx1, l'opération <tt>A\B</tt> s'effectue alors selon les moindres carrés et il en résulte un vecteur "X" de dimension Nx1
+	</li></ul>
+</td></tr>
+
+<tr>
+	<td><tt>/</tt> ou fonction <tt>mrdivide</tt></td>
+	<td><b>Division matricielle</b> (à droite)<br>
+	<tt>B/A</tt> est la solution "X" du système "X*A=B" (où X et B sont des vecteur ligne et A une matrice). Cette solution est équivalente à <tt>B*inv(A)</tt> ou à <tt>(A'\B')'</tt></td>
+</tr>
+
+<tr>
+	<td><tt>./</tt> ou fonction <tt>rdivide</tt></td>
+	<td><b>Division éléments par éléments</b>. Les 2 arguments doivent être des vecteurs ou matrices de même dimension, à moins que l'un des deux ne soit un scalaire auquel cas la division applique le scalaire sur tous les éléments du vecteur ou de la matrice. Les éléments de l'objet de gauche sont divisés par les éléments de même indice de l'objet de droite</td>
+</tr>
+
+<tr>
+	<td><tt>.\</tt> ou fonction <tt>ldivide</tt></td>
+	<td><b>Division à gauche éléments par éléments</b>. Les 2 arguments doivent être des vecteurs ou matrices de même dimension, à moins que l'un des deux ne soit un scalaire. Les éléments de l'objet de droite sont divisés par les éléments de même indice de l'objet de gauche.
+	<p>
+	<u>Ex</u>: <tt>12./(1:3)</tt> et <tt>(1:3).\12</tt> retournent tous les deux le vecteur [12 6 4]</p></td>
+</tr>
+
+<tr>
+	<td><tt>^</tt> ou fonction <tt>mpower</tt></td>
+	<td>Elévation à la <b>puissance matricielle</b>. Il faut distinguer les 2 cas suivants (dans lesquels "<i>M</i>" doit être une matrice carrée et "<i>scal</i>" un scalaire) :
+	<ul>
+	<li><tt><i>M</i>^<i>scal</i></tt> : si <i>scal</i> est un entier&gt;1, produit matriciel de <i>M</i> par elle-même <i>scal</i> fois ; si <i>scal</i> est un réel, mise en oeuvre valeurs propres et vecteurs propres
+	</li><li><tt><i>scal</i>^<i>M</i></tt> : mise en oeuvre valeurs propres et vecteurs propres
+	</li></ul></td>
+</tr>
+
+<tr>
+	<td><tt>.^</tt> ou fonction <tt>power</tt> ou <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>.**</tt></td>
+	<td>Elévation à la <b>puissance éléments par éléments</b>. Les 2 arguments doivent être des vecteurs ou matrices de même dimension, à moins que l'un des deux ne soit un scalaire. Les éléments de l'objet de gauche sont élevés à la puissance des éléments de même indice de l'objet de droite</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>[,]</tt> ou <tt>horzcat</tt>, <tt>[;]</tt> ou <tt>vertcat</tt>, <tt>cat</tt></td>
+	<td><b>Concaténation</b> horizontale, respectivement verticale (voir chapitre "Matrices" ci-dessus)</td>
+</tr>
+
+<tr>
+	<td><tt>( )</tt></td>
+	<td>Permet de spécifier l'ordre d'évaluation des expressions</td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+</p><h3>4.4.2 Opérateurs relationnels et logiques sur vecteurs et matrices</h3>
+
+<p>
+Les opérateurs relationnels et logiques, qui ont été présentées au chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#operateurs">Opérateurs de base</a>", peuvent aussi être utilisées sur des vecteurs et matrices. Elles s'appliquent alors à tous les éléments et retournent donc également des vecteurs ou des matrices.<br>
+   &nbsp; &nbsp; &nbsp; <u>Ex</u>: si l'on a <tt>a=[1 3 4 5]</tt> et <tt>b=[2 3 1 5]</tt>, alors <tt>c = a==b</tt> ou <tt>c=eq(a,b)</tt> retournent le vecteur c=[0 1 0 1]
+
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="fonctions"></a>
+</p><h2>4.5 Fonctions matricielles</h2>
+
+
+
+<h3>4.5.1 Fonctions de réorganisation de matrices</h3>
+
+
+<p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Opérateur <tt>'</tt><br>
+	  &nbsp; ou fonction <tt>ctranspose</tt></td>
+	<td><b>Transposition</b> normale de matrices réelles et transposition <b>conjuguée</b> de matrices <b>complexes</b>. Si la matrice ne contient pas de valeurs complexes, <tt>'</tt> a le même effet que <tt>.'</tt>
+	<p>
+	<u>Ex</u>: <tt>v=(3:5)'</tt> crée directement le vecteur colonne [3 ; 4 ; 5]</p></td>
+</tr>
+
+<tr>
+	<td>Opérateur <tt>.'</tt><br>
+	  ou fonction <tt>transpose</tt></td>
+	<td><b>Transposition</b> non conjuguée de matrices complexes
+	<p>
+	<u>Ex</u>: si l'on a la matrice complexe <tt>m=[1+5i 2+6i ; 3+7i 4+8i]</tt>, la transposition non conjuguée <tt>m.'</tt> fournit [1+5i 3+7i ; 2+6i 4+8i], alors que la transposition conjuguée <tt>m'</tt> fournit [1-5i 3-7i ; 2-6i 4-8i]</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>reshape(<i>var</i>,<i>M</i>,<i>N</i>)</tt>
+	</td>
+	<td>
+	  Cette fonction de <b>redimensionnement</b> retourne une matrice de <i>M</i> lignes x <i>N</i> colonnes contenant les éléments de <i>var</i> (qui peut être une matrice ou un vecteur). Les éléments de <i>var</i> sont lus colonne après colonne, et la matrice retournée est également remplie colonne après colonne. Le nombre d'éléments de <i>var</i> doit être égal à <i>M</i>x<i>N</i>, sinon la fonction retourne une erreur.
+	  <p>
+	  <u>Ex</u>: <tt>reshape([1 2 3 4 5 6 7 8],2,4)</tt> et <tt>reshape([1 5 ; 2 6 ; 3 7 ; 4 8],2,4)</tt> retournent [1 3 5 7 ; 2 4 6 8]
+	</p></td>
+</tr>
+
+<tr>
+  <td>
+    <i>vec</i> = <tt><i>mat</i>(:)</tt>
+  </td>
+  <td>
+    Déverse la <b>matrice</b> <i>mat</i> colonne après colonne sur le <b>vecteur-colonne</b> <i>vec</i>
+	  <p>
+	  <u>Ex</u>: si <tt>m=[1 2 ; 3 4]</tt> , alors <tt>m(:)</tt> retourne le vecteur-colonne [1 ; 3 ; 2 ; 4]
+  </p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>sort(<i>var</i> {,<i>mode</i>})</tt><p>
+	    <tt>sort(<i>var</i>, <i>d</i> {,<i>mode</i>})</tt>
+	</p></td>
+	<td>
+  	Fonction de <b>tri</b> par <b>éléments</b> (voir aussi la fonction <tt>unique</tt> décrite plus bas). Le <i>mode</i> de tri par défaut est <tt>'ascend'</tt> (tri ascendant), à moins que l'on spécifie <tt>'descend'</tt> pour un tri descendant
+  	<ul>
+  	<li>appliqué à un <b>vecteur</b> (ligne ou colonne), trie dans l'ordre de valeurs croissantes les éléments du vecteur
+  	</li><li>appliqué à une <b>matrice</b> <i>var</i>, trie les éléments à l'intérieur des <b>colonnes</b> (indépendemment les unes des autres)
+  	</li><li>si l'on passe le paramètre <i>d</i>=2, trie les éléments à l'intérieur des <b>lignes</b> (indépendemment les unes des autres)
+  	</li></ul>
+  	<p>
+  	<u>Ex</u>: si <tt>m=[7 4 6;5 6 3]</tt>, alors <tt>sort(m)</tt> retourne [5 4 3 ; 7 6 6] <br>
+    &nbsp; &nbsp; &nbsp; <tt>sort(m,'descend')</tt> retourne [7 6 6 ; 5 4 3] <br>
+    &nbsp; &nbsp; &nbsp; et <tt>sort(m,2)</tt> retourne [4 6 7 ; 3 5 6]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>sortrows(<i>mat</i> {,<i>no_col</i>})</tt></td>
+	<td>
+	  <b>Trie les lignes</b> de la <b>matrice</b> <i>mat</i> dans l'ordre croissant des valeurs de la première colonne, ou dans l'ordre croissant des valeurs de la colonne <i>no_col</i>
+	  <p>
+	  <u>Ex</u>: en reprenant la matrice m de l'exemple précédent : <tt>sortrows(m)</tt> (identique à <tt>sortrows(m,1)</tt>) et <tt>sortrows(m,3)</tt> retournent [5 6 3 ; 7 4 6], alors que <tt>sortrows(m,2)</tt> retourne [7 4 6 ; 5 6 3]
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>fliplr(<i>mat</i>)</tt> <br>
+	  <tt>flipud(<i>mat</i>)</tt>
+	</td>
+	<td>
+	  Retournement de la matrice <i>mat</i> par <b>symétrie horizontale</b> (<b>l</b>eft/<b>r</b>ight),<br>
+	  respectivement <b>verticale</b> (<b>u</b>p/<b>d</b>own)
+	  <p>
+	  <u>Ex</u>: <tt>fliplr('abc')</tt> retourne 'cba', <tt>fliplr([1 2 3 ; 4 5 6])</tt> retourne [3 2 1 ; 6 5 4], et <tt>flipud([1 2 3 ; 4 5 6])</tt> retourne [4 5 6 ; 1 2 3]
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>rot90(<i>mat</i> {,<i>K</i>})</tt>
+	</td>
+	<td>
+	  Effectue une rotation de la matrice <i>mat</i> de <i>K</i> fois 90 degrés dans le sens inverse des aiguilles d'une montre. Si <i>K</i> est omis, cela équivaut à K=1
+	  <p>
+	  <u>Ex</u>: <tt>rot90([1 2 3 ; 4 5 6])</tt> retourne [3 6 ; 2 5 ; 1 4], et <tt>rot90([1 2 3 ; 4 5 6],-2)</tt> retourne [6 5 4 ; 3 2 1]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>flipdim</tt>, <tt>permute</tt>, <tt>ipermute</tt>,<br>
+	<tt>tril</tt>, <tt>triu</tt></td>
+	<td>Autres fonctions de réorganisation de matrices...</td>
+</tr>
+
+
+</tbody></table></center><p>
+
+
+</p><h3>4.5.2 Fonctions mathématiques sur vecteurs et matrices</h3>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Les fonctions mathématiques présentées au chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#fonctions">Fonctions de base</a>" peuvent aussi être utilisées sur des vecteurs et matrices. Elles s'appliquent alors à tous les éléments et retournent donc également des vecteurs ou des matrices.<br>
+   &nbsp; &nbsp; &nbsp; <u>Ex</u>: si l'on définit la série (vecteur ligne) <tt>x=0:0.1:2*pi</tt>, alors <tt>y=sin(x)</tt> ou directement <tt>y=sin(0:0.1:2*pi)</tt> retournent<br>
+   &nbsp; &nbsp; &nbsp; un vecteur ligne contenant les valeurs du sinus de "0" à "2*pi" avec un incrément de "0.1"
+
+
+</p><h3>4.5.3 Fonctions de calcul matriciel et statistiques</h3>
+
+<p>
+On obtient la liste des fonctions matricielles avec <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>helpwin elmat</tt> et <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>helpwin matfun</tt>.
+
+<br>
+<br>
+
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><tt>norm(<i>vec</i>)</tt></td>
+	<td>Calcule la <b>norme</b> (longueur) du vecteur <i>vec</i>.<br>
+	On peut aussi passer à cette fonction une matrice (voir help)</td>
+</tr>
+
+<tr>
+	<td><tt>dot(<i>vec1,vec2</i>)</tt></td>
+	<td>Calcule la <b>produit scalaire</b> des 2 vecteurs <i>vec1</i> et <i>vec2</i> (ligne ou colonne). Equivalent à <tt><i>vec1</i> * <i>vec2</i>'</tt> s'il s'agit de vecteurs-ligne, ou à <tt><i>vec1</i>' * <i>vec2</i></tt> s'il s'agit de vecteurs-colonne<br>
+	On peut aussi passer à cette fonction des matrices (voir help)</td>
+</tr>
+
+<tr>
+	<td><tt>cross(<i>vec1,vec2</i>)</tt></td>
+	<td>Calcule la <b>produit vectoriel</b> (en 3D) des 2 vecteurs <i>vec1</i> et <i>vec2</i> (ligne ou colonne, mais qui doivent avoir 3 éléments !).<br></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>inv(<i>mat</i>)</tt></td>
+	<td><b>Inversion</b> de la matrice carrée <i>mat</i>. Une erreur est produite si la matrice est singulière (ce qui peut être testé avec la fonction <tt>cond</tt> qui est plus approprié que le test du déterminant)</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>det(<i>mat</i>)</tt></td>
+	<td>Retourne le <b>déterminant</b> de la matrice carrée <i>mat</i></td>
+</tr>
+
+<tr>
+	<td><tt>trace(<i>mat</i>)</tt></td>
+	<td>Retourne la <b>trace</b> de la matrice <i>mat</i>, c'est-à-dire la somme des éléments de sa diagonale principale</td>
+</tr>
+
+<tr>
+	<td><tt>rank(<i>mat</i>)</tt></td>
+	<td>Retourne le <b>rang</b> de la matrice <i>mat</i>, c'est-à-dire le nombre de lignes ou de colonnes linéairement indépendants</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>min(<i>var</i>{,<i>d</i>})</tt> et<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>max(<i>var</i>{,<i>d</i>})</tt></td>
+	<td>Appliquées à un vecteur ligne ou colonne, ces fonctions retournent le <b>plus petit</b>, resp. le <b>plus grand</b> élément du vecteur. Appliquées à une matrice <i>var</i>, ces fonctions retournent :<ul>
+	<li>si le paramètre <i>d</i> est <b>omis</b> ou qu'il vaut <b>1</b> : un vecteur <b>ligne</b> contenant le plus petit, resp. le plus grand élément de chaque <b>colonne</b> de <i>var</i><br>
+	</li><li>si le paramètre <i>d</i> vaut <b>2</b> : un vecteur <b>colonne</b> contenant le plus petit, resp. le plus grand élément de chaque <b>ligne</b> de <i>var</i>
+	</li><li>ce paramètre <i>d</i> peut être supérieur à 2 dans le cas de "tableaux multidimensionnels" (voir plus bas)
+	</li></ul></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>sum(<i>var</i>{,<i>d</i>})</tt> et<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>prod(<i>var</i>{,<i>d</i>})</tt></td>
+	<td>
+	  Appliquée à un vecteur ligne ou colonne, retourne la <b>somme</b> ou le <b>produit</b> des éléments du vecteur. Appliquée à une matrice <i>var</i>, retourne un vecteur ligne (ou colonne suivant la valeur de <i>d</i>, voir plus haut sous <tt>min</tt>/<tt>max</tt>) contenant la somme ou le produit des éléments de chaque colonne (resp. lignes) de <i>var</i>
+	  <p>
+	  <u>Ex</u>: <tt>prod([2 3;4 3] {,1})</tt> retourne le vecteur ligne [8 9], <tt>prod([2 3;4 3],2)</tt> retourne le vecteur colonne [6 ; 12] et <tt>prod(prod([2 3;4 3]))</tt> retourne le scalaire 72 
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>cumsum(<i>var</i>{,<i>d</i>})</tt> et<br>
+	<tt>cumprod(<i>var</i>{,<i>d</i>})</tt></td>
+	<td>Réalise la <b>somme</b> partielle (<b>cumulée</b>) ou le <b>produit</b> partiel (<b>cumulé</b>) des éléments de <i>var</i>. Retourne une variable de même dimension que celle passée en argument (vecteur -&gt; vecteur, matrice -&gt; matrice)
+	<p>
+	<u>Ex</u>: <tt>cumprod(1:10)</tt> retourne les factorielles de 1 à 10, c-à-d. [1 2 6 24 120 720 5040 40320 362880 3628800]</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>mean(<i>var</i>{,<i>d</i>})</tt></td>
+	<td>Appliquée à un vecteur ligne ou colonne, retourne la <b>moyenne arithmétique</b> des éléments du vecteur. Appliquée à une matrice <i>var</i>, retourne un vecteur ligne (ou colonne suivant la valeur de <i>d</i>, voir plus haut sous <tt>min</tt>/<tt>max</tt>) contenant la moyenne arithmétique des éléments de chaque colonne (resp. lignes) de <i>var</i>. Un troisième paramètre, spécifique à Octave, permet de demander le calcul de la moyenne <b>géométrique</b> (<tt>'g'</tt>) ou de la moyenne <b>harmonique</b> (<tt>'h'</tt>).
+	</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>std(<i>var</i>{,<i>f</i>{,<i>d</i>}})</tt></td>
+	<td>Appliquée à un vecteur ligne ou colonne, retourne l'<b>écart-type</b> des éléments du vecteur. Appliquée à une matrice <i>var</i>, retourne un vecteur ligne (ou colonne suivant la valeur de <i>d</i>, voir plus haut sous <tt>min</tt>/<tt>max</tt>) contenant l'écart-type des éléments de chaque colonne (resp. lignes) de <i>var</i>.<br>
+	<b>Attention</b> : si le flag "<i>f</i>" est omis ou qu'il vaut "0", l'écart-type est calculé en normalisant par rapport à "<i>n</i>-1" (où <i>n</i> est le nombre de valeurs) ; s'il vaut "1" on normalise par rapport à "<i>n</i>"</td>
+</tr>
+
+<tr>
+	<td><tt>median(<i>var</i>{,<i>d</i>})</tt></td>
+	<td>Calcule la <b>médiane</b></td>
+</tr>
+
+<tr>
+	<td><tt>cov</tt></td>
+	<td>Retourne vecteur ou matrice de <b>covariance</b></td>
+</tr>
+
+<tr>
+	<td><tt>eig</tt>, <tt>eigs</tt>, <tt>svd</tt>, <tt>svds</tt>, <tt>cond</tt>, <tt>condeig</tt>...</td>
+	<td>Fonctions en relation avec <b>vecteurs propres</b> et <b>valeurs propres</b> (voir help)</td>
+</tr>
+
+<tr>
+	<td><br>
+	   <tt>lu</tt>, <tt>chol</tt>, <tt>qr</tt>, <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>qzhess</tt>, <br>
+	   <tt>schur</tt>, <tt>svd</tt>, <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>housh</tt>, <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>krylov</tt>...
+	</td>
+	<td>
+	  Fonctions en relation avec les méthodes de décomposition/factorisation de type :<br>
+	  - <b>LU</b>, <b>Cholesky</b>, <b>QR</b>, <b>Hessenberg</b>, <br>
+	  - <b>Schur</b>, valeurs singulières, householder, <b>Krylov</b>...
+	</td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+
+</p><h3>4.5.4 Fonctions matricielles de recherche</h3>
+
+
+<p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>vec</i> = <tt>find(<i>mat</i>)</tt>
+	  <p>  
+	  [<i>v1</i>, <i>v2</i> {, <i>v3</i> }] = <tt>find(<i>mat</i>)</tt>
+	</p></td>
+	<td>
+	  Recherche des <b>indices</b> des <b>éléments non-nuls</b> de la matrice <i>mat</i><br>
+	  • Dans la 1ère forme, MATLAB/Octave retourne un vecteur-colonne <i>vec</i> d'indices à une dimension en considérant les éléments de la matrice <i>mat</i> colonne après colonne<br>
+	  • Dans la seconde forme, les vecteurs-colonne <i>v1</i> et <i>v2</i> contiennent respectivement les numéros de ligne et de colonne des éléments non nuls ; les éléments eux-mêmes sont éventuellement déposés sur le vecteur-colonne <i>v3</i>
+	  <p>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <b>Remarques importantes</b> :<br>
+	  • À la place de <i>mat</i> vous pouvez définir une <b>expression logique</b> (voir aussi le chapitre "<b>Indexation logique</b>" ci-dessous) ! Ainsi par exemple <tt>find(isnan(<i>mat</i>))</tt> retournera un vecteur-colonne contenant les indices de tous les éléments de <i>mat</i> qui sont indéterminés (égaux à NaN).<br>
+	  • Le vecteur <i>vec</i> résultant permet ensuite d'adresser les éléments concernés de la matrice, pour les récupérer ou les modifier. Ainsi par exemple <tt><i>mat</i>(find(<i>mat</i>&lt;0))=NaN</tt> remplace tous les éléments de <i>mat</i> qui sont inférieurs à 0 par la valeur NaN.
+	  </p><p>
+	  <u>Ex</u>: soit la matrice <tt>m=[1 2 ; 0 3]</tt><br>
+	  • <tt>find(m)</tt> retourne [1 ; 3 ; 4] (indices des éléments non-nuls)<br>
+	  • <tt>find(m&lt;2)</tt> retourne [1 ; 2] (indices des éléments inférieurs à 2)<br>
+	  • <tt>m(find(m&lt;2))=-999</tt> retourne [-999 2 ; -999 3] (remplacement des valeurs inférieures à 2 par -999)<br>
+	  • <tt>[v1,v2,v3]=find(m)</tt> retourne indices v1=[1 ; 1 ; 2] v2=[1 ; 2 ; 2], et valeurs v3=[1 ; 2 ; 3]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>unique(<i>mat</i>)</tt></td>
+	<td>
+	  Retourne un vecteur contenant les éléments de <i>mat</i> <b>triés</b> dans un ordre croissant et <b>sans répétitions</b>. Si <i>mat</i> est une matrice ou un vecteur-colonne, retourne un vecteur-colonne ; sinon (si <i>mat</i> est un vecteur-ligne), retourne un vecteur-ligne. (Voir aussi les fonctions <tt>sort</tt> et <tt>sortrows</tt> décrites plus haut).<br>
+	  <i>mat</i> peut aussi être un tableau cellulaire (contenant par exemple des chaînes)
+	  <p>
+	  <u>Ex</u>:<br>
+	  • si <tt>m=[5 3 8 ; 2 9 3 ; 8 9 1]</tt>, la fonction <tt>unique(m)</tt> retourne alors [1 ; 2 ; 3 ; 5 ; 8 ; 9]<br>
+	  • si <tt>a={'pomme','poire';'fraise','poire';'pomme','fraise'}</tt>, alors <tt>unique(a)</tt> retourne {'fraise';'poire';'pomme'}
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>intersect(<i>var1</i>,<i>var2</i>)</tt>
+	  <p>
+	  <tt>setdiff(<i>var1</i>,<i>var2</i>)</tt>
+	  </p><p>
+	  <tt>union(<i>var1</i>,<i>var2</i>)</tt>
+	</p></td>
+	<td>
+	  Retourne un vecteur contenant, de façon <b>triée</b> et <b>sans répétitions</b>, les éléments qui :
+	  <ul>
+	  <li><tt>intersect</tt>: sont <b>communs</b> à <i>var1</i> et <i>var2</i>
+	  </li><li><tt>setdiff</tt>: existent dans <i>var1</i> mais <b>n'existent pas</b> dans <i>var2</i>
+	  </li><li><tt>union</tt>: existent dans <i>var1</i> <b>et/ou</b> dans <i>var2</i>
+	  </li></ul>
+	  Le vecteur résultant sera de type ligne, à moins que <i>var1</i> <b>et</b> <i>var2</i> soient tous deux de type colonne.
+	  <p>
+	  <i>var1</i> et <i>var2</i> peuvent être des tableaux cellulaires (contenant par exemple des chaînes)
+	  </p><p>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> Sous Octave, <i>var1</i> et <i>var2</i> peuvent être des matrices numériques, alors que MATLAB est limité à des vecteurs numériques
+	  </p><p>
+	  <u>Ex</u>:<br>
+	  • si <tt>a={'pomme','poire';'fraise','cerise'}</tt> et <tt>b={'fraise','abricot'}</tt>, alors<br>
+	  &nbsp; &nbsp; &nbsp; - <tt>setdiff(a,b)</tt> retourne {'cerise';'poire';'pomme'}<br>
+	  &nbsp; &nbsp; &nbsp; - <tt>union(m1,m2)</tt> retourne {'abricot';'cerise';'fraise';'poire';'pomme'} <br>
+	  • <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> si <tt>m1=[3 4 ; -1 6 ; 6 3]</tt> et <tt>m2=[6 -1 9]</tt>, alors <tt>intersect(m1,m2)</tt> retourne [-1 6]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>ismember(<i>mat1</i>,<i>mat2</i>)</tt></td>
+	<td>Voir plus bas (fonctions matricielles logiques)</td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+
+
+</p><h3>4.5.5 Fonctions matricielles logiques</h3>
+
+<p>
+Outre les fonctions logiques de base (qui, pour la plupart, s'appliquent aux matrices : voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#fonctions">Fonctions de base</a>"), il existe des fonctions logiques spécifiques aux matrices décrites ici.
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>isequal(<i>mat1</i>,<i>mat2</i>)</tt></td>
+	<td>Retourne le scalaire vrai ("1") si tous les éléments de <i>mat1</i> sont <b>égaux</b> aux éléments de <i>mat2</i>, faux ("0") sinon</td>
+</tr>
+
+<tr>
+	<td><tt>isscalar(<i>var</i>)</tt> <br>
+      <tt>isvector(<i>var</i>)</tt></td>
+	<td>Retourne le scalaire vrai si <i>var</i> est un <b>scalaire</b>, faux si c'est un vecteur ou tableau &#8805; 2-dim <br>
+      Retourne le scalaire vrai si <i>var</i> est un <b>vecteur</b> ou <b>scalaire</b>, faux si tableau &#8805; 2-dim
+  </td>
+</tr>
+
+<tr>
+	<td><tt>iscolumn(<i>var</i>)</tt> <br>
+      <tt>isrow(<i>var</i>)</tt></td>
+	<td>Retourne le scalaire vrai si <i>var</i> est un vecteur <b>colonne</b> ou <b>scalaire</b>, faux si tableau &#8805; 2-dim <br>
+      Retourne le scalaire vrai si <i>var</i> est un vecteur <b>ligne</b> ou <b>scalaire</b>, faux si tableau &#8805; 2-dim
+  </td>
+</tr>
+
+<tr>
+	<td><i>mat3</i> = <tt>ismember(<i>mat1</i>,<i>mat2</i>)</tt></td>
+	<td>
+	  Cherche si les valeurs de <i>mat1</i> sont présentes dans <i>mat2</i> : retourne une matrice <i>mat3</i> de la même dimension que <i>mat1</i> où <i>mat3(i,j)</i>=1 si la valeur <i>mat1(i,j)</i> a été trouvée quelque-part dans dans <i>mat3</i>, sinon <i>mat3(i,j)</i>=0. Les matrices (ou vecteurs) <i>mat1</i> et <i>mat2</i> peuvent avoir des dimensions différentes.<br>
+	  <i>mat1</i> et <i>mat2</i> peuvent être des tableaux cellulaires (contenant par exemple des chaînes)
+	  <p>
+	  <u>Ex</u>: Si <tt>a=[0 1 2 ; 3 4 5]</tt> et <tt>b=[2 4;6 8;10 12;14 16;18 20]</tt>, la fonction <tt>ismember(a,b)</tt> retourne alors [0 0 1 ; 0 1 0]<br>
+	  Si <tt>a={'pomme','poire';'fraise','cerise'}</tt> et <tt>b={'fraise','abricot'}</tt>, alors <tt>ismember(a,b)</tt> retourne [0 0 ; 1 0]
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>any(<i>vec</i>)</tt> et <tt>all(<i>vec</i>)</tt>
+	  <p>
+	  <tt>any(<i>mat</i>)</tt> et <tt>all(<i>mat</i>)</tt>
+	</p></td>
+	<td>
+	  Retourne le scalaire vrai si l'un au moins des éléments du vecteur <i>vec</i> n'est <b>pas nul</b>, respectivement si tous les éléments ne sont pas nuls
+	  <p>
+	  Comme ci-dessus, mais analyse les colonnes de <i>mat</i> et retourne ses résultats sur un vecteur ligne
+	</p></td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+
+</p><h3>4.5.6 Indexation logique</h3>
+
+<h4>Introduction</h4>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Sous le terme d' "<b>indexation logique</b>" (logical indexing, logical subscripting) on entend la technique d'indexation par une <b>matrice logique</b>, c'est-à-dire une matrice booléenne composée de 0 ou de 1. Ces "matrices logiques d'indexation" résultent le plus souvent :
+
+</p><ul>
+<li>d'opérations basées sur les "opérateurs relationnels et logiques" (p.ex. <tt>==</tt>, <tt>&gt;</tt>, <tt>~</tt>, etc...) (voir le chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#operateurs">opérateurs de base</a>")
+</li><li>de "fonctions logiques de base" (les fonctions <tt>is*</tt>, p.ex. <tt>isnan</tt>) (voir le chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/fonctions.shtml#operateurs">opérateurs de base</a>")
+</li><li>ainsi que des "fonctions matricielles logiques" (voir ci-dessus)
+</li><li>si la matrice logique est construite "à la main" (avec des valeurs 0 et 1), on devra lui appliquer la fonction <tt>logical</tt> pour en faire une vraie matrice logique booléenne (voir exemple ci-dessous).
+</li></ul>
+
+<p>
+Il faudrait en principe que les <b>dimensions</b> de la matrice logique soient <b>identiques</b> à celles de la matrice que l'on indexe (cela engendrant, dans le cas contraire, des différences de comportement entre MATLAB et Octave...).
+</p><p>
+L'avantage de l'indexation logique réside dans le fait qu'il s'agit d'un <b>mécanisme vectorisé</b> (donc bien plus efficaces qu'un traitement basé sur des boucles <tt>for</tt> ou <tt>while</tt>).
+</p><p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Dans ce qui vient d'être dit, le terme "matrice" désigne bien entendu également des tableaux <b>multidimensionnels</b> ou de simples vecteurs (ligne ou colonne).
+Et encore mieux : l'indexation logique peut aussi être appliquée à des <b>structures</b> et des <b>tableaux cellulaires</b> !!! (voir les exemples spécifiques dans les chapitres traitant de ces deux types de données).
+
+
+
+</p><h4>Utilisation de l'indexation logique</h4>
+
+
+<p>
+
+</p><dl>
+
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <i>vec</i> = <tt><i>mat</i>(<i>mat_log</i>)</tt>
+
+  </dt><dd>Examine la matrice <i>mat</i> à travers le "masque" de la matrice logique <i>mat_log</i> (de mêmes dimensions que <i>mat</i>), et retourne un <b>vecteur-colonne</b> <i>vec</i> comportant les éléments de <i>mat</i>(<i>i</i>,<i>j</i>) où <i>mat_log</i>(<i>i </i>,<i>j</i>)=1. Les éléments sont déversés dans <i>vec</i> en examinant la matrice <i>mat</i> colonne après colonne.
+  <p>
+  <b>Remarques importantes</b> :<br>
+  • <i>mat_log</i> peut être (et est souvent !) une expression logique basée sur la matrice <i>mat</i> elle-même. Ainsi, par exemple, <tt><i>mat</i>(<i>mat</i>&gt;<i>val</i>)</tt> (indexation de la matrice <i>mat</i> par la <b>matrice logique</b> produite par <tt><i>mat</i>&gt;<i>val</i></tt>) retournera un vecteur-colonne contenant tous les éléments de <i>mat</i> qui sont supérieurs à <i>val</i>.<br>
+  • On peut rapprocher cette fonctionnalité de la fonction <tt>find</tt> décrite plus haut. Pour reprendre l'exemple ci-dessus, <tt><i>mat</i>(find(<i>mat</i>&gt;<i>val</i>))</tt> (indexation de la matrice <i>mat</i> par le <b>vecteur d'indices à une dimension</b> produit par <tt>find(<i>mat</i>&gt;<i>val</i>)</tt>) retournerait également les éléments de <i>mat</i> qui sont supérieurs à <i>val</i>.
+  </p><p>
+  <u>Ex</u>:<br>
+  • Soit la matrice <tt>m=[5 3 8 ; 2 9 3 ; 8 9 1]</tt> ; <tt>m(m&gt;3)</tt> retourne le vecteur-colonne [5 ; 8 ; 9 ; 9 ; 8] (contenant donc les éléments supérieurs à 3)<br>
+  • Si l'on construit manuellement une matrice logique <tt>m_log1=[1 0 1;0 1 0;1 1 0]</tt>, on ne peut pas faire <tt>m(m_log1)</tt>, car <tt>m_log1</tt> n'est alors pas considéré par MATLAB/Octave comme une matrice logique (booléenne) mais comme une matrice de nombres... et MATLAB/Octave essaie alors de faire de l'indexation standard avec des indices nuls, d'où l'erreur qui est générée ! Il faut plutôt faire <tt>m_log2=logical(m_log1)</tt> (ou <tt>m_log2=(m_log1~=0)</tt>), puis <tt>m(m_log2)</tt>. On peut bien entendu aussi faire directement <tt>m(logical(m_log1))</tt> ou <tt>m(logical([1 0 1;0 1 0;1 1 0]))</tt>. En effet, regardez avec la commande <tt>whos</tt>, les types respectifs de <tt>m_log1</tt> et de <tt>m_log2</tt> !<br>
+  • Pour remplacer les valeurs indéterminées (NaN) d'une série de mesures <tt>s=[-4 NaN -2.2 -0.9 0.3 NaN 1.5 2.6]</tt> en vue de faire un graphique, on fera <tt>s=s(~isnan(s))</tt> ou <tt>s=s(isfinite(s))</tt> qui retournent toutes deux s=[-4 -2.2 -0.9 0.3 1.5 2.6]<br>
+
+
+</p></dd><dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>mat</i>(<i>mat_log</i>) = <i>valeur</i></tt>
+
+  </dt><dd>Utilisée sous cette forme-là, l'indexation logique ne retourne pas un vecteur d'éléments de <i>mat</i>, mais <b>modifie certains éléments</b> de la matrice <i>mat</i> : tous les éléments de <i>mat</i>(<i>i</i>,<i>j</i>) où <i>mat_log</i>(<i>i </i>,<i>j</i>)=1 seront remplacés par la <i>valeur</i> spécifiée. Comme cela a été vu plus haut, la matrice logique <i>mat_log</i> devrait avoir les mêmes dimensions que <i>mat</i>, et <i>mat_log</i> peut être (et est souvent !) une expression logique basée sur la matrice <i>mat</i> elle-même.
+  <p>
+  <u>Ex</u>:<br>
+  • En reprenant la matrice <tt>m=[5 3 8 ; 2 9 3 ; 8 9 1]</tt> de l'exemple ci-dessus, l'instruction <tt>m(m&lt;=3)=-999</tt> modifie la matrice <tt>m</tt> en remplaçant tous les éléments inférieurs où égaux à 3 par -999 ; celle-ci devient donc [5 -999 8 ; -999 9 -999 ; 8 9 -999]<br>
+  • L'indexation logique peut aussi être appliquée à des chaînes de caractères pour identifier ou remplacer des caractères. Soit la chaîne <tt>str='Bonjour tout le monde'</tt>. L'affectation <tt>str(isspace(str))='_'</tt> remplace dans <tt>str</tt> tous les caractères &lt;espace&gt; par le caractère '_' et retourne donc str='Bonjour_tout_le_monde'
+
+
+</p></dd></dl>
+
+
+
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="chaines"></a>
+<h2>4.6 Chaînes de caractères</h2>
+
+
+<h3>4.6.1 Généralités</h3>
+
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Lorsque l'on définit une <b>chaîne de caractères</b> (<i>string</i>), celle-ci sera délimitée entre deux <b>apostrophes</b>. Si la chaîne contient des apostrophes, le mécanisme d'échappement consiste à les dédoubler.
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> De façon interne, les chaînes sont stockées par MATLAB/Octave sur des <b>vecteurs-ligne</b> de type <b>char</b> dans lesquels chaque caractère de la chaîne occupe un <b>élément</b> du vecteur. Il est aussi possible de manipuler des <b>matrices de chaînes</b>, comme nous l'illustrons ci-dessous, ainsi que des "<a href="http://enacit1.epfl.ch/cours_matlab/matrices.shtml#cells">tableaux cellulaires</a>" de chaînes.
+</p><p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important3.gif"> Dans le cas où vous manipuleriez des caractères <b>accentués</b> (ou tout caractère non-ASCII-7bits), prenez note de la différence suivante qui peut conduire à des problèmes de portage de code :
+
+</p><ul>
+<li>MATLAB stocke chacun des caractères sur 2 octets
+</li><li>Octave sous Linux stocke les caractères non accentués (ASCII 7-bits) sur 1 octet, et les caractères accentués sur 2 octets
+</li><li>alors que Octave sous Windows (si l'on active le codepage <tt>dos('chcp 437')</tt>) stocke chacun des caractères (non accentués ou accentués) sur 1 octet
+</li></ul>
+
+
+<dl>
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt><i>string</i> = '<i>chaîne de caractères</i>'</tt>
+
+  </dt><dd>Stocke la <i>chaîne de caractères</i> (spécifiée entre apostrophes) sur la variable <i>string</i> qui est ici un <b>vecteur-ligne</b> contenant autant d'éléments que de caractères. Les apostrophes faisant partie de la chaîne doivent donc être dédoublés (sinon interprétés comme signe de fin de chaîne... la suite de la chaîne provoquant alors une erreur)<br>
+  <u>Ex</u>: <tt>section = 'Sciences et ingénierie de l''environnement'</tt>
+
+</dd><dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt><i>string</i> = "<i>chaîne de caractères</i>"</tt>
+
+  </dt><dd>Propre à Octave, cet usage de guillemets est intéressante car elle permet de définir, dans la chaîne, des caractères spéciaux : <br>
+    &nbsp; &nbsp; <tt>\t</tt>  pour le caractère <tt>&lt;tab&gt;</tt> <br>
+    &nbsp; &nbsp; <tt>\n</tt>  pour un saut à la ligne (<tt>&lt;newline&gt;</tt>) ; mais la chaîne reste cependant un vecteur ligne et non une matrice<br>
+    &nbsp; &nbsp; <tt>\"</tt>  pour le caractère <tt>"</tt> <br>
+    &nbsp; &nbsp; <tt>\'</tt>  pour le caractère <tt>'</tt> <br>
+    &nbsp; &nbsp; <tt>\\</tt>  pour le caractère <tt>\</tt> <br>
+  <u>Ex</u>: <tt>disp("Texte\ttabulé\net sur\t2 lignes")</tt>
+
+
+</dd><dt><tt><i>string</i>(<i>i</i>:<i>j</i>)</tt>
+
+  </dt><dd>Retourne la <b>partie de la chaîne</b> <i>string</i> comprise entre le <i>i</i>-ème et le <i>j</i>-ème caractère<br>
+  <u>Ex</u>: suite à l'exemple ci-dessus, <tt>section(13:22)</tt> retourne la chaîne "ingénierie"
+
+
+</dd><dt><tt><i>string</i>(<i>i</i>:end)</tt> , équivalent à <tt><i>string</i>(<i>i</i>:length(<i>string</i>))</tt>
+
+  </dt><dd>Retourne la <b>fin de la chaîne</b> <i>string</i> à partir du <i>i</i>-ème caractère<br>
+  <u>Ex</u>: suite à l'exemple ci-dessus, <tt>section(29:end)</tt> retourne la chaîne "environnement"
+
+
+</dd><dt><tt>[<i>s1</i> <i>s2</i> <i>s3</i>...]</tt>
+  
+  </dt><dd><b>Concatène</b> horizontalement les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i> <br>
+  <u>Ex</u>: soit <tt>s1=' AAA ', s2='CCC ', s3='EEE '</tt><br>
+  alors <tt>[s1 s2 s3]</tt> retourne " AAA CCC EEE "
+  
+</dd><dt><tt>strcat(<i>s1</i>,<i>s2</i>,<i>s3</i>...)</tt>
+  
+  </dt><dd><b>Concatène</b> horizontalement les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i>... en supprimant les caractères &lt;espace&gt; <b>terminant</b> les chaînes <i>s1</i>, <i>s2</i>... ("trailing blanks") (mais pas les &lt;espace&gt; commençant celles-ci). Noter que, sous Octave, cette suppression des espaces n'est implémentée qu'à partir de la version 3.2.0<br>
+  <u>Ex</u>: soit <tt>s1=' AAA ', s2='CCC ', s3='EEE '</tt><br>
+  alors <tt>strcat(s1,s2,s3)</tt> retourne " AAACCCEEE"
+  
+</dd><dt><tt><i>mat_string</i> = strvcat(<i>s1</i>,<i>s2</i>,<i>s3</i>...)</tt>
+  
+  </dt><dd>Concatène <b>verticalement</b> les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i>...
+  Produit donc une <b>matrice de chaînes de caractères</b> <i>mat_string</i> contenant la chaîne <i>s1</i> en 1ère ligne, <i>s2</i> en seconde ligne, <i>s3</i> en 3ème ligne...
+  Les chaînes éventuellement vides sont ignérées, c'est-à-dire ne produisent dans ce cas pas de lignes blanches (contrairement à <tt>char</tt> ou <tt>str2mat</tt>).
+  <p>
+  <b>Remarque importante</b>: pour produire cette matrice <i>mat_string</i>, MATLAB/Octave complètent automatiquement chaque ligne par le nombre nécessaire de caractères &lt;espace&gt; ("trailing blanks") afin que toutes les lignes soient de la même longueur (même nombre d'éléments, ce qui est important dans le cas où les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i>... n'ont pas le même nombre de caractères). Cet inconvénient n'existe pas si l'on recourt à des <b>tableaux cellulaires</b> plutôt qu'à des matrices de chaînes.<br>
+  On peut <b>convertir</b> une matrice de chaînes en un "tableau cellulaire de chaînes" avec la fonction <tt>cellstr</tt> (voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/matrices.shtml#cells">Tableaux cellulaires</a>").
+  </p><p>
+  <u>Ex</u>: <br>
+  • en utilisant les variables "s1", "s2", "s3" de l'exemple ci-dessus, <tt>mat=strvcat(s1,s2,s3)</tt> retourne la matrice de chaînes de dimension 3x16 caractères :<br>
+  &nbsp; &nbsp; <tt>Jules Dupond&nbsp;&nbsp;&nbsp;&nbsp;</tt><br>
+  &nbsp; &nbsp; <tt>Albertine Durand</tt><br>
+  &nbsp; &nbsp; <tt>Robert Muller&nbsp;&nbsp;&nbsp;</tt><br>
+  &nbsp; &nbsp; puis <tt>mat=strvcat(mat,'xxxx')</tt> permettrait ensuite d'ajouter une ligne supplémentaire à cette matrice<br>
+  • pour stocker ces chaînes dans un tableau cellulaire, on utiliserait <tt>tabl_cel={s1;s2;s3}</tt> ou <tt>tabl_cel={'Jules Dupond';'Albertine Durand';'Robert Muller'}</tt><br>
+  • ou pour convertir la matrice de chaîne ci-dessus en un tableau cellulaire, on utilise <tt>tabl_cel=cellstr(mat)</tt>
+
+  
+  
+</p></dd><dt><tt><i>mat_string</i> = char(<i>s1</i>,<i>s2</i>,<i>s3</i>...)</tt> <br>
+  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt><i>mat_string</i> = str2mat(<i>s1</i>,<i>s2</i>,<i>s3</i>...)</tt> <br>
+  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt><i>mat_string</i> = [<i>s1</i> ; <i>s2</i> ; <i>s3</i> ...]</tt>
+  
+  </dt><dd>Concatène <b>verticalement</b> les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i>... de la même manière que <tt>strvcat</tt>, à la nuance près que les éventuelles chaînes vides produisent dans ce cas une ligne vide. La 3ème forme ne fonctionne que sous Octave (MATLAB générant une erreur si les chaînes <i>s1</i>, <i>s2</i>, <i>s3</i>... n'ont pas toutes la même longueur)
+
+
+</dd><dt><tt><i>mat_string</i>(<i>i</i>,:)</tt><br>
+  <tt><i>mat_string</i>(<i>i</i>,<i>j</i>:<i>k</i>)</tt>
+
+  </dt><dd>Retourne la <i>i</i>-ème ligne de la matrice de chaînes <i>mat_string</i>,<br>
+  respectivement la sous-chaîne de cette ligne allant du <i>j</i>-ème au <i>k</i>-ème caractère<br>
+  <u>Ex</u>: en reprenant la matrice "mat" de l'exemple ci-dessus,
+  <tt>mat(2,:)</tt> retourne "Albertine Durand", et <tt>mat(3,8:13)</tt> retourne "Muller"
+
+</dd></dl>
+
+
+<br><br>
+
+Usage de <b>caractères accentués</b> dans des <b>scripts ou fonctions</b> (M-files) :
+
+<ul>
+<li>Que ce soit sous MATLAB ou Octave, si un M-file définit des chaînes contenant des caractères acccentués (caractères non-ASCII-7bits) et les écrit sur un fichier, l'<b>encodage des caractères</b> dans ce fichier dépend bien entendu de l'encodage du M-file ayant généré ce fichier. Si le M-file est encodé ISO-latin-1, le fichier produit sera encodé ISO-latin1 ; si le M-file est encodé UTF-8, le fichier produit sera encodé UTF-8...
+</li><li>Sous <b>Windows</b>, si le M-file est encodé UTF-8 et qu'il affiche des chaînes dans la console MATLAB/Octave (avec <tt>disp</tt>, <tt>fprintf</tt>...) : <br>
+  - sous MATLAB (testé sous 7.8), les caractères accentués ne s'affichent pas proprement <br>
+  - sous Octave 3.2.x, ils s'afficheront proprement pour autant que la police de caractères utilisée dans la fenêtre de commande soit de type TrueType (par exemple Lucida Console) et que l'on ait activé le code-page Windows UTF-8 avec la commande <tt>dos('chcp 65001')</tt>
+</li><li>Sous <b>Linux</b>, le mode par défaut est UTF-8 et il n'y a pas de problème particulier
+</li></ul>
+
+
+
+<h3>4.6.2 Fonctions générales relatives aux chaînes</h3>
+
+<p>
+Sous MATLAB, <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>helpwin strfun</tt> donne la listes des fonctions relatives aux chaînes de caractères.
+</p><p>
+Notez encore que, pour la plupart des fonctions ci-dessous, l'argument <i>string</i> peut aussi être une <b>cellule</b> voir un <b>tableau cellulaire</b> de chaînes !
+<br>
+<br>
+
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>length(<i>string</i>)</tt></td>
+	<td>Retourne le <b>nombre de caractères</b> de la chaîne <i>string</i></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>deblank(<i>string</i>)</tt> <br>
+    <tt>strtrim(<i>string</i>)</tt>
+	  <p>
+	  <tt>blanks(<i>n</i>)</tt>
+	</p></td>
+	<td>
+	  <b>Supprime</b> les car. &lt;espace&gt; terminant <i>string</i> (<b>trailing blanks</b>) <br>
+    Supprime les car. &lt;espace&gt; débutant et terminant <i>string</i> (<b>leading &amp; trailing blanks</b>)
+	  <p>
+	  Retourne une chaîne de <i>n</i> caractères &lt;espace&gt;
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>substr(<i>string</i>, <i>offset</i> {, <i>length</i>})</tt></td>
+	<td>
+		Retourne de la chaîne <i>string</i> la <b>sous-chaîne</b> débutant à la position <i>offset</i> et de longueur <i>length</i> <br>
+		Si <i>length</i> n'est pas spécifié, la sous-chaîne s'étend jusqu'à la fin de <i>string</i> <br>
+		Si l'on spécifie un <i>offset</i> négatif, le décompte s'effectue depuis la fin de <i>string</i>
+		<p>
+		<u>Ex</u>: si l'on a <tt>str='abcdefghi'</tt>, alors <br>
+		• <tt>substr(str,3,4)</tt> retourne 'cdef', identique à <tt>str(3:3+(4-1))</tt> <br>
+		• <tt>substr(str,3)</tt> retourne 'cdefghi', identique à <tt>str(3:end)</tt> <br>
+		• <tt>substr(str,-3)</tt> retourne 'ghi', identique à <tt>str(end-3+1:end)</tt>
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>findstr(<i>string</i>,<i>s1</i> {,<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><i>overlap</i>})</tt><br>
+    ou <tt>strfind(<i>cell_string</i>,<i>s1</i>)</tt>
+  </td>
+	<td>
+	  Retourne, sur un vecteur ligne, la <b>position</b> dans <i>string</i> de toutes les chaînes <i>s1</i> qui ont été trouvées. Noter que <tt>strfind</tt> est capable d'analyser un tableau cellulaire de chaînes, alors que <tt>findstr</tt> ne peut qu'analyser des chaînes simples.<br>
+	  Si ces 2 fonctions ne trouvent pas de sous-chaîne <i>s1</i> dans <i>string</i>, elles retournent un tableau vide (<tt>[]</tt>) <br>
+    <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> Si le paramètre optionnel <i>overlap</i> est présent est vaut <tt>0</tt>, <tt>findstr</tt> ne tient pas compte des occurences superposées (voir exemple ci-dessous)
+	  <p>
+	  <u>Ex</u>: si l'on a <tt>str='Bla bla bla *xyz* bla etc...'</tt>, alors<br>
+	  • <tt>star=findstr(str,'*')</tt> ou <tt>star=strfind(str,'*')</tt> retournent le vecteur [13 17] indiquant la position des "*" dans la variable "str"<br>
+	  • <tt>str(star(1)+1:star(2)-1)</tt> retourne la sous-chaîne de "str" se trouvant entre "*", soit "xyz"<br>
+	  • <tt>length(findstr(str,'bla'))</tt> retourne le nombre d'occurences de "bla" dans "str", soit 3 <br>
+	  • <tt>isempty(findstr(str,'ZZZ'))</tt> retourne "vrai" (valeur <tt>1</tt>), car la sous-chaîne "ZZZ" n'existe pas dans "str" <br>
+    • <tt>findstr('abababa','aba')</tt> retourne [1 3 5], alors que <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>findstr('abababa','aba',0)</tt> retourne [1 5]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>strmatch(<i>mat_string</i>,<i>s1</i> {,'exact'} )</tt></td>
+	<td>
+	  Retourne un vecteur-colonne contenant les numéros des lignes de la <b>matrice de chaîne</b> <i>mat_string</i> qui 'commencent' par la chaîne <i>s1</i>. En ajoutant le paramètre 'exact', ne retourne que les numéros des lignes qui sont 'exactement identiques' à <i>s1</i>.
+	  <p>
+	  <u>Ex</u>: <tt>strmatch('abc', str2mat('def abc','abc','yyy','abc xxx'))</tt> retourne [2 ; 4]<br>
+	  En ajoutant le paramètre <tt>'exact'</tt>, ne retourne que [ 2 ]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>regexp(<i>mat_string</i>, <i>pattern</i>)</tt>
+      <p>
+      <tt>regexpi(<i>mat_string</i>, <i>pattern</i>)</tt></p></td>
+	<td>
+	  Effectue une <b>recherche</b> dans <i>mat_string</i> à l'aide du motif défini par l'<b>expression régulière</b> <i>pattern</i> (extrêmement puissant... lorsque l'on maîtrise les expression régulières Unix). La seconde forme effecte une recherche "case insensitive" (ne différenciant pas majuscules/minuscules).
+	</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>strrep(<i>string</i>,<i>s1</i>,<i>s2</i>)</tt></td>
+	<td>
+	  Retourne une copie de la chaîne <i>string</i> dans laquelle toutes les occurences de <i>s1</i> sont <b>remplacées</b> par <i>s2</i>
+	  <p>
+	  <u>Ex</u>: <tt>strrep('abc//def//ghi/jkl','//','|')</tt> retourne "abc|def|ghi/jkl"
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>regexprep(<i>s1</i>, <i>pattern</i>, <i>s2</i>)</tt></td>
+	<td>
+	  Effectue un <b>remplacement</b>, dans <i>s1</i>, par <i>s2</i> là où l'<b>expression régulière</b> <i>pattern</i> est satisfaite
+	</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>strsplit(<i>string</i>,<i>car_sep</i>)</tt></td>
+	<td>
+	  <b>Découpe</b> la chaîne <i>string</i> en utilisant les différents <b>caractères</b> de <i>car_sep</i>, et retourne les sous-chaînes résultantes sur un vecteur cellulaire de chaînes.
+	  <p>
+	  <u>Ex</u>: <tt>strsplit('abc/def/ghi*jkl','/*')</tt> retourne le vecteur cellulaire <tt>{'abc','def','ghi','jkl'}</tt>
+	</p></td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>split(<i>string</i>,<i>str_sep</i>)</tt></td>
+	<td>
+	  <b>Découpe</b> la chaîne <i>string</i> selon la <b>chaîne</b>-séparateur <i>str_sep</i>, et retourne les sous-chaînes résultantes sur une matrice de chaînes. Note: cette fonction est dépréciée (disparaîtra sous Octave 3.6) en faveur de <tt>strsplit</tt> (qui fonctionne cependant différemment)
+	  <p>
+	  <u>Ex</u>: <tt>split('abc//def//ghi/jkl','//')</tt> retourne la matrice<br>
+  &nbsp; &nbsp; <tt>abc&nbsp;&nbsp;&nbsp;&nbsp;</tt><br>
+  &nbsp; &nbsp; <tt>def&nbsp;&nbsp;&nbsp;&nbsp;</tt><br>
+  &nbsp; &nbsp; <tt>ghi/jkl</tt><br>
+	</p></td>
+</tr>
+
+<tr>
+	<td>[<i>debut</i> <i>fin</i>]=<tt>strtok(<i>string</i>,<i>delim</i>)</tt></td>
+	<td>
+	  <b>Découpe</b> la chaîne <i>string</i> en 2 parties selon le(s) caractère(s) de délimitation énuméré(s) dans la chaîne <i>delim</i> ("tokens") : sur <i>debut</i> est retournée la première partie de <i>string</i> (caractère de délimitation non compris), sur <i>fin</i> est retournée la seconde partie de <i>string</i> (commençant par le caractère de délimitation).<br>
+	  Si le caractère de délimitation est &lt;tab&gt;, il faudra entrer ce caractère tel quel dans <i>delim</i> (et non pas '\t' qui serait interprété comme les 2 délimiteurs \ et t).<br>
+	  Si ce que l'on découpe ainsi ce sont des nombres, il faudra encore convertir les chaînes résultantes en nombres avec la fonction <tt>str2num</tt> (voir plus bas).
+	  <p>
+	  <u>Ex</u>: <tt>[debut fin]=strtok('Abc def, ghi.', ',:;.')</tt> découpera la chaîne en utilisant les délimiteurs de phrase habituels et retournera, dans le cas présent, debut='Abc def' et fin=', ghi.'
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>strjust(<i>var</i>,'left|center|right')</tt></td>
+	<td>
+	  <b>Justifie</b> la chaîne ou la matrice de chaîne <i>var</i> à gauche, au centre ou à droite. Si l'on ne passe à cette fonction que la chaîne, la justification s'effectue à droite
+	</td>
+</tr>
+
+<tr>
+	<td><tt>sortrows(<i>mat_string</i>)</tt></td>
+	<td>
+	  <b>Trie</b> par ordre alphabétique croissant les lignes de la matrice de chaînes <i>mat_string</i>
+	</td>
+</tr>
+
+<tr>
+	<td><i>vect_log</i> = <tt><i>string1</i>==<i>string2</i></tt></td>
+	<td>
+	  <b>Comparaison caractères après caractères</b> de 2 chaînes <i>string1</i> et <i>string2</i> de longueurs identiques (retourne sinon une erreur !). Retourne un vecteur logique (composé de 0 et de 1) avec autant d'élément que de caractères dans chaque chaîne. <br>
+    Pour tester l'égalité exacte de chaînes de longueur indéfinie, utiliser plutôt <tt>strcmp</tt> ou <tt>isequal</tt> (voir ci-dessous).
+	</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>strcmp(<i>string1</i>,<i>string2</i>)</tt>  ou  <tt>isequal(<i>string1</i>,<i>string2</i>)</tt> <p>
+	    <tt>strcmpi(<i>string1</i>,<i>string2</i>)</tt>
+	    </p><p>
+	    <tt>strncmp(<i>string1</i>,<i>string2</i>,<i>n</i>)</tt><br>
+	    <tt>strncmpi(<i>string1</i>,<i>string2</i>,<i>n</i>)</tt>
+	</p></td>
+	<td>
+	  <b>Compare</b> les 2 chaînes <i>string1</i> et <i>string2</i>: retourne 1 si elles sont identiques, 0 sinon.<p>
+	  La fonction <tt>strcmpi</tt> ignore les différences entre majuscule et minuscule ("casse")
+	  </p><p>
+	  Ne compare que les <b><i>n</i> premiers</b> caractères des 2 chaînes<br>
+	  La fonction <tt>strncmpi</tt> ignore les différences entre majuscule et minuscule ("casse")
+	</p></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>ischar(<i>var</i>)</tt>
+	  <p>
+	  <tt>isletter(<i>string</i>)</tt>
+	  </p><p>
+	  <tt>isspace(<i>string</i>)</tt>
+	</p></td>
+	<td>
+	  Retourne 1 si <i>var</i> est une <b>chaîne</b> de caractères, 0 sinon. Ne plus utiliser <tt>isstr</tt> qui va disparaître.
+	  <p>
+	  Retourne un vecteur de la taille de <i>string</i> avec des 1 là où <i>string</i> contient des caractères de l'<b>alphabet</b>, et des 0 sinon.
+	  </p><p>
+	  Retourne un vecteur de la taille de <i>string</i> avec des 1 là où <i>string</i> contient des <b>caractères de séparation</b> (&lt;espace&gt; &lt;tab&gt; &lt;newline&gt; &lt;formfeed&gt;), et des 0 sinon.
+	  </p></td>
+</tr>
+
+<tr>
+	<td><tt>isstrprop(<i>var</i>, <i>propriete</i>)</tt></td>
+	<td>
+	  Test les <i>propriétés</i> de la chaîne <i>var</i> (alphanumérique, majuscule, minuscule, espaces, ponctuation, chiffres décimaux/hexadécimaux, caractères de contrôle...) <br>
+	  Sous Octave, implémenté depuis la version 3.2.0
+	</td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+
+</p><h3>4.6.3 Fonctions de conversion relatives aux chaînes</h3>
+
+
+
+<p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+
+<tr>
+	<td><tt>lower(<i>string</i>)</tt><br>
+	    <tt>upper(<i>string</i>)</tt></td>
+	<td>Convertit la chaîne <i>string</i> en <b>minuscules</b>,<br>
+	    respectivement en <b>majuscules</b></td>
+</tr>
+
+<tr>
+	<td>
+	  <tt>abs(<i>string</i>)</tt> ou<br>
+	  <tt>double(<i>string</i>)</tt>
+	</td>
+	<td>
+	  Convertit les caractères de la chaîne <i>string</i> en leurs <b>codes</b> décimaux selon la table <b>ASCII</b> ISO-Latin-1
+	  <p>
+	  <u>Ex</u>: <tt>abs('àéèçâêô')</tt> retourne le vecteur [ 224   233   232   231   226   234   244 ] (code ASCII de ces caractères accentués)
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>char(<i>var</i>)</tt></td>
+	<td>
+	  Convertit les nombres de la variable <i>var</i> en <b>caractères</b> (selon encodage 8-bits ISO-Latin-1)
+	  <p>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif">Remarque: avec Octave-Forge 2.1.42 sous Windows, la fenêtre de commande refuse que l'on entre au clavier des caractères accentués ; cette fonction permet donc de contourner cette difficulté
+	  </p><p>
+	  <u>Ex</u>: <tt>char(224)</tt> retourne le caractère "à", <tt>char([233 232])</tt> retourne la chaîne "éè"
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>sprintf(<i>format</i>,<i>variable(s)</i>...)</tt></td>
+	<td>
+	  Permet de convertir un(des) <b>nombre(s)</b> en une <b>chaîne</b> (voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/mfiles.shtml#entrees_sorties">Entrées-sorties</a>")<br>
+	  Voir aussi les fonctions <tt>int2str</tt> et <tt>num2str</tt> (qui sont cependant moins flexibles)
+	</td>
+</tr>
+
+<tr>
+	<td><tt>mat2str(<i>mat</i> {,<i>n</i>})</tt></td>
+	<td>
+	  Convertit la <b>matrice</b> <i>mat</i> en une <b>chaîne</b> de caractère incluant les crochets [ ] et qui serait dont "évaluable" avec la fonction <tt>eval</tt> (voir ci-dessous). L'argument <i>n</i> permet de définir la précision (nombre de chiffres). Cette fonction peut être intéressante pour sauvegarder une matrice sur un fichier (en combinaison avec <tt>fprintf</tt>, voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/mfiles.shtml#entrees_sorties">Entrées-sorties</a>").
+	  <p>
+	  <u>Ex</u>: <tt>mat2str(eye(3,3))</tt> produit la chaîne "[1 0 0;0 1 0;0 0 1]"
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>sscanf(<i>string</i>,<i>format</i>)</tt></td>
+	<td>Permet de récupérer le(s) <b>nombre(s)</b> se trouvant dans la chaîne <i>string</i>
+	(voir chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/mfiles.shtml#entrees_sorties">Entrées-sorties</a>")</td>
+</tr>
+
+<tr>
+	<td><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> <tt>str2num(<i>string</i>)</tt></td>
+	<td>
+	  Convertit en <b>nombres</b> le(s) nombre(s) se trouvant dans la <b>chaîne</b> <i>string</i>.<br>
+	  Pour des possibilités plus élaborées, on utilisera la fonction <tt>sscanf</tt> décrite au chapitre "<a href="http://enacit1.epfl.ch/cours_matlab/mfiles.shtml#entrees_sorties">Entrées-sorties</a>".
+	  <p>
+	  <u>Ex</u>: <tt>str2num('12 34 ; 56 78')</tt> retourne la matrice [12 34 ; 56 78]
+	</p></td>
+</tr>
+
+<tr>
+	<td><tt>eval(<i>expression</i>)</tt></td>
+	<td>
+	  Évalue (<b>exécute</b>) l'<i>expression</i> MATLAB/Octave spécifiée
+	  <p>
+	  <u>Ex</u>: si l'on a une chaîne <tt>str_mat='[1 3 2 ; 5.5 4.3 2.1]'</tt>, l'expression <tt>eval(['x=' str_mat])</tt> permet d'affecter les valeurs de cette chaîne à la matrice x
+	</p></td>
+</tr>
+
+</tbody></table></center><p>
+
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="tableaux"></a>
+</p><h2>4.7 Tableaux multidimensionnels</h2>
+
+<h3>4.7.1 Généralités</h3>
+
+
+<table border="0" width="100%" class="noborder">
+<tbody><tr>
+<td>
+  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Sous la dénomination de "<b>tableaux multidimensionnels</b>" (multidimensional arrays, ND-Arrays), il faut simplement imaginer des matrices ayant <b>plus de 2 indices</b> (<u>ex</u>: <tt>B(2,3,3)</tt>). S'il est facile de se représenter la 3e dimension (voir Figure ci-contre), c'est un peu plus difficile au-delà :<br>
+  &nbsp; &nbsp; - 4 dimensions pourrait être vu comme un vecteur de tableaux 3D<br>
+  &nbsp; &nbsp; - 5 dimensions comme une matrice 2D de tableaux 3D<br>
+  &nbsp; &nbsp; - 6 dimensions comme un tableau 3D de tableaux 3D...<br>
+  Un tableau tridimensionnel permettra, par exemple, de stocker une séquence de matrices 2D de tailles identiques (pour des matrices de tailles différentes, on devra faire appel aux "tableaux cellulaires" décrits plus loin) relatives à des données physiques de valeurs spatiales (échantillonées sur une grille) évoluant en fonction d'un 3e paramètre (altitude, temps...).
+  <p>
+  Les tableaux multidimensionnels sont supportés depuis longtemps sous MATLAB, et depuis la version 2.1.51 d'Octave.
+  </p><p>Ce chapitre illustre la façon de définir et utiliser des tableaux multidimensionnels. Les exemples, essentiellement 3D, peuvent sans autre être extrapolés à des dimensions plus élevées.
+</p></td>
+<td>
+  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/fig_tableau_3d.png">
+</td>
+</tr></tbody></table>
+
+<p>
+
+
+
+</p><h3>4.7.2 Tableaux multidimensionnels</h3>
+
+<p>
+
+</p><dl>
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> La <b>génération</b> de tableaux multidimensionnels peut s'effectuer simplement par indexation, c'est-à-dire <b>en utilisant un 3ème, 4ème... indice</b> de matrice.
+  <p>
+  </p></dt><dd><u>Ex</u>:
+  <ul>
+  <li>si le tableau <tt>B</tt> ne pré-existe pas, la simple affectation <tt>B(2,3,3)=2</tt> va générer un tableau tridimensionnel (de dimension 2x3x3 analogue à celui de la Figure ci-dessus) dont le dernier élément, d'indice (2,3,3), sera mis à la valeur 2 et tous les autres éléments initialisés à la valeur 0
+  </li><li>puis <tt>B(:,:,2)=[1 1 1 ; 1 1 1]</tt> ou <tt>B(:,:,2)=ones(2,3)</tt> ou encore plus simplement <tt>B(:,:,2)=1</tt> permettrait d'initialiser tous les éléments de la seconde "couche" de ce tableau 3D à la valeur 1
+  </li><li>et <tt>B(1:2,2,3)=[2;2]</tt> permettrait de modifier la seconde colonne de la troisième "couche" de ce tableau 3D
+  </li><li>on pourrait de même accéder individuellement à tous les éléments <tt>B(<i>k</i>,<i>l</i>,<i>m</i>)</tt> de ce tableau par un ensemble de boucles <tt>for</tt> tel que (bien que ce ne soit pas efficace ni élégant pour un langage "vectorisé" tel que MATLAB/Octave) :
+     <pre class="small">     for k=1:2         % indice de ligne
+       for l=1:3       % indice de colonne
+         for m=1:3     % indice de "couche"
+           B(k,l,m)=...
+         end
+       end
+     end</pre>
+  </li></ul>
+  
+  
+</dd><dt>Certaines fonctions MATLAB/Octave déjà présentées plus haut permettent de générer directement des tableaux multidimensionnels lorsqu'on leur passe plus de 2 arguments : <tt>ones</tt>, <tt>zeros</tt>, <tt>rand</tt>, <tt>randn</tt>.
+<p>
+  </p></dt><dd><u>Ex</u>:
+  <ul>
+  <li><tt>C=ones(2,3,3)</tt> génère un tableau 3D de dimension 2x3x3 dont tous les éléments sont mis à la valeur 1
+  </li><li><tt>D=zeros(2,3,3)</tt> génère un tableau 3D de dimension 2x3x3 dont tous les éléments sont mis à la valeur 0
+  </li><li><tt>E=rand(2,3,3)</tt> génère un tableau 3D de dimension 2x3x3 dont les éléments auront une valeur aléatoire comprise entre 0 et 1
+  </li></ul>
+
+
+</dd><dt>Voir aussi les fonctions de génération et réorganisation de matrices, telles que <tt>repmat(<i>tableau</i>,[<i>M</i> <i>N</i> <i>P</i> ...])</tt> et <tt>reshape(<i>tableau</i>,<i>M</i>,<i>N</i>,<i>P</i>...)</tt>, qui s'appliquent également aux tableaux multidimensionnels.
+
+
+
+</dt><dt>Les opérations dont l'un des deux opérandes est un <b>scalaire</b>, les <b>opérateurs de base</b> (arithmétiques, logiques, relationnels...) ainsi que les fonctions opérant "<b>élément par élément</b>" sur des matrices 2D (fonctions trigonométriques...) travaillent de façon identique sur des tableaux multidimensionnels, c'est-à-dire s'appliquent à tous les éléments du tableau. Par contre les fonctions qui opèrent spécifiquement sur des matrices 2D et vecteurs (algèbre linéaire, fonctions "matricielles" telles que inversion, produit matriciel, etc...) ne pourront être appliquées qu'à des sous-ensembles 1D (vecteurs) ou 2D ("tranches") des tableaux multidimensionnels, donc moyennement un usage correct des indices de ces tableaux !
+<p>
+  </p></dt><dd><u>Ex</u>:
+  <ul>
+  <li>en reprenant le tableau C de l'exemple précédent, <tt>F=3*C</tt> retourne un tableau dont tous les éléments auront la valeur 3
+  </li><li>en faisant <tt>G=E+F</tt> on obtient un tableau dont les éléments ont une valeur aléatoire comprise entre 3 et 4
+  </li><li><tt>sin(E)</tt> calcule le sinus de tous les éléments du tableau E
+  </li></ul>
+
+
+
+</dd><dt>Certaines fonctions présentées plus haut (notamment les fonctions <b>statistiques</b> <tt>min</tt>, <tt>max</tt>, <tt>sum</tt>, <tt>prod</tt>, <tt>mean</tt>, <tt>std</tt>...) permettent de spécifier un "<b>paramètre de dimension</b>" <tt><i>d</i></tt> qui est très utile dans le cas de tableaux multidimensionnels. Illustrons l'usage de ce paramètre avec la fonction <tt>sum</tt> :
+
+</dt><dt><tt>sum(<i>tableau</i>, <i>d</i> )</tt>
+  </dt><dd>Calcule la <b>somme</b> des éléments en faisant <b>varier le <i>d</i>-ème indice</b> du <i>tableau</i>
+  <p>
+  <u>Ex</u>: dans le cas d'un <i>tableau</i> de dimension 3x4x5 (nombre de: lignes x colonnes x profondeur)
+  </p><ul>
+  <li><tt>sum(<i>tableau</i>,1)</tt> retourne un tableau 1x4x5 contenant la somme des éléments par ligne
+  </li><li><tt>sum(<i>tableau</i>,2)</tt> retourne un tableau 3x1x5 contenant la somme des éléments par colonne
+  </li><li><tt>sum(<i>tableau</i>,3)</tt> retourne une matrice 3x4x1 contenant la somme des éléments calculés selon la profondeur
+  </li></ul>
+
+
+
+
+</dd><dt>La génération de tableaux multidimensionnels peut également s'effectuer par la fonction de <b>concaténation</b> de matrices (voire de tableaux !) de dimensions inférieures avec la fonction <tt>cat</tt>
+<p>
+<tt>cat(<i>d</i>, <i>mat1</i>, <i>mat2</i>)</tt>
+</p><p>
+  </p></dt><dd><b>Concatène</b> les 2 matrices <i>mat1</i> et <i>mat2</i> selon la <i>d</i>-ème dimension. Si <i>d</i>=1 (indice de ligne) =&gt; concaténation verticale. Si <i>d</i>=2 (indice de colonne) =&gt; concaténation horizontale. Si <i>d</i>=3 (indice de "profondeur") =&gt; création de "couches" suppémentaires ! Etc...
+  <p>
+  <u>Ex</u>:
+  </p><ul>
+  <li><tt>A=cat(1,zeros(2,3),ones(2,3))</tt> ou <tt>A=[zeros(2,3);ones(2,3)]</tt> retournent la matrice 4x2 A=[0 0 0 ; 0 0 0 ; 1 1 1 ; 1 1 1] (on reste en <b>2D</b>)
+  </li><li><tt>A=cat(2,zeros(2,3),ones(2,3))</tt> ou <tt>A=[zeros(2,3),ones(2,3)]</tt> retournent la matrice 2x4 A=[0 0 0 1 1 1 ; 0 0 0 1 1 1] (on reste en <b>2D</b>)
+  </li><li>et <tt>B=cat(3,zeros(2,3),ones(2,3))</tt> retourne le tableau à <b>3 dimensions</b> 2x3x2 composé de B(:,:,1)=[0 0 0 ; 0 0 0] et B(:,:,1)=[1 1 1 ; 1 1 1]
+  </li><li>puis <tt>B=cat(3,B,2*ones(2,3))</tt> ou <tt>B(:,:,3)=2*ones(2,3)</tt> permettent de rajouter une nouvelle "couche" à ce tableau (dont la dimension passe alors à 2x3x3) composé de B(:,:,3)=[2 2 2; 2 2 2], ce qui donne exactement le tableau de la Figure ci-dessus
+  </li></ul>
+
+
+</dd><dt>Les fonctions ci-dessous permettent de connaître la <b>dimension</b> d'un tableau (2D, 3D, 4D...) et la "<b>taille de chaque dimension</b>" :
+
+
+</dt><dt><i>vect</i>=<tt>size(<i>tableau</i>)</tt> <br>
+    <i>taille</i>=<tt>size(<i>tableau</i>, <i>dimension</i>)</tt>
+  </dt><dd>Retourne un vecteur-ligne <i>vect</i> dont le i-ème élément indique la taille de la i-ème dimension du <i>tableau</i><br>
+  Retourne la <i>taille</i> du <i>tableau</i> correspondant à la <i>dimension</i> spécifiée
+  <p>
+  <u>Ex</u>:
+  </p><ul>
+  <li>pour le tableau <tt>B</tt> ci-dessus, <tt>size(B)</tt> retourne le vecteur [2 3 3], c'est-à-dire respectivement le nombre de lignes, de colonnes et de "couches"
+  </li><li>et <tt>size(B,1)</tt> retourne ici 2, c'est-à-dire le nombre de lignes (1ère dimension)
+  </li><li>pour un scalaire (vu comme une matrice dégénérée) cette fonction retourne toujours [1 1]
+  </li></ul>
+
+
+</dd><dt><tt>numel(<i>tableau</i>)</tt>  &nbsp; &nbsp; &nbsp;  <i>(NUMber of ELements)</i> 
+  </dt><dd>Retourne le nombre d'éléments <i>tableau</i>. Identique à <tt>prod(size(<i>tableau</i>))</tt> ou <tt>length(<i>mat</i>(:))</tt>, mais un peu plus "lisible"<br>
+
+  <u>Ex</u>: pour le tableau <tt>B</tt> ci-dessus, <tt>numel(B)</tt> retourne donc 18
+
+
+</dd><dt><tt>ndims(<i>tableau</i>)</tt> 
+  </dt><dd>Retourne la dimension <i>tableau</i> : 2 pour une matrice 2D et un vecteur ou un scalaire (vus comme des matrices dégénérées !), 3 pour un tableau 3D, 4 pour un tableau quadri-dimensionnel, etc...
+   Identique à <tt>length(size(<i>tableau</i>))</tt> <br> 
+
+  <u>Ex</u>: pour le tableau <tt>B</tt> ci-dessus, <tt>ndims(B)</tt> retourne donc 3
+
+
+</dd></dl>
+
+<p><br>
+Il est finalement intéressant de savoir, en matière d'échanges, qu'Octave permet de sauvegarder des tableaux multidimensionnels sous forme texte (utiliser <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>save -text</tt> ...), ce que ne sait pas faire MATLAB.
+
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="structures"></a>
+</p><h2>4.8 Structures (enregistrements)</h2>
+
+
+<h3>4.8.1 Généralités</h3>
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Une "<b>structure</b>" (enregistrement, record) est un type d'objet MATLAB/Octave (que l'on retrouve dans d'autres langages) se composant de plusieurs "<b>champs</b>" nommés (fields) qui peuvent être <b>de types différents</b> (chaînes, matrices, tableaux cellulaires...), champs qui peuvent eux-mêmes se composer de sous-champs... MATLAB/Octave permet logiquement de créer des "<b>tableaux de structures</b>" (structures array) multidimensionels.
+
+</p><p>
+
+
+</p><dl>
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> On accède aux champs d'une structure avec la <b>syntaxe</b> <tt><i>structure</i>.<i>champ</i>.<i>sous_champ</i></tt>... (usage du caractère "<tt>.</tt>" comme séparateur). Pour illustrer les concepts de base relatifs aux structures, prenons l'exemple d'une structure permettant de stocker les différents attributs d'une personne (nom, prénom, age, adresse, etc...).
+<p>
+<u>Exemple</u>:
+  </p><p>
+  </p></dt><dd>
+  
+  <table border="0" class="noborder">
+  <tbody><tr>
+    <td width="60%">
+      <b>A)</b> <b>Création</b> d'une <b>structure</b> <i>personne</i> par définition des attributs du 1er individu :
+      <p>
+      </p><ul>
+      <li>avec <tt>personne.nom='Dupond'</tt> la structure est mise en place et contient le nom de la 1ère personne ! (vérifiez avec <tt>whos personne</tt>)
+      </li><li>avec <tt>personne.prenom='Jules'</tt> on ajoute un champ <i>prenom</i> à cette structure et l'on définit le prénom de la 1ère personne
+      </li><li>et ainsi de suite : <tt>personne.age=25 ; personne.code_postal=1010 ; personne.localite='Lausanne'</tt><br>
+      </li><li>on peut, à ce stade, vérifier le contenu de la structure en frappant <tt>personne</tt><br>
+      </li></ul>
+    </td>
+    <td width="40%">
+      <center>Tableau de structures <b>personne</b><table border="1">
+      <tbody><tr>
+        <td>
+          <b>nom</b>: Dupond &nbsp; &nbsp; &nbsp; <b>prenom</b>: Jules<br>
+          <b>age</b>: 25<br>
+          <b>code_postal</b>: 1010 &nbsp; &nbsp; <b>localite</b>: Lausanne<br>
+          <b>enfants</b>: -<br>
+          <b>tel.prive</b>: 021 123 45 67 &nbsp; <b>tel.prof</b>: 021 987 65 43
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>nom</b>: Durand &nbsp; &nbsp; &nbsp; <b>prenom</b>: Albertine<br>
+          <b>age</b>: 30<br>
+          <b>code_postal</b>: 1205 &nbsp; &nbsp; <b>localite</b>: Geneve<br>
+          <b>enfants</b>:  Arnaud &nbsp; &nbsp;   Camille<br>
+          <b>tel.prive</b>: - &nbsp; &nbsp; <b>tel.prof</b>: -
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>nom</b>: Muller &nbsp; &nbsp; &nbsp; <b>prenom</b>: Robert<br>
+          <b>age</b>: 28<br>
+          <b>code_postal</b>: 2000 &nbsp; &nbsp; <b>localite</b>: Neuchatel<br>
+          <b>enfants</b>: -<br>
+          <b>tel.prive</b>: - &nbsp; &nbsp; <b>tel.prof</b>: -
+        </td>
+      </tr>
+      </tbody></table></center>
+    </td>
+  </tr></tbody></table>
+  
+  <p>
+  <b>B)</b> Définition d'autres individus =&gt; la structure devient un <b>tableau de structures</b> :
+  </p><p>
+  </p><ul>
+  <li>Ajout d'une 2e personne avec <tt>personne(2).nom='Durand' ; personne(2).prenom='Albertine' ; personne(2).age=30 ; personne(2).code_postal=1205 ; personne(2).localite='Geneve'</tt>
+  <p>
+  </p></li><li>Définition d'une 3e personne via une notation plus compacte en spécifiant <b>tous les champs d'un coup</b> :<br>
+  <tt>personne(3)=struct('nom','Muller','prenom','Robert','age',28,'code_postal',2000,'localite','Neuchatel')</tt><br>
+  • ATTENTION: on ne peut utiliser cette fonction que si l'on spécifie tous les champs ! Donc <tt>personne(3)=struct('nom','Muller','age',28)</tt> retournerait une erreur (car il manque les champs : prenom, code_postal, localite) <br>
+  • <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/x.gif"> <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"> Sous MATLAB seulement, les champs doivent toujours être passés dans le <b>même ordre</b> ! Donc si l'on crée la structure <tt>pays(1)=struct('nom','Suisse','capitale','Berne')</tt>, l'instruction <tt>pays(1)=struct('capitale','Paris','nom','France',)</tt> génère ensuite une erreur (les 2 champs nom et capitale étant permutés par rapport à la séquence initiale de création des champs de cette structure) !
+  
+  <!-- <IMG SRC=o.gif><TT>personne(3)=setfield('nom','Muller','prenom','Robert','age',28,'code_postal',2000,'localite','Neuchatel')</TT><BR> -->
+  </li></ul>
+  
+  <p>
+  <b>C)</b> Ajout de <b>nouveaux champs</b> à un tableau de structures existant :
+  </p><p>
+  </p><ul>
+  <li>Ajout d'un champ <i>enfants</i> de type "tableau cellulaire" (voir chapitre suivant) en définissant les 2 enfants de la 2e personne avec :<br>
+      <tt>personne(2).enfants={'Arnaud','Camille'}</tt>
+  <p>
+  </p></li><li>Comme illustration de la notion de <b>sous-champs</b>, définissions les numéros de téléphone privé et prof. ainsi :<br>
+      <tt>personne(1).tel.prive='021 123 45 67' ; personne(1).tel.prof='021 987 65 43'</tt><br>
+      <b>Attention</b> : le fait de donner une valeur au champ principal <i>personne.tel</i> (avec <tt>personne.tel='Xxx'</tt>) ferait disparaître les sous-champs <i>tel.prive</i> et <i>tel.prof</i> !
+  </li></ul>
+  
+  <p>
+  <b>D)</b> <b>Accès</b> aux <b>structures</b> et aux <b>champs</b> d'un tableau de structures :<br>
+  &nbsp; &nbsp; - la notation <tt><i>structure</i>(<i>i</i>)</tt> retourne la <i>i</i>-ème structure du tableau de structures <i>structure</i><br>
+  &nbsp; &nbsp; - par extension, <tt><i>structure</i>([<i>i</i> <i>j</i>:<i>k</i>])</tt> retournerait un tableau de structures contenant la <i>i</i>-ème structure et les structures <i>j</i> à <i>k</i> du tableau <i>structure</i><br>
+  &nbsp; &nbsp; - avec <tt><i>structure</i>(<i>i</i>).<i>champ</i></tt> on accède au contenu du <i>champ</i> spécifié du <i>i</i>-ème individu du tableau <i>structure</i>
+  </p><p>
+  </p><ul>
+  <li>Avec <tt>personne(1)</tt> on récupère donc la structure correspondant à notre 1ère personne (Dupond),<br>
+      et <tt>personne([1 3])</tt> retourne un tableau de structures contenant la 1ère et la 3e personne
+  </li><li><tt>personne(1).tel.prive</tt> retourne le No tel privé de la 1ère personne (021 123 45 67)<br>
+      <b>Attention</b> : comportements bizarres dans le cas de sous-champs : <tt>personne(2).tel</tt> retourne <tt>[]</tt> (ce qui est correct vu que la 2e personne n'a pas de No tél), mais <tt>personne(2).tel.prive</tt> provoque une erreur !
+  </li><li><tt>personne(2).enfants</tt> retourne un tableau cellulaire contenant les noms des enfants de la 2e personne<br>
+      et <tt>personne(2).enfants{1}</tt> retourne le nom du 1er enfant de la 2e personne (Arnaud)
+  <p>    
+  </p></li><li>Pour obtenir la <b>liste</b> de <b>toutes les valeurs d'un champ</b> spécifié, on utilise :<br>
+    • pour des champs de type <b>nombre</b> (ici liste des âges de tous les individus) :<br>
+      &nbsp; - <tt>vec_ages = [ personne.age ]</tt> retourne un vecteur-ligne <i>vec_ages</i><br>
+    <!-- sous <B>Octave</B> seulement :<BR>
+    - <IMG SRC=o.gif><TT>liste_noms = personne.nom</TT> retourne un objet <I>liste_noms</I> de type "liste" -->
+    • pour des champs de type <b>chaîne</b> (ici liste des noms de tous les individus) :<br>
+      &nbsp; - soit <tt>tabl_cel_noms = { personne.nom }</tt> qui retourne un objet <i>tab_cel_noms</i> de type "tableau cellulaire"<br>
+      &nbsp; - ou <tt>[tab_cel_noms{1:length(personne)}] = deal(personne.nom)</tt> (idem)<br>
+      &nbsp; - ou encore la boucle <tt>for k=1:length(personne), tab_cel_noms{k}=personne(k).nom ; end</tt> (idem)<br>
+  <p>
+  </p></li><li>Et l'on peut utiliser l'<b>indexation logique</b> pour extraire des parties de structure ! <br>
+  Voici un exemple très parlant : l'instruction <tt>prenoms_c = { personne( [personne.age] &gt; 26 ).prenom }</tt> retourne le vecteur cellulaire <i>prenoms_c</i> contenant les prénoms des personnes âgées de plus de 26 ans ; on a pour ce faire "indexé logiquement" la structure <tt>personne</tt> par le vecteur logique <tt>[personne.age] &gt; 26</tt>
+  </li></ul>
+  
+    <p>
+  <b>E)</b> <b>Suppression</b> de <b>structures</b> ou de <b>champs</b> :<br>
+  &nbsp; &nbsp; - pour supprimer des structures, on utilise la notation habituelle <tt><i>structure</i>(...)=[]</tt><br>
+  &nbsp; &nbsp; - pour supprimer des champs, on utilise la fonction <tt><i>structure</i> = rmfield(<i>structure</i>,'<i>champ</i>')</tt>
+  </p><p>
+  </p><ul>
+  <li><tt>personne(:).age=[]</tt> supprime l'âge des 2 personnes, mais conserve le champ âge de ces structures
+  </li><li><tt>personne(2)=[]</tt> détruit la 2e structure (personne Durand) 
+  </li><li><tt>personne = rmfield(personne,'tel')</tt> supprime le champ <i>tel</i> (et ses sous-champs <i>prive</i> et <i>prof</i>) dans toutes les structures du tableau <i>personne</i>
+  </li></ul>
+  
+  <p>
+  <b>F)</b> <b>Champs</b> de type <b>matrices</b> ou <b>tableau cellulaire</b> : <br>
+  &nbsp; &nbsp; - habituellement les champs sont de type scalaire on chaîne, mais ce peut aussi être des tableaux classiques ou des tableaux cellulaires !
+  </p><ul>
+  <li>par exemple avec <tt>personne(1).naissance_mort=[1920 2001]</tt> on définit un champ <tt>naissance_mort</tt> de type vecteur ligne <br>
+  puis on accède à l'année de mort du premier individu avec <tt>personne(1).naissance(2)</tt> ; <br>
+  </li><li>ci-dessus, <tt>enfants</tt> illustre un champ de type tableau cellulaire
+  </li></ul>
+  
+  <p>
+  <b>G)</b> <b>Matrices</b> de structures : <br>
+  &nbsp; &nbsp; - ci-dessus, <tt>personne</tt> est en quelque-sorte un vecteur-ligne de structures <br>
+  &nbsp; &nbsp; - on pourrait aussi définir (même si c'est un peu "tordu") un tableau bi-dimensionnel (matrice) de structures <br>
+  &nbsp; &nbsp; &nbsp; en utilisant 2 indices (numéro de ligne et de colonne) lorsque l'on définit/accède à la structure, <br>
+  &nbsp; &nbsp; &nbsp; par exemple <tt>personne(2,1)</tt> ... 
+
+</p></dd></dl>
+
+<p><br>
+Il est finalement utile de savoir, en matière d'échanges, qu'Octave permet de sauvegarder des structures sous forme texte (utiliser <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>save -text</tt> ...), ce que ne sait pas faire MATLAB.
+
+
+
+</p><h3>4.8.2 Fonctions spécifiques relatives aux structures</h3>
+
+
+
+<p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>struct</tt><br>
+	  <tt>setfield</tt><br>
+	  <tt>rmfield</tt>
+	</td>
+	<td>
+	  <br><i>Ces fonctions ont été vues dans l'exemple ci-dessus...</i>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>nfields(<i>struct</i>)</tt>
+	</td>
+	<td>
+	  Retourne le nombre de champs de la structure <i>struct</i>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>fieldnames(<i>struct</i>)</tt>
+	  <p>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>struct_elements(<i>struct</i>)</tt>
+	</p></td>
+	<td>
+	  Retourne la <b>liste des champs</b> de la structure (ou du tableau de structures) <i>struct</i>. Cette liste est de type "tableau cellulaire" (à 1 colonne) sous MATLAB, et de type "liste" dans Octave.<br>
+	  La fonction <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"><tt>struct_elements</tt> fait de même, mais retourne cette liste sous forme d'une matrice de chaînes.
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>getfield(<i>struct</i>,'<i>champ</i>')</tt>
+	</td>
+	<td>
+	  Est identique à <tt><i>struct</i>.<i>champ</i></tt>, donc retourne le contenu du champ <i>champ</i> de la structure <i>struct</i>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>isstruct(<i>var</i>)</tt><p>
+	  <tt>isfield(<i>struct</i>,'<i>champ</i>')</tt>
+	</p></td>
+	<td>
+	  <b>Test</b> si var est un objet de type <b>structure</b> (ou tableau de structures) : retourne 1 si c'est le cas, 0 sinon.<p>
+	  <b>Test</b> si <i>champ</i> est un <b>champ</b> de la structure (ou du tableau de structures) <i>struct</i> : retourne 1 si c'est le cas, 0 sinon.
+	</p></td>
+</tr>
+
+
+<tr>
+	<td>
+	  [<i>n</i> <i>m</i>]=<tt>size(<i>tab_struct</i>)</tt>
+	  <p>
+	  <tt>length(<i>tab_struct</i>)</tt>
+	</p></td>
+	<td>
+	  Retourne le nombre <i>n</i> de <b>lignes</b> et <i>m</i> de <b>colonnes</b> du tableau de structures <i>tab_struct</i>,
+	  <p>
+	  respectivement le <b>nombre total</b> de structures
+	</p></td>
+</tr>
+
+
+<tr>
+	<td>
+	  <pre class="small">   for k=1:length(<i>tab_struct</i>)
+     % on peut accéder à <i>tab_struct</i>(k).<i>champ</i>
+   end</pre>
+	</td>
+	<td>
+	  On <b>boucle</b> ainsi <b>sur tous les éléments</b> du tableau de structures <i>tab_struct</i> pour accéder aux valeurs correspondant au <i>champ</i> spécifié.<br>
+	  <u>Ex</u>: <tt>for k=1:length(personne), tab_cel_noms{k}=personne(k).nom ; end</tt> (voir plus haut)
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <pre class="small"><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/o.gif"> for [ <i>valeur</i> , <i>champ</i> ] = <i>tab_struct</i>
+     % on peut utiliser <i>champ</i>
+     %               et <i>valeur</i>
+   end</pre>
+	</td>
+	<td>
+	  Propre à Octave, cette forme particulière de la structure de contrôle <tt>for ... end</tt> permet de boucler sur tous les éléments d'un tableau de structures <i>tab_struct</i> et accéder aux noms de <i>champ</i> et aux <i>valeurs</i> respectives
+	</td>
+</tr>
+
+
+</tbody></table></center><p>
+
+
+
+
+<span style="page-break-before: always;"></span> <!--  saut de page à l'impression   -->
+
+<a name="cells"></a>
+</p><h2>4.9 Tableaux cellulaires (cells arrays)</h2>
+
+
+<h3>4.9.1 Généralités</h3>
+
+
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Le "<b>tableau cellulaire</b>" ("cells array") est le type de donnée MATLAB/Octave le plus polyvalent. Il se distingue du 'tableau standard' en ce sens qu'il peut se composer d'<b>objets de types différents</b> (scalaire, vecteur, chaîne, matrice, structure... et même tableau cellulaire =&gt; permettant ainsi même de faire des tableaux cellulaires imbriqués dans des tableaux cellulaires !).
+</p><p>
+Initialement uniquement bidimensionnels sous Octave, les tableaux cellulaires peuvent désormais être <b>multidimensionnels</b> (i.e. à 3 indices ou plus) depuis Octave 3.
+
+</p><dl>
+<dt><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Pour définir un tableau cellulaire et accéder à ses éléments, on recourt aux <b>accolades</b> <tt>{ }</tt> (notation qui <font color="red">ne désigne ici pas, contrairement au reste de ce support de cours, des éléments optionnels</font>). Ces accolades seront utilisées soit au niveau des <b>indices</b> des éléments du tableau, soit dans la définition de la <b>valeur</b> qui est introduite dans une cellule. Illustrons ces différentes syntaxes par un exemple.
+<p>
+<u>Exemple</u>:
+  </p><p>
+  </p></dt><dd>
+  
+  <table border="0" class="noborder">
+  <tbody><tr>
+    <td width="60%">
+      <b>A)</b> Nous allons <b>construire le tableau cellulaire</b> 2D de 2x2 cellules <tt>T</tt> ci-contre par étapes successives. Il contiendra donc les cellules suivantes :<br>
+      &nbsp; - une chaîne 'hello'<br>
+      &nbsp; - une matrice 2x2 [22 23 ; 24 25]<br>
+      &nbsp; - un tableau contenant 2 structures (nom et age de 2 personnes)<br>
+      &nbsp; - et un tableau cellulaire 1x2 imbriqué { 'quatre' &nbsp; &nbsp; 44 }<br>
+    </td>
+    <td width="40%">
+      <center>Tableau cellulaire <b>T</b><table border="1">
+      <tbody><tr align="CENTER">
+        <td><br> 'hello' </td>
+        <td>
+          <table border="1" width="100%">
+            <tbody><tr align="CENTER"><td>22</td><td>23</td></tr>
+            <tr align="CENTER"><td>24</td><td>25</td></tr>
+          </tbody></table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          personne<br>
+          &nbsp; nom: 'Dupond' age: 25<br>
+          &nbsp; nom: 'Durand' age: 30
+        </td>
+        <td align="CENTER"> <br>{ 'quatre' &nbsp; &nbsp; 44 } </td>
+      </tr>
+      </tbody></table></center>
+    </td>
+  </tr>
+  </tbody></table>
+  <ul>
+  <li>commençons par définir, indépendemment du tableau celulaire T, le tableau de structures "personne"<br>
+      avec <tt>personne.nom='Dupond'; personne.age=25; personne(2).nom='Durand'; personne(2).age=30; </tt>
+  </li><li>avec <tt>T(1,1)={ 'hello' }</tt> ou <tt>T{1,1}='hello'</tt> on définit la première cellule (examinez bien l'usage des <b>parenthèses</b> et des <b>accolades</b> !) ;<br>
+     comme T ne préexiste pas, on pourrait aussi définir cette première cellule tout simplement avec <tt>T={'hello'}</tt>
+  </li><li>avec <tt>T(1,2)={ [22 23 ; 24 25] }</tt> ou <tt>T{1,2}=[22 23 ; 24 25]</tt> on définit la seconde cellule
+  </li><li>puis <tt>T(2,1)={ personne }</tt> on définit la troisième cellule
+  </li><li>avec <tt>T(2,2)={ { 'quatre' , 44 } }</tt> ou <tt>T{2,2}={ 'quatre' , 44 }</tt> on définit la quatrième cellule
+  </li><li>on aurait aussi pu définir tout le tableau en une seule opération ainsi :<br>
+      <tt>T={ 'hello' , [22 23 ; 24 25] ; personne , { 'quatre' , 44 } }</tt><br>
+      <b>Remarque</b> : on aurait pu omettre les virgules dans l'expression ci-dessus
+  </li></ul>
+  
+  <p>
+  <b>B)</b> Pour <b>accéder aux éléments</b> d'un tableau cellulaire, il faut bien comprendre la différence de syntaxe suivante :<br>
+  &nbsp; &nbsp; - la notation <tt><i>tableau</i> (<i>i</i>,<i>j</i>)</tt> (usage de <b>parenthèses</b>) retourne le "<b>container</b>" de la <b>cellule</b> d'indice <i>i</i>,<i>j</i> du <i>tableau</i> (tableau cellulaire à 1 élément)<br>
+  &nbsp; &nbsp; - par extension, <tt><i>tableau</i> (<i>i</i>,:)</tt> retournerait par exemple un nouveau tableau cellulaire contenant la <i>i</i>-ème ligne de <i>tableau</i><br>
+  &nbsp; &nbsp; - tandis que <tt><i>tableau</i> {<i>i</i>,<i>j</i>}</tt> (usage d'<b>accolades</b>) retourne le <b>contenu</b> (c-à-d. la valeur) de la <b>cellule</b> d'indice <i>i</i>,<i>j</i>
+  </p><ul>
+  <li>ainsi <tt>T(1,2)</tt> retourne le container de la seconde cellule de T (tableau cellulaire à 1 élément)
+  </li><li>et <tt>T(1,:)</tt> retourne un tableau cellulaire contenant la première ligne du tableau T
+  </li><li>alors que <tt>T{1,2}</tt> retourne le contenu de la seconde cellule, soit la matrice [22 23 ; 24 25] proprement dite<br>
+      et <tt>T{1,2}(2,2)</tt> retourne la valeur 25 (4e élément de cette matrice)
+  </li><li>avec <tt>T{2,1}(2)</tt> on récupère la seconde structure relative à Durand<br>
+      et <tt>T{2,1}(2).nom</tt> retourne la chaîne 'Durand', et <tt>T{2,1}(2).age</tt> retourne la valeur 30<br>
+      et l'on pourrait p.ex. changer le nom de la second personne avec <tt>T{2,1}(2).nom='Muller'</tt>
+  </li><li>avec <tt>T{2,2}</tt> on récupère le tableau cellulaire de la 4e cellule<br>
+      et <tt>T{2,2}{1,1}</tt> retourne la chaîne 'quatre', et <tt>T{2,2}{1,2}</tt> retourne la valeur 44<br>
+      et l'on pourrait p.ex. changer la valeur avec <tt>T{2,2}{1,2}=4</tt>
+  </li></ul>
+  
+  <p>
+  <b>C)</b> Pour <b>supprimer</b> une ligne ou une colonne d'un tableau cellulaire, on utilise la syntaxe habituelle :
+  </p><ul>
+  <li>ainsi <tt>T(2,:)=[]</tt> supprime la seconde ligne de T
+  </li></ul>
+
+  <p>
+  <b>D)</b> Pour <b>récupérer</b> sur un <b>vecteur numérique</b> tous les nombres d'une colonne ou d'une ligne d'un tableau cellulaire :<br>
+  &nbsp; &nbsp; - soit le tableau cellulaire suivant: <tt>TC={'aa' 'bb' 123 ; 'cc' 'dd' 120 ; 'ee' 'ff' 130}</tt>
+  </p><ul>
+  <li>tandis que <tt>vec_cel=TC(:,3)</tt> nous retournerait un "<b>vecteur cellulaire</b>" contenant la 3e colonne de ce tableau,
+  </li><li>on peut directement récupérer (sans faire de boucle <tt>for</tt>), sur un <b>vecteur de nombres</b>, tous les éléments de la 3e colonne avec <tt>vec_nb = [ TC{:,3} ]</tt>
+  </li><li>ou par exemple calculer la moyenne de tous les nombres de cette 3e colonne avec <tt>mean( [ TC{:,3} ] )</tt>
+  </li></ul>
+  
+  <p>
+  <b>E)</b> Et l'on peut même utiliser l'<b>indexation logique</b> pour extraire des parties de tableau cellulaire !
+  </p><p>
+  Voici un exemple parlant : <br>
+  - soit le tableau cellulaire de personnes et âges : <tt>personnes={'Dupond' 25; 'Durand' 30; 'Muller' 60}</tt> <br>
+  - l'instruction <tt>personnes( ([ personnes{:,2} ] &gt; 27)' ,1)</tt> retourne alors, sous forme de tableau cellulaire, <br>
+  &nbsp; les noms des personnes âgées de plus de 27 ans (Durand et Muller) ; <br>
+  - pour ce faire, on a ici "indexé logiquement" la première colonne de <tt>personnes</tt> (contenant les noms) <br>
+  &nbsp; par le vecteur logique <tt>[ personnes{:,2} ] &gt; 27</tt> (que l'on transpose pour qu'il soit en colonne), <br>
+  &nbsp; et on n'extrait de ce tableau <tt>personnes</tt> que la <tt>1</tt>ère colonne (les noms)
+  
+
+</p></dd></dl>
+
+<br>
+<p>
+<img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/important.gif"> Il est intéressant de noter que les tableaux cellulaires peuvent être utilisés comme <b>paramètres d'entrée</b> et <b>de sortie</b> à toutes les <b>fonctions</b> MATLAB/Octave (un tableau cellulaire pouvant, par exemple, remplacer une liste de paramètres d'entrée).
+
+</p><p><br>
+Il est finalement utile de savoir, en matière d'échanges, qu'Octave permet de sauvegarder des tableaux cellulaires sous forme texte (avec <tt>save -text</tt> ...), ce que ne sait pas faire MATLAB.
+
+
+
+
+</p><h3>4.9.2 Fonctions spécifiques relatives aux tableaux cellulaires</h3>
+
+<p>
+Nous présentons dans le tableau ci-dessous les <b>fonctions</b> les plus importantes <b>spécifiques aux tableaux cellulaires</b>.
+</p><p>
+On utilisera en outre avec profit, dans des tableaux cellulaires contenant des chaînes de caractères, les fonctions de tri et de recherche <tt>sort</tt>/<tt>sortrows</tt>, <tt>unique</tt>, <tt>intersect</tt>/<tt>setdiff</tt>/<tt>union</tt> et <tt>ismember</tt> présentées plus haut.
+
+<br>
+<br>
+
+
+</p><p></p><center><table border="1" cellpadding="5" cellspacing="0" width="95%">
+<tbody><tr bgcolor="#E4E4E4">
+	<td width="30%"><b>Fonction</b></td>
+	<td width="65%"><b>Description</b></td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>cell(<i>n</i>)</tt><br>
+	  <tt>cell(<i>n</i>,<i>m</i>)</tt><br>
+	  <tt>cell(<i>n</i>,<i>m</i>,<i>o</i>,<i>p</i>...)</tt>
+	</td>
+	<td>
+	  <b>Crée</b> un objet de type <b>tableau cellulaire</b> carré de dimension <i>n</i> x <i>n</i>,<br>
+	  respectivement de <i>n</i> lignes x <i>m</i> colonnes, dont tous les éléments sont vides.<br>
+	  Avec plus que 2 paramètres, crée un tableau cellulaire multidomensionnel.
+	  <p>
+	  Mais, comme l'a démontré l'exemple ci-dessus, un tableau cellulaire peut être créé, sans cette fonction, par une simple affectation de type <tt><i>tableau</i>={ <i>valeur</i> }</tt> ou <tt><i>tableau</i>{1,1}=<i>valeur</i></tt>, puis sa dimension peut être étendue dynamiquement
+	</p></td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>iscell(<i>var</i>)</tt>
+	  <p>
+	  <tt>iscellstr(<i>var</i>)</tt>
+	</p></td>
+	<td>
+	  <b>Test</b> si <i>var</i> est un objet de type tableau cellulaire : retourne 1 si c'est le cas, 0 sinon.
+	  <p>
+	  Test si <i>var</i> est un tableau cellulaire de <b>chaînes</b>.
+	</p></td>
+</tr>
+
+
+<tr>
+	<td>
+	  [<i>n</i> <i>m</i>]=<tt>size(<i>tab_cel</i>)</tt>
+	</td>
+	<td>
+	  Retourne la <b>taille</b> (nombre <i>n</i> de <b>lignes</b> et <i>m</i> de <b>colonnes</b>) du tableau cellulaire <i>tab_cel</i>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <i>mat</i> = <tt>cell2mat(<i>tab_cel</i>)</tt>
+	</td>
+	<td>
+	  Convertit le tableau cellulaire <i>tab_cel</i> en une matrice <i>mat</i> en concaténant ses éléments<br>
+    <u>Ex</u>: <tt>cell2mat( { 11 22 ; 33 44 } )</tt> retourne [11 22 ; 33 44]
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <i>tab_cel_string</i> = <tt>cellstr(<i>mat_string</i>)</tt>
+	</td>
+	<td>
+	  Conversion de la "matrice de chaînes" <i>mat_string</i> en un <b>tableau cellulaire de chaînes</b> <i>tab_cel_string</i>. Chaque ligne de <i>mat_string</i> est automatiquement "nettoyée" des &lt;espaces&gt; de remplissage (trailing blanks) avant d'être placée dans une cellule. Le tableau cellulaire résultant aura 1 colonne et autant de lignes que <i>mat_string</i>.
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <i>mat_string</i> = <tt>char(<i>tab_cel_string</i>)</tt>
+	</td>
+	<td>
+	  Conversion du tableau cellulaire de chaînes <i>tab_cel_string</i> en une <b>matrice de chaînes</b> <i>mat_string</i>. Chaque chaîne de <i>tab_cel_string</i> est automatiquement complétée par des &lt;espaces&gt; de remplissage (trailing blanks) de façon que toutes les lignes de <i>mat_string</i> aient le même nombre de caractères.
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>celldisp(<i>tab_cel</i>)</tt>
+	</td>
+	<td>
+	  Affiche récursivement le <b>contenu</b> du tableau cellulaire <i>tab_cel</i>. Utile sous MATLAB où, contrairement à Octave, le fait de frapper simplement <tt><i>tab_cel</i></tt> n'affiche pas le contenu de <i>tab_cel</i> mais le type des objets qu'il contient.
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/m.gif"><tt>cellplot(<i>tab_cel</i>)</tt>
+	</td>
+	<td>
+	  Affiche une figure représentant <b>graphiquement</b> le contenu du tableau cellulaire <i>tab_cel</i>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>num2cell</tt>
+	</td>
+	<td>
+	  Conversion d'un tableau numérique en tableau cellulaire
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>struct2cell</tt>, <tt>cell2struct</tt>
+	</td>
+	<td>
+	  Conversion d'un tableau de structures en tableau cellulaire, et vice-versa
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+	  <tt>cellfun(<i>function</i>,<i>tab_cel</i> {,<i>dim</i>})</tt>
+	</td>
+	<td>
+	  Applique la fonction <i>function</i> (qui peut être: <tt>'isreal'</tt>, <tt>'isempty'</tt>, <tt>'islogical'</tt>, <tt>'length'</tt>, <tt>'ndims'</tt> ou <tt>'prodofsize'</tt>) à tous les éléments du tableau cellulaire <i>tab_cell</i>, et retourne un tableau numérique
+	</td>
+</tr>
+
+
+</tbody></table></center><p>
+
+
+</p><h3>4.9.3 Listes Octave</h3>
+
+Le type d'objet "liste" était <b>propre à Octave</b>. Conceptuellement proches des "tableaux cellulaires", les listes n'ont plus vraiment de sens aujourd'hui et disparaissent de Octave depuis la version 3.4. On trouve sous <a href="http://enacit1.epfl.ch/cours_matlab/old-octave-listes.shtml">ce lien</a> des explications relatives à cet ancien type d'objet.
+
+
+<br>
+<br>
+
+
+
+
+<br><br><hr noshade="" size="1">
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr"><img src="./MATLAB et Octave - 4. Objets   séries vecteurs, matrices, chaînes, tableaux multidimensionnels et cellulaires, structures_files/cc-by-sa.png" border="0" align="bottom" class="noprint"></a>
+	Documentation <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">CC BY-SA 3.0</a> /
+	<a href="http://ssie.epfl.ch/pers/collab/bonjour.html">J.-D. BONJOUR</a>
+	(<script>msgto('jean-daniel.bonjour', 'epfl.ch' ,'*** Commentaire sur Cours MATLAB/Octave')</script><a href="mailto:jean-daniel.bonjour@epfl.ch?Subject=***%20Commentaire%20sur%20Cours%20MATLAB/Octave">jean-daniel.bonjour@epfl.ch</a>) / EPFL-ENAC-IT /
+	Rév. 15-11-2012 &nbsp; &nbsp; &nbsp; 
+	<a href="http://enacit1.epfl.ch/cours_matlab/" target="_top" class="noprint bouton">&#8629; Table des matières</a>
+<hr noshade="" size="1">
+
+
+
+</body></html>

@@ -1,0 +1,56 @@
+
+	BODY       { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: black; background: white; }
+	
+	/*  Les couleurs de background de titres correspondent à celles des sites officiels Octave  */
+	H1         { font-family: Arial, Helvetica, sans-serif; font-size: 16pt; color: #0000AA; background: #DDEEFF; text-align: center; padding-left: 15px; padding-right: 15px; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+	H2         { font-family: Arial, Helvetica, sans-serif; font-size: 14pt; color: white  ; background: #10A0FF; margin-top: 30pt; margin-bottom: 15pt; border-top: 1px solid #002266; padding-left: 10px; }
+	H3         { font-family: Arial, Helvetica, sans-serif; font-size: 13pt; color: #444444; background: #E0E0E0; margin-top: 18pt; margin-bottom: 10pt; border-top: 1px solid #888888; padding-left: 8px; }
+	H4         { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #444444; background: white; margin-top: 14pt; margin-bottom: 8pt; border-top: 1px solid #888888; padding-left: 4px; }
+	H5         { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #444444; background: white; margin-top: 10pt; margin-bottom: 5pt; }
+	
+	P,LI,DT,DD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+	U          { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; background: #888888; color: #FFFFFF; padding-left: 4px; padding-right: 4px; text-decoration: none; font-weight: bold; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+	
+	TABLE      { border-collapse: collapse; border: 1px solid #888888; }
+	TABLE.noborder { border-collapse: collapse; border: 0px; }
+	TH,TD      { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; vertical-align: top; padding: 3pt; }
+	TD.petit   { font-size: 7pt; }
+	TD.titre   { vertical-align: bottom; }
+	
+	DL DT      { margin-top: 12pt; }
+	DT.nomargin  { margin-top: 6pt; }
+	SUP        { font-size:   8pt; }
+	P.petit    { font-size:   7pt; }
+	
+	UL         { list-style-image: url("puce.png"); padding-left: 10pt; margin-left: 10pt; }
+	
+	PRE,TT     { font-family: Courier New, Courier, monospace; font-size: 9pt; font-weight: bold;   color: #000099; background: #E9F4FF; }
+	PRE.small  { font-family: Courier New, Courier, monospace; font-size: 8pt; font-weight: normal; color: #000099; background: #E9F4FF; }
+	PRE I      { font-family: Courier New, Courier, monospace; font-size: 8pt; font-weight: normal; color: #000099; background: #E9F4FF; }
+	
+	/* la règle TT I  est pour IE 3.0  */
+	TT I       { font-family: Courier New, Courier, monospace; font-size: 9pt; font-weight: normal; color: #000099; background: #E9F4FF; }
+	TT         { padding-left: 5px; padding-right: 5px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+	
+	TT.key     { padding-left: 2px; padding-right: 2px; border:1px solid #bbf; color: #000099; background: #fff; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; font-weight: normal; }
+	TT.button  { border-right:2px solid #999999; border-bottom:2px solid #999999; color: #444444; background: #f0f0f0; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+	TT.menu    { color: #666666; background: #f0f0f0; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+	
+	I.nobold   { font-weight: normal; padding-left: 2px; padding-right: 2px; }
+	
+	A:link     { color: #0000FF; font-weight: bold; text-decoration: none; }
+	A:visited  { color: #0000FF; font-weight: bold; text-decoration: none; }
+	A:hover    { color: #0000FF; font-weight: bold; text-decoration: none; background: #ddeeff; }
+	A:active   { color: red    ; font-weight: bold; text-decoration: none; }
+	
+	.stabylo   { background: #FFFFBB; }
+	.txtsize9  { font-size:  9pt; }
+	.txtsize10 { font-size: 10pt; }
+	.bouton    { background: #ddd; padding-left: 4px; padding-right: 4px; }
+	
+	
+	/* ci-dessus:  border-radius est spécification CSS3, -moz-border-radius pour Gecko (firefox...), -webkit-border-radius pour Webkit (chrome, safari...)   */
+	
+	@media print {   /* partie de la feuille de style réservée à l'impression */
+		.noprint { display: none; }
+	}

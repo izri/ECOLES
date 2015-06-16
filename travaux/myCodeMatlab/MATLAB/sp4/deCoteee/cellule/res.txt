@@ -1,0 +1,2529 @@
+network7cellsTimeOk
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     2
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     3
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     3
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     4
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     5
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     5
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     1
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     1
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     2
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     3
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     3
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     4
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     4
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     5
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     6
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     2
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     7
+
+
+sauv =
+
+     1
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     2
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     2
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     2
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     3
+
+
+sauv =
+
+     2
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     4
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     5
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     6
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     6
+
+
+sauv =
+
+     2
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     6
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     6
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     7
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     7
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     7
+
+
+sauv =
+
+     2
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     3
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     7
+
+
+sauv =
+
+     2
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     1
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     2
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     3
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     5
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     5
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     6
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     6
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     9
+
+
+q =
+
+     6
+
+
+sauv =
+
+     3
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     6
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     4
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     7
+
+
+sauv =
+
+     3
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     4
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     2
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     3
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     4
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     5
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     6
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     6
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     6
+
+
+sauv =
+
+     4
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     5
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     6
+
+
+sauv =
+
+     4
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     1
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     1
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     3
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     8
+
+
+q =
+
+     4
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+    10
+
+
+q =
+
+     5
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     5
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     5
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     5
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     3
+
+
+q =
+
+     6
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     2
+
+
+q =
+
+     6
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     6
+
+
+q =
+
+     6
+
+
+sauv =
+
+     5
+
+*******  JE SUIS ICI ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     5
+
+
+q =
+
+     6
+
+
+sauv =
+
+     5
+
+*******  JE SUIS LAAAAAAAAAAAAAAAAA ******** 
+
+t =
+
+     6
+
+
+wwRbConfli =
+
+     7
+
+
+q =
+
+     7
+
+
+sauv =
+
+     5
+
+{Attempted to access Mat.apprentissageRB(7,7); index out of bounds because
+size(Mat.apprentissageRB)=[6,10].
+
+Error in <a href="matlab:helpUtils.errorDocCallback('network7cellsTimeOk', 'C:\Users\Nora IZRI\Documents\MATLAB\cellule\network7cellsTimeOk.m', 442)" style="font-weight:bold">network7cellsTimeOk</a> (<a href="matlab: opentoline('C:\Users\Nora IZRI\Documents\MATLAB\cellule\network7cellsTimeOk.m',442,0)">line 442</a>)
+                    Mat(t).gain(q,wwRbConfli)= Mat(t).apprentissageRB(q,wwRbConfli) -
+                    Mat(sauv).apprentissageRB(q,wwRbConfli);
+                    %cell{q,t}.probCollision*apprentissageRB(q,ww);
+} 
+diary off

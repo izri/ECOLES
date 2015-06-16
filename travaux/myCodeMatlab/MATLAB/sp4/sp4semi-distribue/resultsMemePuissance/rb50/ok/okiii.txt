@@ -1,0 +1,25 @@
+COUNT= 7 ---- cell 1 -- RB 31   --new 1 
+COUNT= 7 ---- cell 1 -- RB 35   --new 4 
+COUNT= 7 ---- cell 1 -- RB 36   --new 5 
+COUNT= 7 ---- cell 1 -- RB 38   --new 7 
+COUNT= 7 ---- cell 1 -- RB 39   --new 9 
+COUNT= 7 ---- cell 1 -- RB 50   --new 13 
+COUNT= 8 ---- cell 2 -- RB 11   --new 1 
+COUNT= 8 ---- cell 2 -- RB 16   --new 2 
+COUNT= 8 ---- cell 2 -- RB 20   --new 3 
+COUNT= 8 ---- cell 2 -- RB 23   --new 5 
+COUNT= 8 ---- cell 2 -- RB 28   --new 6 
+COUNT= 8 ---- cell 2 -- RB 30   --new 7 
+COUNT= 8 ---- cell 2 -- RB 31   --new 9 
+COUNT= 8 ---- cell 2 -- RB 33   --new 10 
+COUNT= 8 ---- cell 2 -- RB 37   --new 11 
+COUNT= 8 ---- cell 2 -- RB 41   --new 12 
+COUNT= 8 ---- cell 2 -- RB 45   --new 14 
+COUNT= 11 ---- cell 5 -- RB 4   --new 3 
+COUNT= 11 ---- cell 5 -- RB 9   --new 4 
+COUNT= 11 ---- cell 5 -- RB 19   --new 6 
+COUNT= 12 ---- cell 6 -- RB 43   --new 1 
+COUNT= 13 ---- cell 7 -- RB 20   --new 1 
+COUNT= 13 ---- cell 7 -- RB 30   --new 2 
+COUNT= 14 ---- cell 1 -- RB 1   --new 14 
+     2     4     6

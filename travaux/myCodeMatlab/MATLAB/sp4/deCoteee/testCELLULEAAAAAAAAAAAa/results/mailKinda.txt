@@ -1,0 +1,10 @@
+Bonjour Kinda;
+J'espère que tu vas bien.
+Pour la réunion SOAPS, j'ai du assister à la réunion SP3 et non SP4 l'après midi car Samir n'a pas pu venir.
+
+Je voulais juste t'informer que j'avais eu quelques résultats avec 6 RBs (pour le projet), on a des temps de convergence assez intéressants genre (110 itérations, 35 itérations, 1498 itérations, etc). Certes il faut rajouter l'intervalle de confiance pour que cela soit plus représentatif. J'ai gardé les différents fichiers de résultats dans des répertoires différents pour pouvoir tracer par la suite les courbes intéressantes.
+En revanche, pour 15 RBs cela prend beaucoup plus d'itérations. J'ai lancé cela.
+
+Merci;
+A+,
+Nora

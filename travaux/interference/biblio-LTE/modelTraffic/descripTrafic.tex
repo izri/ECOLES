@@ -1,0 +1,50 @@
+\section{Description du trafic}
+Dans chaque classe de service, nous avons identifi\'e plusieurs types de flux, correspondants \`a diff\'erentes applications. 
+Pour r\'ealiser les simulations, nous avons utilis\'e une mod\'elisation de trafic agr\'egr\'e au niveau de chaque station d'acc\`{e}s. 
+%une premi\`ere mod\'elisation de trafic ou nous utilisons des mod\`eles de source de trafic. Les trafics ainsi g\'en\'er\'es seront agr\'eg\'es dans les noeuds d'acc\`{e}s, avant la constitution des paquets optiques. 
+\subsection{Mod\`ele de source pour le trafic TRI}
+Pour la classe TRI (classe de haute priorit\'e), nous avons pris en compte essentiellement deux types de trafic: la voix sur UMTS,  et la voix sur IP.  %Ces deux types de trafic sont mod\'elis\'es par des processus ON/OFF avec des dur\'ees de burst exponentiellement distribu\'ees.
+Ce trafic a \'et\'e mod\'elis\'e par un processus de Poisson. % trois d'intensit\'es \'egales. 
+La diff\'erence entre les flux des diff\'erentes applications se localise au niveau des tailles de paquets g\'en\'er\'es. 
+Nous consid\'erons que les flux g\'en\'er\'es par l'UMTS utilisent des paquets de petite taille, or que les flux g\'en\'er\'es par la VoIP utilisent des paquets de taille maximum. 
+%La voix est compos\'ee d'une succession de p\'eriodes d'activit\'e et de silence. Une p\'eriode d'activit\'e correspond \`a l'envoi des paroles. Lors des p\'eriodes de silence il n'a y pas de donn\'ees utilisateur (paroles) \`a envoyer, mais seulement les indicateurs de silence (paquets de contr\^ole). Dans nos mod\'elisations et simulations nous ignorons les indicateurs de silence.
+%
+%	\begin{table}[htp]
+%	\begin{center}
+%	%\caption{Simulation parameters}  
+%	\begin{tabular}{| l | c | c |c | c| }\hline  
+%	 CoS & Trafic & Mod\`ele & Distribution & Param\`etre \\
+%	\hline 
+%	TRI & Voix UMTS & ON/OFF & 1& 2 \\
+%	\hline
+%	TRI & Voix IP & ON/OFF & 2 & 3\\ 
+%	\hline
+%	\end{tabular}
+%	\end{center}
+%	\end{table}
+%La voix sur UMTS est caract\'eris\'ee par un  mod\`ele ON/OFF, qui est un mod\`ele Markovien \`a deux \'etats. L'\'etat ON a une dur\'ee exponentiellement distribu\'ee, de moyenne $1/a = 352 ms$, o\`u \textbf{a} est le taux de transition de la p\'eriode ON vers la p\'eriode OFF. Durant cette p\'eriode les paquets de voix sont \'emis \`a un d\'ebit constant, avec une inter-arriv\'ee constante de $T=20 ms$. Le taux d'arriv\'ee des paquets pendant la p\'eriode ON est de $\lambda = 1 / T$. La p\'eriode OFF a une dur\'ee exponentiellement distribu\'ee de moyenne $1/b=650 ms$.   
+\subsection{Mod\`ele de source pour le trafic TRS}
+Pour les applications appartenant \`a la classe TRS (classe de priorit\'e moindre), nous prenons en compte les flux de type Live Reality Show (LRS) et les flux de type Live News Sports (LNS) \cite{classeTRS}. Ces applications correspondent aux transmissions t\'el\'evis\'ees, impliquant des flux avec un d\'ebit important. On suppose que les contenus vid\'eo sont stock\'es sur des serveurs. La diff\'erence entre les deux types d'applications consiste dans la dur\'ee des flux associ\'es. Les applications LRS correspondent \`a des \'emissions de longue dur\'ee, comprise entre une demi-heure et deux heures, associ\'ees aux films, aux \'emissions de divertissement enregistr\'ees, etc. Les applications de type LNS sont des contenus de tr\`es courte dur\'ee, de quelques minutes, associ\'es aux \'emissions de journal t\'el\'evis\'e, par exemple.  
+Ce trafic a \'et\'e mod\'elis\'e par un processus de Poisson. % trois d'intensit\'es \'egales. 
+La diff\'erence entre les flux des diff\'erentes applications se localise au niveau des tailles de paquets g\'en\'er\'es. 
+Nous supposons que les flux g\'en\'er\'es par le trafic LRS utilisent des paquets de petite et moyenne taille, or que les flux g\'en\'er\'es par le trafic LNS utilisent des paquets de taille moyenne et de taille maximum. 
+
+%Dans la classe TRS nous avons d\'efini deux types d'applications : Live Reality Show (LRS) et Live News Sports (LNS). Ces trafics sont caract\'eris\'es par des mod\`eles ON/OFF. La p\'eriode ON repr\'esente la p\'eriode d'activit\'e o\`u des paquets de donn\'ees vid\'eo sont envoy\'es avec une dur\'ee d'inter-arriv\'ee d\'eterministe (constante). L'inter-arriv\'ee est calcul\'ee pour chaque flux en fonction de son d\'ebit requis pour avoir une bonne visualisation et de la taille des paquets envoy\'es. On suppose que les contenus vid\'eo sont stock\'es sur des serveurs. On connait aussi le d\'ebit auquel ces contenus doivent \^etre visualis\'es. Ainsi on peut supposer que le flux g\'en\'er\'e \`a partir de ce contenu sera constitu\'e des paquets de taille constante, envoy\'es r\'eguli\`erement avec une inter-arriv\'ee s\'eparant deux paquets successifs calcul\'ee de telle mani\`ere \`a respecter le d\'ebit de visualisation du flux.
+%	\begin{table}[htp]
+%	\begin{center}
+%	%\caption{Simulation parameters}  
+%	\begin{tabular}{| l | c | c |c | c| }\hline  
+%	 CoS & Trafic & Mod\`ele & Distribution & Param\`etre \\
+%	\hline 
+%	TRS & Live Reality Show & ON/OFF & 1 & 2 \\
+%	\hline
+%	TRS & Live News/Sports & ON/OFF & 2 & 3\\ 
+%	\hline
+%	\end{tabular}
+%	\end{center}
+%	\end{table}
+\subsection{Mod\`ele de source pour le trafic NTR}
+Le trafic de la classe NTR (classe de plus faible priorit\'e), englobe les flux qui n'exigent pas de contraintes temporelles, par contre qui sont tr\`es sensibles aux pertes. Dans cette cat\'egorie se trouve des applications comme l'envoi des  SMS (pour le r\'eseau mobile) \'echange de E-mails, les transferts FTP. 
+Les applications de type SMS et transfert d'E-mails g\'en\`erent des flux de courte dur\'ee, avec des  paquets de petite taille, en g\'en\'eral. En revanche, les transferts FTP g\'en\`erent des flux de diff\'erents dur\'ees, courtes ou longues, avec de grandes tailles de paquets. 
+Nous mod\'elisons ce dernier de type de trafic par un processus de Poisson. % trois d'intensit\'es \'egales. 
+Par ailleurs, la diff\'erence entre les flux des diff\'erentes applications se focalise au niveau des tailles des paquets g\'en\'er\'es. Nous consid\'erons que les flux g\'en\'er\'es par les SMS utilisent des paquets plut\^ot de petite taille, alors que les flux g\'en\'er\'es par les e-mails et les flux FTP utilisent autant des paquets de taille moyenne, que des paquets de taille maximum. 
