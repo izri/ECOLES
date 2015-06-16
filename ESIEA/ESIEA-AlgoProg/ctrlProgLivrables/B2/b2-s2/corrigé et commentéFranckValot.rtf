@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red100\green56\blue32;\red196\green26\blue22;\red170\green13\blue145;
+\red0\green116\blue0;\red28\green0\blue207;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15260\viewh14660\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs22 \cf2 \CocoaLigature0 #include \cf3 <stdlib.h>\cf2 \
+#include \cf3 <stdio.h>\cf2 \
+\cf0 \
+\cf4 typedef\cf0  \cf4 struct\cf0  maillon\{\
+    \cf4 int\cf0  info;\
+    \cf4 struct\cf0  maillon * succ;\
+\}t_maillon;\
+\
+\cf4 void\cf0  afficher_tout(t_maillon * liste)\{\
+    t_maillon * cour=liste;\
+    \
+    \cf4 do\cf0 \{\
+        printf(\cf3 "%d\\n"\cf0 , cour->info);\
+        cour=cour->succ;\
+    \}\cf4 while\cf0 (cour!=liste);\
+\}\
+\
+t_maillon*  liste_parfaite(t_maillon * liste)\{\
+    t_maillon * cour=liste;\
+    t_maillon * tmp = \cf4 NULL\cf0 ;\
+    t_maillon * parfaite=\cf4 NULL\cf0 ;\
+    t_maillon * cour_parfaite=\cf4 NULL\cf0 ;\
+    \cf4 int\cf0  i;\
+    \cf4 int\cf0  compteur;\
+    \
+    \
+    \cf4 do\cf0 \{\
+        \cf5 // printf("%d ", cour->info); commenter cette ligne de d\'e9bug [DEBUG]\cf0 \
+        compteur=\cf6 0\cf0 ;\
+        \cf4 for\cf0 (i=\cf6 1\cf0 ; i<cour->info; i++)\{\
+            \cf4 if\cf0 ((cour->info)%i==\cf6 0\cf0 )\{\
+                compteur+=i;\
+            \}\
+        \}\
+        \cf4 if\cf0 (compteur==cour->info)\{\
+            \cf4 if\cf0 (parfaite==\cf4 NULL\cf0 )\{\
+                parfaite=malloc(\cf4 sizeof\cf0 (t_maillon));\
+                parfaite->info=cour->info;\
+                parfaite->succ=\cf4 NULL\cf0 ;\
+                cour_parfaite=parfaite;\
+            \}\
+            \cf4 else\cf0 \{\
+                cour_parfaite->succ = malloc(\cf4 sizeof\cf0 (t_maillon));\
+                cour_parfaite=cour_parfaite->succ;\
+                cour_parfaite->info=compteur;\
+                cour_parfaite->succ=\cf4 NULL\cf0 ;\
+            \}\
+            \cf5 // cour=cour->succ; d\'e9placer cette ligne apres l'accolade [ERREUR PRINCIPALE]\cf0 \
+        \}\
+        cour=cour->succ; \cf5 // ici\cf0 \
+        \
+    \}\cf4 while\cf0 (cour!=liste);\
+    \
+    cour_parfaite->succ=parfaite;\
+    \cf4 return\cf0  parfaite;\
+\}\
+\
+\cf4 int\cf0  main()\{\
+    t_maillon * liste=\cf4 NULL\cf0 ;\
+    t_maillon * parfaite=\cf4 NULL\cf0 ;\
+    t_maillon * cour=\cf4 NULL\cf0 ;\
+    \cf4 int\cf0  n;\
+    \cf4 int\cf0  i;\
+    \
+    printf(\cf3 "Veuillez saisir le nombre d'element que vous voulez dans votre liste (>0): "\cf0 );\
+    \
+    \cf4 do\cf0 \{\
+        scanf(\cf3 "%d"\cf0 , &n);\
+        \cf4 if\cf0 (n<=\cf6 0\cf0 )\{\
+            printf(\cf3 "Erreur de saisie, veuillez recommencer\\n"\cf0 );\
+        \}\
+    \}\cf4 while\cf0 (n<=\cf6 0\cf0 );\
+    \
+    \cf4 for\cf0 (i=\cf6 1\cf0 ; i<=n; i++)\{\
+        \cf4 if\cf0 (liste!=\cf4 NULL\cf0 )\{\
+            cour->succ=malloc(\cf4 sizeof\cf0 (t_maillon));\
+            cour=cour->succ;\
+            cour->info=i;\
+            cour->succ=\cf4 NULL\cf0 ;\
+        \}\
+        \cf4 else\cf0 \{\
+            liste = malloc(\cf4 sizeof\cf0 (t_maillon));\
+            liste->succ=\cf4 NULL\cf0 ;\
+            liste->info=i;\
+            cour=liste;\
+        \}\
+    \}\
+    cour->succ=liste;\
+    \
+    \
+    afficher_tout(liste);\
+    \cf5 //afficher_parfait(liste); commenter cette ligne que j'ai oubli\'e9 d'enlever [DEBUG]\cf0 \
+    parfaite=liste_parfaite(liste);\
+\
+    \cf5 // afficher_tout(liste); remplacer \'ab\'a0liste\'a0\'bb par parfaite pour afficher la bonne liste [CORRECTION]\cf0 \
+    afficher_tout(parfaite);\
+    \
+	\cf4 return\cf0  \cf6 0\cf0 ;\
+\}\
+}

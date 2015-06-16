@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1429017079 source:c:\users\damien\chat-land\desktop\info\c++\resto\client.cpp
+	"client.hpp"
+
+1429014659 c:\users\damien\chat-land\desktop\info\c++\resto\client.hpp
+	"resto.hpp"
+
+1428416857 c:\users\damien\chat-land\desktop\info\c++\resto\resto.hpp
+	<iostream>
+	<string>
+
+1428416729 source:c:\users\damien\chat-land\desktop\info\c++\resto\command.cpp
+	"command.hpp"
+
+1428416722 c:\users\damien\chat-land\desktop\info\c++\resto\command.hpp
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+
+1428421767 c:\users\damien\chat-land\desktop\info\c++\resto\product.hpp
+	<iostream>
+	<string>
+	"resto.hpp"
+
+1385320478 source:c:\users\damien\chat-land\desktop\info\c++\resto\main.cpp
+	<iostream>
+
+1429017080 source:c:\users\nora\documents\esiea-algoprog\resto\resto\client.cpp
+	"client.hpp"
+
+1429014660 c:\users\nora\documents\esiea-algoprog\resto\resto\client.hpp
+	"resto.hpp"
+
+1428416858 c:\users\nora\documents\esiea-algoprog\resto\resto\resto.hpp
+	<iostream>
+	<string>
+
+1385320478 source:c:\users\nora\documents\esiea-algoprog\resto\resto\main.cpp
+	<iostream>
+
+1429624808 source:c:\users\nora\documents\esiea-algoprog\resto\resto\command.cpp
+	"command.hpp"
+	"client.hpp"
+	"product.hpp"
+
+1429624646 c:\users\nora\documents\esiea-algoprog\resto\resto\command.hpp
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+
+1429624927 c:\users\nora\documents\esiea-algoprog\resto\resto\product.hpp
+	<iostream>
+	<string>
+	"resto.hpp"
+
+1429624929 source:c:\users\nora\documents\esiea-algoprog\resto\resto\product.cpp
+	"product.hpp"
+
+1429624940 source:c:\users\nora\documents\esiea-algoprog\resto\resto\resto.cpp
+	<iostream>
+	<string>
+	<typeinfo>
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+	"command.hpp"
+

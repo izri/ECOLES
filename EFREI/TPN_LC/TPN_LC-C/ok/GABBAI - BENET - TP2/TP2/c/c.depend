@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1422817826 source:c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\gabbai - benet - grammaire.cpp
+	<iostream>
+	<fstream>
+	"GABBAI - BENET - Grammaire.h"
+
+1422817734 c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\gabbai - benet - grammaire.h
+	<vector>
+	"GABBAI - BENET - Regle.h"
+	"GABBAI - BENET - Ensemble.h"
+
+1422817774 c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\gabbai - benet - regle.h
+
+1422817711 c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\gabbai - benet - ensemble.h
+
+1422817806 source:c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\gabbai - benet - regle.cpp
+	<iostream>
+	"GABBAI - BENET - Regle.h"
+
+1422817665 source:c:\users\nora\documents\tpn_lc-c\gabbai - benet - tp2\tp2\c\main.cpp
+	<iostream>
+	"GABBAI - BENET - Grammaire.h"
+

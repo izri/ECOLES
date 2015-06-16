@@ -1,0 +1,5 @@
+../ManaResto/beverages/wine.txt
+195
+2
+1
+75

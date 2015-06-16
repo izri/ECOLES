@@ -1,0 +1,6 @@
+1
+499
+../ManaResto/dishes/starter/sausage.txt|80|1
+../ManaResto/dishes/main/choucroute.txt|65|2
+../ManaResto/dishes/dessert/bavarois.txt|96|3
+../ManaResto/beverages/wine.txt|195|1|75

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1417199372 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\edouardsoares\ed\liste.c
+	<stdio.h>
+	<stdlib.h>
+	"liste.h"
+
+1417199376 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\edouardsoares\ed\liste.h
+

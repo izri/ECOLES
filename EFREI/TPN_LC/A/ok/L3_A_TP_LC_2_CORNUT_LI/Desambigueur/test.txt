@@ -1,0 +1,9 @@
+S (L)
+S a
+S d
+S e
+L Sb
+L Ld
+L e
+L c
+$

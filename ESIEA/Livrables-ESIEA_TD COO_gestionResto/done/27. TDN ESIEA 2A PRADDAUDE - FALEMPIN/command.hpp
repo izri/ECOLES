@@ -1,0 +1,23 @@
+#ifndef COMMAND_HPP
+#define COMMAND_HPP
+
+#include "main.hpp"
+#include "client.hpp"
+#include "product.hpp"
+
+class Command : public Printable
+{
+    private :
+        Client client;
+        Product product;
+        int totalPrice;
+    public :
+        Command(Client client, Product product);
+        const Client get_client();
+        const Product get_product();
+        const float get_totalPrice();
+        const string to_string();
+};
+
+
+#endif // COMMAND_HPP

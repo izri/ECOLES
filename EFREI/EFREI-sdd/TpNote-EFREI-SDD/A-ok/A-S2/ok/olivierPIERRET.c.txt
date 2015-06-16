@@ -1,0 +1,177 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+struct LSC
+{
+	int i;
+	struct LSC* suivant;
+};
+
+struct AR
+{
+	int i;
+	struct AR *sad;
+	struct AR *sag;
+};
+
+struct file
+{
+	int nb;
+	struct lf *debut;
+	struct lf *fin;
+};
+
+struct lf
+{
+	struct AR *a;
+	struct lf *suivant;
+};
+
+struct file *f = NULL;
+struct lf *lfi = NULL;
+
+struct LSC* construireListe(int val);
+void afficherContenu(struct LSC* l);
+void nombreParfait(struct LSC* l);
+void push(struct AR* a);
+struct AR* pop();
+struct AR* creerArbre(struct LSC* l);
+int hauteurArbre(struct AR *a);
+
+struct LSC* construireListe(int val)
+{
+	int i = 1;
+	struct LSC *res = NULL;
+	while(i <= val)
+	{
+		if(res == NULL)
+		{
+			res = malloc(sizeof(struct LSC));
+		}
+		else
+		{
+			res->suivant = malloc(sizeof(struct LSC));
+			res = res->suivant;
+		}
+		res->i = i;
+		i++;
+	}
+	return res;
+}
+
+void afficherContenu(struct LSC* l)
+{
+	while(l != NULL)
+	{
+		printf("%d",l->i);
+		l = l->suivant;
+	}
+}
+
+void nombreParfait(struct LSC* l)
+{
+	int som = 0;
+	int cpt = 1;
+	struct LSC* prec;
+	while(l != NULL)
+	{
+		som = 0;
+		cpt = 1;
+		while(cpt <= l->i)
+		{
+			if(l->i % cpt == 0)
+			{
+				som += cpt;
+			}
+			cpt++;
+		}
+		if(som == l->i)
+		{
+			prec->suivant = l->suivant;
+			free(l);
+		}
+		prec = l;
+		l = l->suivant;
+	}
+}
+
+
+
+void push(struct AR* a)
+{
+	if(f->nb == 0)
+	{
+		lfi = malloc(sizeof(struct lf));
+		f->nb = 1;
+		f->debut = lfi;
+		f->fin = lfi;
+	}
+	else
+	{
+		f->nb++;
+		f->fin->suivant = malloc(sizeof(struct lf));
+		f->fin = f->fin->suivant;
+		f->fin->a = a;
+	}
+}
+
+struct AR* pop()
+{
+	struct AR *a;
+	if(f->nb == 0)
+	{
+		return NULL;
+	}
+	else
+	{
+		f->nb--;
+		a = f->debut;
+		f->debut = f->debut->suivant;
+	}
+	return a;
+}
+
+struct AR* creerArbre(struct LSC* l)
+{
+	struct AR *res,*b;
+	res = malloc(sizeof(struct AR));
+	push(res);
+	while(l != NULL)
+	{
+		b = pop();
+		b->i = l->i;
+		b->sad = malloc(sizeof(struct AR));
+		b->sad = malloc(sizeof(struct AR));
+		push(b->sag);
+		push(b->sad);
+		l = l->suivant;
+	}
+	return res;
+}
+
+
+
+int hauteurArbre(struct AR *a)
+{
+	if(a == NULL)
+	{
+		return 0;
+	}
+	if(hauteurArbre(a->sad) > hauteurArbre(a->sad))
+	{
+		return hauteurArbre(a->sad)+1;
+	}
+	else
+	{
+		return hauteurArbre(a->sag)+1;
+	}
+}
+
+int main()
+{
+	struct LSC *l;
+	l = construireListe(500);
+	nombreParfait(l);
+	afficherContenu(l);
+}

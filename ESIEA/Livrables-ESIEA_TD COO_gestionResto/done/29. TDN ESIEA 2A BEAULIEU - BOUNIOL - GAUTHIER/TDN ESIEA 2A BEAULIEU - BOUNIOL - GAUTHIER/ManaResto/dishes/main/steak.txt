@@ -1,0 +1,4 @@
+../ManaResto/dishes/main/steak.txt
+15
+2
+2

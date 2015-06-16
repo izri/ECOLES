@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1421417882 source:d:\slr\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+
+1421841618 source:f:\slr\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+	<queue>
+
+1422013584 source:c:\users\julien\desktop\slr\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+	<queue>
+	<stack>
+
+1422013584 source:c:\users\nora\documents\tpn_lc\a\l3_a_tp_lc_2_cornut_li\slr\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+	<queue>
+	<stack>
+

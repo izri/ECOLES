@@ -1,0 +1,13 @@
+Veuillez nous excuser pour cette premiere version non fonctionnelle.
+
+Nos problèmes : 
+Au fur et à mesure que nous codons, que nous travaillons sur une fonction, y il a toujours un élément qui coince, qui fait que le programme va planter. Par exemple la saisie marche... (ou a l'air) et pas l'affichage mal saisie peut etre ? 
+Nous essayons de faire des listes chainées, mais en C++ ce n'est pas facile car nous essayons d'avoir quelque chose de modulable, comme dans une classe commande par exemple, avoir plusieurs plats etc...donc, on doit faire du dynamique, et liste chainée mais nous avons un peu de mal.
+
+Nous allons régler ces problèmes dans la semaine car nous avons pris rendez-vous pour faire un cours sur le C++ avec une personne extérieur à l'école afin de nous remettre a niveau. Malheureusement les cours suivient à l'école non pas été nécessaire afin de bien prendre en main le C++.
+
+Nous nous excusons pour ce retard,
+la version final de notre projet vous sera remise le plus vite possible dans le courant de la semaine prochaine.
+
+Cordialement, 
+l'équipe Lo Casale Valot

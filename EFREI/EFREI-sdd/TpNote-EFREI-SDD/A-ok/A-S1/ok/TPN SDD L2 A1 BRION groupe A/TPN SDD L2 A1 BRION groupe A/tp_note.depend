@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1416318834 source:z:\tp noter\tp_note\main.c
+	"arbre.h"
+
+1416317756 z:\tp noter\tp_note\liste_chaine.h
+	<stdio.h>
+	<stdlib.h>
+
+1416318804 source:z:\tp noter\tp_note\liste_chaine.c
+	"liste_chaine.h"
+
+1416318791 source:z:\tp noter\tp_note\arbre.c
+	"arbre.h"
+
+1416319027 z:\tp noter\tp_note\arbre.h
+	"liste_chaine.h"
+
+1416819923 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s1\tpn sdd l2 a1 brion groupe a\tpn sdd l2 a1 brion groupe a\arbre.c
+	"arbre.h"
+
+1416319743 c:\users\nora\documents\tpnote-efrei-sdd\a-s1\tpn sdd l2 a1 brion groupe a\tpn sdd l2 a1 brion groupe a\arbre.h
+	"liste_chaine.h"
+
+1416320118 c:\users\nora\documents\tpnote-efrei-sdd\a-s1\tpn sdd l2 a1 brion groupe a\tpn sdd l2 a1 brion groupe a\liste_chaine.h
+	<stdio.h>
+	<stdlib.h>
+
+1416318804 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s1\tpn sdd l2 a1 brion groupe a\tpn sdd l2 a1 brion groupe a\liste_chaine.c
+	"liste_chaine.h"
+

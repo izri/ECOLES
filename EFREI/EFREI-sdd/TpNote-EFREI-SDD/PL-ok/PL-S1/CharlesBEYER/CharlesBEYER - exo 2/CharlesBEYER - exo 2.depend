@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1416301605 source:c:\users\nora\documents\pl-s1\charlesbeyer\charlesbeyer - exo 2\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1416301337 c:\users\nora\documents\pl-s1\charlesbeyer\charlesbeyer - exo 2\header.h
+
+1416301605 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\charlesbeyer\charlesbeyer - exo 2\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1416301337 c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\charlesbeyer\charlesbeyer - exo 2\header.h
+
+1416570520 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\charlesbeyer\charlesbeyer - exo 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+

@@ -1,0 +1,53 @@
+#ifndef PRODUCT_H
+#define PRODUCT_H
+
+#include <string>
+#include <iostream>
+
+class Product
+{
+    private:
+        std :: string m_name;
+        float m_price;
+    public:
+        Product ();
+        Product(std :: string name, float price);
+        std :: string getName()const;
+        float getPrice ()const;
+};
+
+
+Product setProduct ();
+
+
+class Pizza : public Product
+{
+    public:
+        Pizza (std :: string name, float price);
+};
+
+class PlatDuJour : public Product
+{
+    public:
+        PlatDuJour (std :: string name, float price);
+};
+
+class Vegetarien : public Product
+{
+    public:
+        Vegetarien (std :: string name, float price);
+};
+
+class Dessert : public Product
+{
+    public:
+        Dessert (std :: string name, float price);
+};
+
+class Boisson : public Product
+{
+    public:
+        Boisson (std :: string name, float price);
+};
+
+#endif // PRODUCT_H

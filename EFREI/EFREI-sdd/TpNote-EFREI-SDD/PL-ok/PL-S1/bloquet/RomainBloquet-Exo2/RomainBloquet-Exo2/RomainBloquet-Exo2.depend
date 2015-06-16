@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1416300519 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\bloquet\romainbloquet-exo2\romainbloquet-exo2\arbre.c
+	<stdlib.h>
+	<stdio.h>
+	"arbre.h"
+
+1416300629 c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\bloquet\romainbloquet-exo2\romainbloquet-exo2\arbre.h
+
+1416301574 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s1\bloquet\romainbloquet-exo2\romainbloquet-exo2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbre.h"
+

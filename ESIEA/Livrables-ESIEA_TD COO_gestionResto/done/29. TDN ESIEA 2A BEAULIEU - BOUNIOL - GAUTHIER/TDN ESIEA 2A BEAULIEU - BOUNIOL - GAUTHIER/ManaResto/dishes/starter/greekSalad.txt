@@ -1,0 +1,4 @@
+../ManaResto/dishes/starter/greekSalad.txt
+56
+0
+1

@@ -1,0 +1,5 @@
+../ManaResto/beverages/coca.txt
+5
+1
+0
+33

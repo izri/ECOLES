@@ -1,0 +1,128 @@
+Grammaire :
+                                Z -> A
+                                A -> ABA
+                                A -> a
+                                B -> BAB
+                                B -> b
+                                B -> Epsilon (!)
+
+
+        Premiers :
+
+P(Z)={ a }.
+P(A)={ a }.
+P(B)={ b ! a }.
+
+
+        Suivants :
+
+F(Z)={ $ }.
+F(A)={ b a $ }.
+F(B)={ a }.
+
+
+        Goto :
+
+
+I0 :
+        Z -> .A
+        A -> .ABA
+        A -> .a
+        B -> .BAB
+        B -> .b
+        B -> .
+
+
+I1 :
+        Z -> A.
+        A -> A.BA
+        B -> .BAB
+        B -> .b
+        B -> .
+
+I2 :
+        A -> a.
+
+I3 :
+        B -> B.AB
+        A -> .ABA
+        A -> .a
+
+I4 :
+        B -> b.
+
+I5 :
+        A -> AB.A
+        B -> B.AB
+        A -> .ABA
+        A -> .a
+
+I6 :
+        B -> BA.B
+        A -> A.BA
+        B -> .BAB
+        B -> .b
+        B -> .
+
+I7 :
+        A -> ABA.
+        B -> BA.B
+        A -> A.BA
+        B -> .BAB
+        B -> .b
+        B -> .
+
+I8 :
+        B -> BAB.
+        A -> AB.A
+        B -> B.AB
+        A -> .ABA
+        A -> .a
+
+
+
+                        Table d'analyse
+
+
+        a               b               $               A               B
+
+ 0      2/r6            4                               1               3
+
+
+ 1      /r6             4               /r1-acc                         5
+
+
+ 2      /r3
+
+
+ 3      2                                               6
+
+
+ 4      /r5
+
+
+ 5      2                                               7
+
+
+ 6      /r6             4                                               8
+
+
+ 7      /r6/r2          4/r2            /r2                             8
+
+
+ 8      2/r4                                            7
+
+
+Test du mot w = aababb :
+
+        Tete    |       Entree  |       Sortie
+
+        0       |       aababb  |       r6 : B -> !
+        0B2     |       aababb  |       s3
+        0B2a3   |       ababb   |       r3 : A -> a
+        0B2A6   |       ababb   |       r6 : B -> !
+        0B2A6B8 |       ababb   |       r4 : B -> BAB
+        0B2     |       ababb   |       s3
+        0B2a3   |       babb    |       Erreur
+
+        w n'appartient pas au langage LG

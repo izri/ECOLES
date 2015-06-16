@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1423997778 source:c:\users\nora\documents\tpn_lc\a\l3 gpa tp lc2 toutain - abid\a\grammaire.cpp
+	<iostream>
+	<fstream>
+	"grammaire.h"
+
+1423997758 c:\users\nora\documents\tpn_lc\a\l3 gpa tp lc2 toutain - abid\a\grammaire.h
+	<string>
+	<vector>
+	<windows.h>
+
+1423997740 source:c:\users\nora\documents\tpn_lc\a\l3 gpa tp lc2 toutain - abid\a\main.cpp
+	<iostream>
+	<fstream>
+	"grammaire.h"
+

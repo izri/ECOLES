@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1429739126 source:c:\users\pierre-balthazar\desktop\tdn esiea donadieu biacabe\prog\client.cpp
+	"Client.h"
+
+1429738898 c:\users\pierre-balthazar\desktop\tdn esiea donadieu biacabe\prog\client.h
+	<string>
+	<iostream>
+

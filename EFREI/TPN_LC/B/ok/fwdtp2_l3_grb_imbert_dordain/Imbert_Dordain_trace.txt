@@ -1,0 +1,148 @@
+A' -> A
+A -> A B A
+A -> a
+B -> B A B
+B -> b
+B -> epsilon
+
+Les non-terminaux sont : A' A B
+Les terminaux sont : a b epsilon
+Les elements nullables sont : B
+
+Calcul des premiers
+P(A') = a
+P(A) = a
+P(B) = a b epsilon
+
+
+Calcul des suivants
+S(A') = $
+S(A) = a b $
+S(B) = a
+Affichage de l'automate :
+
+Etat I0
+
+A' ->  A
+A ->  A B A
+A ->  a
+B ->  B A B
+B ->  b
+B ->  epsilon
+reduce en EPSILON sur la regle 6
+ on va place le reduce r6  a la ligne 0 et aux colones a
+
+Etat I1
+
+A' -> A .
+reduce sur la regle 1
+ on va place le reduce r1  a la ligne 1 et aux colones epsilon
+A -> A .  B  A
+B -> . B A B
+B -> . b
+B -> . epsilon
+reduce en EPSILON sur la regle 6
+ on va place le reduce r6  a la ligne 1 et aux colones a
+
+Etat I2
+
+A -> a .
+reduce sur la regle 3
+ on va place le reduce r3  a la ligne 2 et aux colones a
+b
+epsilon
+
+Etat I3
+
+B -> B .  A  B
+A -> . A B A
+A -> . a
+
+Etat I4
+
+B -> b .
+reduce sur la regle 5
+ on va place le reduce r5  a la ligne 4 et aux colones a
+
+Etat I5
+
+A ->  A B .  A
+B -> B .  A  B
+A -> . A B A
+A -> . a
+
+Etat I6
+
+B ->  B A .  B
+A -> A .  B  A
+B -> . B A B
+B -> . b
+B -> . epsilon
+reduce en EPSILON sur la regle 6
+ on va place le reduce r6  a la ligne 6 et aux colones a
+
+Etat I7
+
+A ->  A  B A .
+reduce sur la regle 2
+ on va place le reduce r2  a la ligne 7 et aux colones a
+b
+epsilon
+B ->  B A .  B
+A -> A .  B  A
+B -> . B A B
+B -> . b
+B -> . epsilon
+reduce en EPSILON sur la regle 6
+ on va place le reduce r6  a la ligne 7 et aux colones a
+
+Etat I8
+
+B ->  B  A B .
+reduce sur la regle 4
+ on va place le reduce r4  a la ligne 8 et aux colones a
+A ->  A B .  A
+B -> B .  A  B
+A -> . A B A
+A -> . a
+
+
+
+ table des shifts :
+
+ a  b  $  A'  A  B
+ 2  4  0  0  1  3  0
+ 0  4  0  0  0  5  1
+ 0  0  0  0  0  0  0
+ 2  0  0  0  6  0  3
+ 0  0  0  0  0  0  0
+ 2  0  0  0  7  0  5
+ 0  4  0  0  0  8  6
+ 0  4  0  0  0  8  7
+ 2  0  0  0  7  0  8
+
+
+ Table des reduces
+
+
+A'       A       B       a       	b       epsilon
+ |       |       |      r6   |   	|       |
+
+ |       |       |      r6   |   	|      r1   |
+
+ |       |       |      r3   |  	r3   |  r3   |
+
+ |       |       |       |      	 |       |
+
+ |       |       |      r5   |   	|       |
+
+ |       |       |       |       	|       |
+	
+ |       |       |      r6   |   	|       |
+
+ |       |       |      r2  r6   |      r2   |  r2   |
+
+ |       |       |      r4   |   	|       |
+
+Process returned 0 (0x0)   execution time : 0.150 s
+Press any key to continue.

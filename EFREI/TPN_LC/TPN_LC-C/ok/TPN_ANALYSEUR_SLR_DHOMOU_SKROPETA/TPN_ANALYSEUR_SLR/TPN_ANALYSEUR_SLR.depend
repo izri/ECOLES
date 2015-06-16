@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1421408316 source:e:\lang_compil_projet\tpn_analyseur_slr\main.cpp
+	<iostream>
+	<string>
+	"scanner.hpp"
+
+1421410452 source:e:\lang_compil_projet\tpn_analyseur_slr\scanner.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	"scanner.hpp"
+
+1421404824 e:\lang_compil_projet\tpn_analyseur_slr\scanner.hpp
+
+1421422332 source:d:\lang_compil_projet\tpn_analyseur_slr\main.cpp
+	<iostream>
+	<string>
+	"scanner.hpp"
+
+1421421832 d:\lang_compil_projet\tpn_analyseur_slr\scanner.hpp
+
+1421422562 source:d:\lang_compil_projet\tpn_analyseur_slr\scanner.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	"scanner.hpp"
+
+1422031634 source:g:\lang_compil_projet\tpn_analyseur_slr\main.cpp
+	<iostream>
+	<string>
+	"scanner.hpp"
+
+1422038700 g:\lang_compil_projet\tpn_analyseur_slr\scanner.hpp
+
+1422040666 source:g:\lang_compil_projet\tpn_analyseur_slr\scanner.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	"scanner.hpp"
+

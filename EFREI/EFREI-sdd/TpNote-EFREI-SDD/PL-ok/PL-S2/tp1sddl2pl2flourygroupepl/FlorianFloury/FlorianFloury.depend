@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1416585450 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s2\tp1sddl2pl2flourygroupepl\florianfloury\florianfloury.cpp
+	<stdlib.h>
+	<iostream>
+	<stdio.h>
+	"FlorianFloury.h"
+
+1416585380 c:\users\nora\documents\tpnote-efrei-sdd\pl-s2\tp1sddl2pl2flourygroupepl\florianfloury\florianfloury.h
+

@@ -1,0 +1,6 @@
+S abSA
+S c
+A AaS
+A S
+A 
+-1

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1416327536 source:z:\tpnsdd\exercice1.c
+	<stdio.h>
+	<stdlib.h>
+	"exercice1.h"
+
+1416327547 z:\tpnsdd\exercice1.h
+
+1416327590 source:z:\tpnsdd\main.c
+	<stdio.h>
+	<stdlib.h>
+	"exercice1.h"
+
+1416327538 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\thibaultzuber\thibaultzuber\exercice1.c
+	<stdio.h>
+	<stdlib.h>
+	"exercice1.h"
+
+1416327548 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\thibaultzuber\thibaultzuber\exercice1.h
+

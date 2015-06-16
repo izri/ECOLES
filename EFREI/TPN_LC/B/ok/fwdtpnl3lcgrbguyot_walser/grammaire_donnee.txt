@@ -1,0 +1,5 @@
+A ABA
+A a
+B BAB
+B b
+B @

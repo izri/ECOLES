@@ -1,0 +1,6 @@
+S bB
+B aXSB
+B epsilon
+X bSX
+X a
+X epsilon

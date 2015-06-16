@@ -1,0 +1,54 @@
+TD 2 info :
+
+
+
+
+ I - Orientation générale de l'étude :
+
+
+Le but de ce projet est de concevoir une application en c++ pour un restaurant . Dans un premier temps , ce travail consiste à faire une analyse fonctionnelle en fonction des ventes et du client.
+Ce projet doit répondre à une amélioration du service vente pour pouvoir augmenter le chiffre d'affaire de l'entreprise.
+
+ II - Recherche d'informations :
+
+Pour mettre à bien cette analyse , nous devons recolter un maximum d'information sur les clients et sur les performances de ventes. 
+
+
+ III - Analyses fonctionnelles
+
+		Deux axes :
+
+	ANALYSE DU CLIENT :
+
+- Le quartier où est situé le restaurant est important car cela nous donne une vision générale sur la clientèle , par exemple si c'est dans un quartier d'affaire on risque d'avoir plus de clientèle en début d'après midi
+
+- Le type de client ( travailleurs , famille , riche , pauvre, jeune, vieux , aisé , pauvre , locaux, touriste, étranger )
+
+- Etudier la proximité des clients ( savoir si le restaurant est loin des demandes si oui peut être proposer la vente par livraison )
+
+
+
+
+	ANALYSE DE PERFORMANCES DE VENTE :
+
+
+
+- Moyenne du nombre d'article acheté  et une moyenne du prix d'achat
+
+- Les plats les plus vendus
+
+- Adapter si plat à emporter ou sur place
+
+- Type de payement ( carte bleue( => mettre un seuil minimum pour pousser le client à consommer plus),  en espèce , et ticket restaurant)
+
+- adapter la production  des plats en fonction des ventes
+
+
+
+
+
+
+	DIAGRAMME de classe (cf document photo )
+
+
+

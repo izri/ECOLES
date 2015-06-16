@@ -1,0 +1,6 @@
+4
+2
+../ManaResto/dishes/starter/soup.txt|2|1
+../ManaResto/dishes/main/none.txt|0|2
+../ManaResto/dishes/dessert/none.txt|0|3
+../ManaResto/beverages/none.txt|0|0|0

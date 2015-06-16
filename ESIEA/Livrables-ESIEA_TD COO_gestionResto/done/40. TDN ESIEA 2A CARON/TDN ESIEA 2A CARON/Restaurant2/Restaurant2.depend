@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1429401961 source:c:\users\flavien\documents\projets codeblocks\restaurant2\main.cpp
+	<iostream>
+	"Client.h"
+	"Client.cpp"
+	"Commande.cpp"
+	"Commande.h"
+	"Produit.h"
+	"Produit.cpp"
+	<string>
+
+1429401262 c:\users\flavien\documents\projets codeblocks\restaurant2\client.h
+	<string>
+	<iostream>
+
+1429401262 c:\users\flavien\documents\projets codeblocks\restaurant2\client.cpp
+	"Client.h"
+
+1429399513 c:\users\flavien\documents\projets codeblocks\restaurant2\commande.cpp
+	"Commande.h"
+
+1429399513 c:\users\flavien\documents\projets codeblocks\restaurant2\commande.h
+	<string>
+	<vector>
+	"Produit.h"
+	"Client.h"
+
+1429399513 c:\users\flavien\documents\projets codeblocks\restaurant2\produit.h
+	<string>
+	<iostream>
+
+1429399513 c:\users\flavien\documents\projets codeblocks\restaurant2\produit.cpp
+	"Produit.h"
+

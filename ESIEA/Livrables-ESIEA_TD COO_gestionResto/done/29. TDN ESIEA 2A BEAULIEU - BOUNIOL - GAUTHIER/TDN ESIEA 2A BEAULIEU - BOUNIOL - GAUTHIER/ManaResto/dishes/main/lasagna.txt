@@ -1,0 +1,4 @@
+../ManaResto/dishes/main/lasagna.txt
+24
+0
+2

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1421405038 source:c:\users\20120103\desktop\slr\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1422035962 source:c:\users\gaspacho\desktop\c++\slr\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<windows.h>
+

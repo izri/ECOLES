@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1430073897 source:c:\users\adrien\documents\resto\code\src\client.cpp
+	"client.hpp"
+	<stdio.h>
+
+1430072335 c:\users\adrien\documents\resto\code\include\client.hpp
+	"resto.hpp"
+	<list>
+
+1430071261 c:\users\adrien\documents\resto\code\include\resto.hpp
+	<iostream>
+	<string>
+
+1430068664 source:c:\users\adrien\documents\resto\code\src\command.cpp
+	"command.hpp"
+	<stdio.h>
+
+1430068664 c:\users\adrien\documents\resto\code\include\command.hpp
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+
+1430065823 c:\users\adrien\documents\resto\code\include\product.hpp
+	"resto.hpp"
+
+1430065940 source:c:\users\adrien\documents\resto\code\src\product.cpp
+	"product.hpp"
+	"client.hpp"
+	<sstream>
+	<stdio.h>
+
+1430077231 source:c:\users\adrien\documents\resto\code\src\resto.cpp
+	<iostream>
+	<string>
+	<typeinfo>
+	<stdio.h>
+	<stdlib.h>
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+	"command.hpp"
+
+1430073897 source:c:\users\adrien\desktop\tdn 2a esiea adrien\code\src\client.cpp
+	"client.hpp"
+	<stdio.h>
+
+1430072335 c:\users\adrien\desktop\tdn 2a esiea adrien\code\include\client.hpp
+	"resto.hpp"
+	<list>
+
+1430071261 c:\users\adrien\desktop\tdn 2a esiea adrien\code\include\resto.hpp
+	<iostream>
+	<string>
+
+1430068664 source:c:\users\adrien\desktop\tdn 2a esiea adrien\code\src\command.cpp
+	"command.hpp"
+	<stdio.h>
+
+1430068664 c:\users\adrien\desktop\tdn 2a esiea adrien\code\include\command.hpp
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+
+1430065823 c:\users\adrien\desktop\tdn 2a esiea adrien\code\include\product.hpp
+	"resto.hpp"
+
+1430065940 source:c:\users\adrien\desktop\tdn 2a esiea adrien\code\src\product.cpp
+	"product.hpp"
+	"client.hpp"
+	<sstream>
+	<stdio.h>
+
+1430077231 source:c:\users\adrien\desktop\tdn 2a esiea adrien\code\src\resto.cpp
+	<iostream>
+	<string>
+	<typeinfo>
+	<stdio.h>
+	<stdlib.h>
+	"resto.hpp"
+	"client.hpp"
+	"product.hpp"
+	"command.hpp"
+

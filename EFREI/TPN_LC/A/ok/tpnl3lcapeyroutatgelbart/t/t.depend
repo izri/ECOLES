@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1423778651 source:c:\users\nora\documents\tpn_lc\a\tpnl3lcapeyroutatgelbart\t\main.cpp
+	<iostream>
+	"GELBART_PEYROUTAT_Language.h"
+
+1423779956 c:\users\nora\documents\tpn_lc\a\tpnl3lcapeyroutatgelbart\t\gelbart_peyroutat_language.h
+	<iostream>
+	<fstream>
+	<map>
+	<set>
+	<string>
+	<list>
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<stack>
+
+1423780230 source:c:\users\nora\documents\tpn_lc\a\tpnl3lcapeyroutatgelbart\t\gelbart_peyroutat_language.cpp
+	<iostream>
+	<fstream>
+	"GELBART_PEYROUTAT_Language.h"
+	<windows.h>
+

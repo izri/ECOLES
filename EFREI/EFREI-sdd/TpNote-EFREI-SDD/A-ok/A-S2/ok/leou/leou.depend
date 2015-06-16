@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1417103820 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\leou\main.cpp
+	<iostream>
+	"WINDOWS.h"
+

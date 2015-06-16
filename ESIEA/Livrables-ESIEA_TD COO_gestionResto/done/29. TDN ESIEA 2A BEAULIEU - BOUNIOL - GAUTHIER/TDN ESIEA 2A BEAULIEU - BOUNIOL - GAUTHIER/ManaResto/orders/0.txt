@@ -1,0 +1,6 @@
+0
+29
+../ManaResto/dishes/starter/soup.txt|2|1
+../ManaResto/dishes/main/steak.txt|15|2
+../ManaResto/dishes/dessert/ice.txt|5|3
+../ManaResto/beverages/coca.txt|5|0|33

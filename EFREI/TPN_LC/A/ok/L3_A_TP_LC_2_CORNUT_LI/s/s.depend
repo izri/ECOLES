@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1430212608 source:c:\users\nora\documents\tpn_lc\a\ok\l3_a_tp_lc_2_cornut_li\s\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<sstream>
+	<queue>
+	<stack>
+

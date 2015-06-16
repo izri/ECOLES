@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1421249451 source:z:\desambigueur\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+
+1421360570 source:c:\users\julien\documents\codeblocks\desambigueur\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+

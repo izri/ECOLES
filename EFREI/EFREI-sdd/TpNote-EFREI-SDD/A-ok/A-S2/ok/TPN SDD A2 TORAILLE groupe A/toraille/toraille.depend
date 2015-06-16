@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1417112003 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\tpn sdd a2 toraille groupe a\toraille\main.c
+	<stdio.h>
+	<stdlib.h>
+

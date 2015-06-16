@@ -1,0 +1,13 @@
+I0 :
+
+X .A
+A .A B A
+A .a
+B .B A B
+B .b
+B .
+
+g.alphabet = XABab
+
+Process returned 0 (0x0)   execution time : 0.050 s
+Press any key to continue.

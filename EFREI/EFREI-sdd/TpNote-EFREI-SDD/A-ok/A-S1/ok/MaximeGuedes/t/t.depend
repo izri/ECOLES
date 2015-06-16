@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1416819669 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s1\maximeguedes\t\exo1.c
+	<stdio.h>
+	<stdlib.h>
+	"MaximeGUEDES.h"
+
+1416819701 c:\users\nora\documents\tpnote-efrei-sdd\a-s1\maximeguedes\t\maximeguedes.h
+
+1416819687 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s1\maximeguedes\t\exo2.c
+	<stdio.h>
+	<stdlib.h>
+	"MaximeGUEDES.h"
+

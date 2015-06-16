@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1422797717 source:c:\users\nora\documents\tpn_lc-c\zu xinyu-li tianbo\t\main.cpp
+	"SLR.h"
+	<stack>
+
+1422797818 c:\users\nora\documents\tpn_lc-c\zu xinyu-li tianbo\t\slr.h
+	<iostream>
+	<string>
+	<windows.h>
+	<stack>
+	<stdlib.h>
+	<stdio.h>
+
+1422797734 source:c:\users\nora\documents\tpn_lc-c\zu xinyu-li tianbo\t\slr.cpp
+	"SLR.h"
+
+1422797717 source:c:\users\nora\documents\tpn_lc\tpn_lc-c\ok\zu xinyu-li tianbo\t\main.cpp
+	"SLR.h"
+	<stack>
+
+1422797818 c:\users\nora\documents\tpn_lc\tpn_lc-c\ok\zu xinyu-li tianbo\t\slr.h
+	<iostream>
+	<string>
+	<windows.h>
+	<stack>
+	<stdlib.h>
+	<stdio.h>
+
+1422797734 source:c:\users\nora\documents\tpn_lc\tpn_lc-c\ok\zu xinyu-li tianbo\t\slr.cpp
+	"SLR.h"
+

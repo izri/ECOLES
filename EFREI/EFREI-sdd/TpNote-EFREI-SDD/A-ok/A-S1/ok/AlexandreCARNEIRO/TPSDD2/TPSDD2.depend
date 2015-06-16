@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1416318396 source:z:\codeblocks\tpsdd2\main.c
+	"fonction.h"
+
+1416319243 z:\codeblocks\tpsdd2\fonction.h
+	<stdio.h>
+	<stdlib.h>
+

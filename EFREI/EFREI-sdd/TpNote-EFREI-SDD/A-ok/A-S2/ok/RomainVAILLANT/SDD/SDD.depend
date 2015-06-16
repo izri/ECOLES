@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1416323675 source:z:\sdd\list.c
+	"list.h"
+	<stdlib.h>
+	<stdio.h>
+
+1416323075 z:\sdd\list.h
+
+1416326932 source:z:\sdd\main.c
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+	"tree.h"
+
+1416326906 source:z:\sdd\tree.c
+	"tree.h"
+	<stdlib.h>
+	<stdio.h>
+
+1416326498 z:\sdd\tree.h
+	"list.h"
+
+1416323675 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\romainvaillant\sdd\list.c
+	"list.h"
+	<stdlib.h>
+	<stdio.h>
+
+1416323075 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\romainvaillant\sdd\list.h
+
+1416326906 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\romainvaillant\sdd\tree.c
+	"tree.h"
+	<stdlib.h>
+	<stdio.h>
+
+1416326498 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\romainvaillant\sdd\tree.h
+	"list.h"
+

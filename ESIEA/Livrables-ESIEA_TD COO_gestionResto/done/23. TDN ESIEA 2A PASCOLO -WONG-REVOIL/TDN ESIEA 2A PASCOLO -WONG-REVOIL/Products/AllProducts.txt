@@ -1,0 +1,8 @@
+Salade 5
+Terrine 6
+Pizza 8
+Pates 7
+Vin 6
+Eau 3
+Charlotte 6
+Profiteroles 4

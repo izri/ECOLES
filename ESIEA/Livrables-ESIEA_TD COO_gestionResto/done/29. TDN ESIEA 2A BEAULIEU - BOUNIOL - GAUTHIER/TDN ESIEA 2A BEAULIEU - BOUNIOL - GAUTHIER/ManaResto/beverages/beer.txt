@@ -1,0 +1,5 @@
+../ManaResto/beverages/beer.txt
+12
+1
+1
+50

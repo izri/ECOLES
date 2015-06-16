@@ -1,0 +1,13 @@
+mysqldb:
+    image: mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=password
+        - MYSQL_DATABASE=WebResto
+        - MYSQL_USER=webresto
+        - MYSQL_PASSWORD=webresto
+webresto:
+    build: .
+    links:
+        - mysqldb:mysql
+    ports:
+        - "8000:80"

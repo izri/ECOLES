@@ -1,0 +1,10 @@
+﻿
+
+Avant de commencer à coder, nous avons décidé de revoir notre expression fonctionnelle, celle-ci semblait satisfaisante c’est pourquoi nous ne l’avons pas modifié.
+Nous avons d’abord commencé par nous occuper de la classe Client qui renseigne sur les informations liées au client. Nous avons ensuite programmé la class Product qui permet d’avoir le nom et le prix, individuel, des plats qui composent la commande. Cette classe est celle sur laquelle nous avons passé le plus de temps et qui nous a posé le plus de soucis. En effet des problèmes de compilation nous ont ralentis sur notre progression. Après nous être débarrassés des problèmes de compilation, nous avons attaqué la classe Command qui donne le détail de la commande avec le prix total de celle-ci et la TVA. Dans le MAIN est fait le menu, c’est à partir de là que le serveur sélectionne tous les plats commandés (c’est au serveur qu’incombe la tâche de renseigner toute les informations utiles). Une fois la commande complètement rentrée, grâce à un système de chiffres de 1 à 5 qui regroupent les caractéristiques de chaque plat (par exemple le prix), on appuie sur 0 pour la terminer. Apparaissent alors l’addition, avec le nom et le prénom du client, la date, l’heure, le prix TTC et HT. Par manque de temps nous n’avons pu développer les fonctionnalités de pourcentage et d’histogramme lié au volume de vente et au meilleur plat. Ne sont pas disponibles les fonctionnalités permettant de choisir le type de paiement. Dans le cahier des charges les clients devaient être classifiés par tranche d’âge et origine (s’il s’agissait de locaux ou de touriste).
+Nous n’avons pu répondre à toutes les fonctionnalités exprimées dans le cahier des charges. Mais le programme est capable de prendre en compte une commande détaillée et de donner le prix total de l’addition.
+Référence des sources :
+http://openclassrooms.com/courses/programmez-avec-le-langage-c/qu-est-ce-que-le-c-2 
+http://www.cplusplus.com/ 
+Découvrez le cours « Qu’est-ce que le C++ ? » sur @OpenClassrooms 
+openclassrooms.com

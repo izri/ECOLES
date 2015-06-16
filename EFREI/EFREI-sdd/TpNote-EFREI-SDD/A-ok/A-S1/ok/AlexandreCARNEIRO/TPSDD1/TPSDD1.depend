@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1416317786 source:z:\codeblocks\tpsdd1\headerfonction.c
+	"header.h"
+
+1416316044 z:\codeblocks\tpsdd1\header.h
+	<stdio.h>
+	<stdlib.h>
+
+1416316763 source:z:\codeblocks\tpsdd1\main.c
+	"header.h"
+
+1416317818 source:z:\codeblocks\tpsdd1\alexandrecarneiro.c
+	"header.h"
+
+1416317786 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s1\alexandrecarneiro\tpsdd1\headerfonction.c
+	"header.h"
+
+1416316044 c:\users\nora\documents\tpnote-efrei-sdd\a-s1\alexandrecarneiro\tpsdd1\header.h
+	<stdio.h>
+	<stdlib.h>
+

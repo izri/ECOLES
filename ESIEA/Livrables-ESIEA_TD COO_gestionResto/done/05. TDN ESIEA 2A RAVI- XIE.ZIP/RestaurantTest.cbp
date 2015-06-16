@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="RestaurantTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/RestaurantTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/RestaurantTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Boisson.cpp" />
+		<Unit filename="Boisson.h" />
+		<Unit filename="CarteFi.cpp" />
+		<Unit filename="CarteFi.h" />
+		<Unit filename="Client.cpp" />
+		<Unit filename="Client.h" />
+		<Unit filename="Commande.cpp" />
+		<Unit filename="Commande.h" />
+		<Unit filename="Dessert.cpp" />
+		<Unit filename="Dessert.h" />
+		<Unit filename="MajStock.cpp" />
+		<Unit filename="MajStock.h" />
+		<Unit filename="Pizza.cpp" />
+		<Unit filename="Pizza.h" />
+		<Unit filename="PlatJour.cpp" />
+		<Unit filename="PlatJour.h" />
+		<Unit filename="PlatV.cpp" />
+		<Unit filename="PlatV.h" />
+		<Unit filename="Produit.cpp" />
+		<Unit filename="Produit.h" />
+		<Unit filename="Reservation.cpp" />
+		<Unit filename="Reservation.h" />
+		<Unit filename="TicketCaisse.cpp" />
+		<Unit filename="TicketCaisse.h" />
+		<Unit filename="Vente.cpp" />
+		<Unit filename="Vente.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

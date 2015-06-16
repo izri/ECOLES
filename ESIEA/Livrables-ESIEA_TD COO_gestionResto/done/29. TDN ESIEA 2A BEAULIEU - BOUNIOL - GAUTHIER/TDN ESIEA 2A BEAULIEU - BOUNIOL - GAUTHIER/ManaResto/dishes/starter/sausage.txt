@@ -1,0 +1,4 @@
+../ManaResto/dishes/starter/sausage.txt
+80
+2
+1

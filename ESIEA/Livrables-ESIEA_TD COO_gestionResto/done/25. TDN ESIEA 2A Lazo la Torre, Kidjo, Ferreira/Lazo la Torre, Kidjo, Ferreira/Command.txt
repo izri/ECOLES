@@ -1,0 +1,24 @@
+#ifndef COMMAND_H
+#define COMMAND_H
+
+#include <string>
+#include <vector>
+#include "Product.h"
+#include "Client.h"
+
+class Command
+{
+    private:
+        int m_nbPlat;
+        float prixTotal;
+        std :: vector <Product> m_product;
+        Client m_client;
+    public:
+        Command(int const nbPlat, Client const client);
+        Product getProduct (int const index) const;
+        Client getClient () const;
+};
+
+Command setCommmand ();
+
+#endif // COMMAND_H

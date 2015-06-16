@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1416585782 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s2\tpn sdd l2 pl2 prieur groupe pl\prieur\liste.cpp
+	"liste.h"
+
+1416585785 c:\users\nora\documents\tpnote-efrei-sdd\pl-s2\tpn sdd l2 pl2 prieur groupe pl\prieur\liste.h
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+
+1416585771 source:c:\users\nora\documents\tpnote-efrei-sdd\pl-s2\tpn sdd l2 pl2 prieur groupe pl\prieur\main.cpp
+	"liste.h"
+

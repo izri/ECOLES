@@ -1,0 +1,12 @@
+TDN ESIEA 2A DEBOUT - CARON
+
+Vous trouverez en pièces jointes :
+
+- une archive ZIP contenant notre code source :
+
+6 classes : command, product, client, resto, Historique, Carte (avec leur header (.hpp) respectif).
+Une erreur empêche le programme de compiler donc nous n'avons pu le tester.
+
+- notre cahier des charges de la gestion du restaurant (inchangé)
+
+- notre diagramme de classe de la gestion du restaurant (V2)

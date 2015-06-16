@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1424003726 source:c:\users\nora\documents\tpn_lc\a\ebbo_paulet\m\fonction.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"fonction.h"
+
+1422053048 c:\users\nora\documents\tpn_lc\a\ebbo_paulet\m\fonction.h
+	<vector>
+	<string>
+
+1424003733 source:c:\users\nora\documents\tpn_lc\a\ebbo_paulet\m\main.cpp
+	<iostream>
+	<algorithm>
+	"fonction.h"
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1422804691 source:c:\users\nora\documents\tpn_lc-c\shuopu_haoting\a\main.cpp
+	"SLR1.h"
+
+1422803966 c:\users\nora\documents\tpn_lc-c\shuopu_haoting\a\slr1.h
+	<iostream>
+	<string>
+	<windows.h>
+	<stack>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+

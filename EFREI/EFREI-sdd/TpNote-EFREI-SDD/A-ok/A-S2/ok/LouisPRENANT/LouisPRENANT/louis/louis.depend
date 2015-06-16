@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1417199164 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\louisprenant\louisprenant\louis\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"parfait.h"
+
+1417199155 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\louisprenant\louisprenant\louis\parfait.h
+

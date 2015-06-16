@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1429971962 source:c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\main.cpp
+	<iostream>
+	<Client.h>
+	<string>
+
+1429975866 source:c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\src\command.cpp
+	"Command.h"
+
+1429974947 c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\include\command.h
+	<string>
+	<vector>
+	"Product.h"
+	"Client.h"
+
+1429978831 source:c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\src\product.cpp
+	"Product.h"
+
+1429977824 c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\include\product.h
+	<string>
+	<iostream>
+
+1429972341 source:c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\src\client.cpp
+	"Client.h"
+
+1429971824 c:\users\marc lazola torre\documents\esiea\2a\info\projet\monresto\monresto\include\client.h
+	<string>
+	<iostream>
+

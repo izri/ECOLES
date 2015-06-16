@@ -1,0 +1,40 @@
+
+VANCEMENT DU PROJET
+	Nous avons dans ce projet implémenté le chargement en mÈmoire d'une grammaire stockÈe sous forme de fichier texte.
+	Le programme est capable de reconnaitre un état terminal d'un non terminal ainsi que de donner la grammaire.
+	Sont surtout mis en commentaires les parties non finis du projet (algo des différentes parties non-codées)
+
+
+AVERTISSEMENT
+	Nous avons établi une nomenclature dans la structuration des fichiers de grammaire afin d'assurer le fonctionnement du programme.
+	Le programme différencie les états terminaux des non-terminaux avec un test de "terminabilité".
+	De manière générale, un caractère en majuscule sera considéré comme non-terminal et un caractère en minuscule sera considéré comme terminal.
+	
+	
+NOMENCLATURE DES FICHIERS DE TEST:
+
+	Pour le fichier suivant:
+	
+		AcB
+		BA
+		Bc
+		
+	Le programme interprètera :
+	
+		A -> cB
+		B -> A
+		B -> c
+
+Il sera aussi capable de donner en sortie:
+	
+		A -> cB
+		B -> A ! c
+		
+	Le premier caractère d'une ligne est considéré comme étant le sommet et les caractères suivants, ses transitions.
+	Il est impératif d'introduire un espace fin de différencier les différents éléments.
+	Le symbole caractËre vide communément noté par la lettre greque epsilon est isi représentée par le 'e'.
+
+References:
+Nous nous sommes essenteillement basé sur les cours ainsi que des sites internets et des forums.
+http://ufrsciencestech.u-bourgogne.fr/master1/mi1-tc5/PROJETS_D_ETUDIANTS/dahu/rapports/rapport_imprimable_recto_verso.pdf
+http://stackoverflow.com/questions/19869163/algorithm-for-computing-first-and-follow-set-in-grammar

@@ -1,0 +1,4 @@
+../ManaResto/dishes/main/choucroute.txt
+65
+1
+2

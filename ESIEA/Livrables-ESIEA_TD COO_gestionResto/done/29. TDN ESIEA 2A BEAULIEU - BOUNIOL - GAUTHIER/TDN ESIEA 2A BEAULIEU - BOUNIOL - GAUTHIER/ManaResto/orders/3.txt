@@ -1,0 +1,6 @@
+3
+380
+../ManaResto/dishes/starter/sausage.txt|80|1
+../ManaResto/dishes/main/steak.txt|15|2
+../ManaResto/dishes/dessert/tiramisu.txt|38|3
+../ManaResto/beverages/wine.txt|195|1|75

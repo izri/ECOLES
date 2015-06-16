@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1416326976 source:z:\tp_sdd_l2_a\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
+1416325837 z:\tp_sdd_l2_a\fonctions.h
+	<stdio.h>
+	<stdlib.h>
+
+1416326206 source:z:\tp_sdd_l2_a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
+1416327038 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\etiennequelain_tpn\tp_sdd_l2_a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+
+1417196461 c:\users\nora\documents\tpnote-efrei-sdd\a-s2\etiennequelain_tpn\tp_sdd_l2_a\fonctions.h
+	<stdio.h>
+	<stdlib.h>
+
+1417196435 source:c:\users\nora\documents\tpnote-efrei-sdd\a-s2\etiennequelain_tpn\tp_sdd_l2_a\fonctions.c
+	<stdio.h>
+	<stdlib.h>
+	"fonctions.h"
+

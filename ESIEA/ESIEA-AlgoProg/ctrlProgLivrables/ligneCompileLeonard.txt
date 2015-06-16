@@ -1,0 +1,4 @@
+
+PS : La ligne de compilation utilisée :
+
+gcc -Wall -Wextra -Wuninitialized LéonardBENEDETTI.c

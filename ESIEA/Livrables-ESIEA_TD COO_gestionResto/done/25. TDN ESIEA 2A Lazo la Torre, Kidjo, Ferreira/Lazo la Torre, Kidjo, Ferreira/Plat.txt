@@ -1,0 +1,13 @@
+#ifndef PLAT_H
+#define PLAT_H
+
+
+class Plat
+{
+    private:
+
+    public:
+        Plat();
+};
+
+#endif // PLAT_H
